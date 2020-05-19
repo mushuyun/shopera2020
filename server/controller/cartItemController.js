@@ -43,7 +43,7 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   update: function(req, res) {
-    db.Book
+    db.Prod
       .findOneAndUpdate({ _id: req.params.id }, req.body)
       .then(dbModel => {
         console.log(dbModel);
