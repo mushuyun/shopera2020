@@ -13,6 +13,6 @@ const prodctSchema = new mongoose.Schema({
   numReviews: { type: Number, default: 0, required: true },
 });
 
-const Product = mongoose.model("Product", prodctSchema);
+const Product = mongoose.model("Product", productSchema);
 
 export {Product};
