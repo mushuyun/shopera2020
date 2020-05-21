@@ -17,9 +17,6 @@ function Home(props) {
             </div>
             <div className="product-brand">{product.brand}</div>
             <div className="product-price">${product.price}</div>
-            <button id="addToCart" onClick={(event) => props.addItem(event, "id")}>
-                Add To Cart
-              </button>
             <div className="product-rating">{product.rating} Stars ({product.numReiews} Reviews)</div>
           </div>
         </li>)
