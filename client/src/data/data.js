@@ -121,6 +121,34 @@ export default {
         numReviews: 17
         }
        
-    
+    ],
+    cart: [{
+        _id: "1",
+        qty: "1",
+        image: "/images/jewelry3.png",
+        name: "Necklace 3",
+        price: 2700,
+    },
+    {
+        _id: "2",
+        qty: "2",
+        image: "/images/lip2.png",
+        name: "Lip Stick2",
+        price: 90,
+    },
+    {
+        _id: "3",
+        image: "/images/highheel3.png",
+       name: "High Heel Shoe3",
+       price: 400,
+       }
+    ],
+    user: [
+      {
+        _id: "1",
+        firstName: "Lisa",
+        lastName: "Smith"
+    }
     ]
+    
 }
