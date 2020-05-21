@@ -51,6 +51,7 @@ function Product(props) {
           </li>
           <li>
             <button className="button primary" id="atc">Add to Cart</button>
+
           </li>
         </ul>
       </div>

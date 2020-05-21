@@ -1,6 +1,7 @@
 import React from "react";
 // import "./addToCartBtn.css";
 
+
 const CartBtn = props => (
   <button
     onClick={props.onClick}
@@ -8,5 +9,6 @@ const CartBtn = props => (
     {...props}
   />
 );
+
 
 export default CartBtn;
