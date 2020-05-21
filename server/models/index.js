@@ -1,3 +1,8 @@
 module.exports = {
-    Product: require ("./product")
+
+    Product: require ("./Product"),
+    User: require( "./User"),
+    Order: require ("./Order"),
+    Cart: require ("./Cart")
+
 }
