@@ -126,6 +126,7 @@ export default {
         _id: "1",
         qty: "1",
         image: "/images/jewelry3.png",
+        desc: "multi-stone, 20-inch, lobster-claw, 14kt",
         name: "Necklace 3",
         price: 2700,
     },
@@ -133,14 +134,16 @@ export default {
         _id: "2",
         qty: "2",
         image: "/images/lip2.png",
+        desc: "Matte Finish, 'Red Alert'",
         name: "Lip Stick2",
         price: 90,
     },
     {
         _id: "3",
         image: "/images/highheel3.png",
-       name: "High Heel Shoe3",
-       price: 400,
+        desc: "4-inch stiletto heel. True Red burnout with jeweled toe",
+        name: "High Heel Shoe3",
+        price: 400,
        }
     ],
     user: [

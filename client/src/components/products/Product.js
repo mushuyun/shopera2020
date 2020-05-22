@@ -27,7 +27,7 @@ function Product(props) {
           <li>
             Description:
             <div>
-              {product.description}
+              {product.desc}
             </div>
           </li>
         </ul>
