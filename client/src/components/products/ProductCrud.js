@@ -7,3 +7,6 @@ export default function ProductCrud() {
         </div>
     )
 }
+
+
+// form based on json File-add new products here----edit product file
