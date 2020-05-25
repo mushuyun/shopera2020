@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require("express");
 const path = require("path");
 const dotenv = require("dotenv");
 const userRoute = require ("./routes/userRoute");
@@ -8,13 +8,13 @@ const auth = require("./auth.js");
 const config = require("./config");
 const models = require("./models");
 
-if (process.env.NODE_ENV !== 'production') {
-	console.log('loading dev environments');
-	require('dotenv').config();
+if (process.env.NODE_ENV !== "production") {
+	console.log("loading dev environments");
+	require("dotenv").config();
 }
 
 // Connect to the Mongo DB
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 //mongoose.connect(config.MONGODB_URI);
 const mongodbUrl = config.MONGODB_URI;
 mongoose.connect(mongodbUrl, {
@@ -27,30 +27,30 @@ mongoose.connect(mongodbUrl, {
 const app = express();
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
-app.use(express.static(path.join(__dirname, '../client/public')));
+app.use(express.static(path.join(__dirname, "../client/public")));
 //app.use(routes);
-app.use('/api/users', userRoute);
-//app.use('/api/products', productRoute);
-//app.use('/api/orders', orderRoute);
+app.use("/api/users", userRoute);
+//app.use("/api/products", productRoute);
+//app.use("/api/orders", orderRoute);
 
 // If its production environment!
-if (process.env.NODE_ENV === 'production') {
-	const path = require('path');
-	// console.log('YOU ARE IN THE PRODUCTION ENV');
-	app.use('/static', express.static(path.join(__dirname, '../client/build/static')));
-	app.get('/', (req, res) => {
-		res.sendFile(path.join(__dirname, '../client/build/'))
+if (process.env.NODE_ENV === "production") {
+	const path = require("path");
+	// console.log("YOU ARE IN THE PRODUCTION ENV");
+	app.use("/static", express.static(path.join(__dirname, "../client/build/static")));
+	app.get("/", (req, res) => {
+		res.sendFile(path.join(__dirname, "../client/build/"))
 	});
 }
 
 // Add routes, both API and view
-// app.get('/api/config/paypal', (req, res) => {
+// app.get("/api/config/paypal", (req, res) => {
 //   res.send(config.PAYPAL_CLIENT_ID);
 // });
 
 // Error handler
 app.use(function(err, req, res, next) {
-	console.log('====== ERROR =======');
+	console.log("====== ERROR =======");
 	console.error(err.stack);
 	res.status(500);
 });
