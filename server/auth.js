@@ -1,5 +1,5 @@
-const jwt = require('jsonwebtoken');
-const config = require('./config');
+const jwt = require("jsonwebtoken");
+const config = require("./config");
 
 const getToken = (user) => {
   return jwt.sign({
@@ -9,7 +9,7 @@ const getToken = (user) => {
     isAdmin: user.isAdmin,
 
   }, config.JWT_SECRET, {
-    expiresIn: '48h'
+    expiresIn: "24h"
   })
 }
 
@@ -20,7 +20,7 @@ const isAuth = (req, res, next) => {
     const onlyToken = token.slice(7, token.length);
     jwt.verify(onlyToken, config.JWT_SECRET, (err, decode) => {
       if (err) {
-        return res.status(401).send({ msg: 'Invalid Token' });
+        return res.status(401).send({ msg: "Invalid Token" });
       }
       req.user = decode;
       next();
@@ -36,7 +36,7 @@ const isAdmin = (req, res, next) => {
   if (req.user && req.user.isAdmin) {
     return next();
   }
-  return res.status(401).send({ msg: 'Admin Token is not valid.' })
+  return res.status(401).send({ msg: "Admin Token is not valid." })
 }
 
 module.exports = {
