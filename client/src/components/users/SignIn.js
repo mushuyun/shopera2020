@@ -30,7 +30,7 @@ function Signin(props) {
     <form onSubmit={submitHandler} >
       <ul className="form-container">
         <li>
-          <h2>Sign-In</h2>
+          <h2>Sign In</h2>
         </li>
         <li>
           {loading && <div>Loading...</div>}
@@ -49,13 +49,15 @@ function Signin(props) {
           </input>
         </li>
         <li>
-          <button type="submit" className="button primary">Signin</button>
+          <button type="submit" className="button primary">SignIn</button>
         </li>
         <li>
-          Do not have a shopera account?
+          <p>Do not have a shopera account?</p>
         </li>
-        <li>
-          <Link to="/register" className="button secondary text-center" >Create shopera account</Link>
+        <li>  
+            <Link to="/register" className="button secondary text-center" >
+                <h3>Create your shopera account</h3>
+            </Link>
         </li>
       </ul>
     </form>

@@ -66,7 +66,8 @@ function Register(props) {
           <button type="submit" className="button primary">Register</button>
         </li>
         <li>
-          Already have an account? <Link to="/signin">Sign-in</Link>
+          <p>Already have an account?</p> 
+          <Link to="/signin"><h3>Sign-in</h3></Link>
         </li>
 
       </ul>
