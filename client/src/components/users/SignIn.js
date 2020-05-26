@@ -51,10 +51,10 @@ function Signin(props) {
           <button type="submit" className="button primary">Signin</button>
         </li>
         <li>
-          New to amazona?
+          Do not have a shopera account?
         </li>
         <li>
-          <Link to="/register" className="button secondary text-center" >Create your amazona account</Link>
+          <Link to="/register" className="button secondary text-center" >Create shopera account</Link>
         </li>
       </ul>
     </form>
