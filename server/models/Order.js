@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 const mongoose = require("mongoose");
+=======
+const mongoose = require('mongoose');
+>>>>>>> origin
 const shippingSchema = {
   address: { type: String, required: true },
   city: { type: String, required: true },
@@ -40,5 +44,9 @@ const orderSchema = new mongoose.Schema({
 });
 
 const Order = mongoose.model("Order", orderSchema);
+<<<<<<< HEAD
 
 module.exports = Order;
+=======
+module.exports = Order;
+>>>>>>> origin
