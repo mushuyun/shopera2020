@@ -1,8 +1,8 @@
-import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
-import thunk from 'redux-thunk';
-import Cookie from 'js-cookie';
+import { createStore, combineReducers, applyMiddleware, compose } from "redux";
+import thunk from "redux-thunk";
+import Cookie from "js-cookie";
 //need to import from cart and product
-import { userSigninReducer, userRegisterReducer } from './userReducers';
+import { userSigninReducer, userRegisterReducer } from "./userReducers";
 
 //const cartItems = Cookie.getJSON("cartItems") || [];
 const userInfo = Cookie.getJSON("userInfo") || null;
