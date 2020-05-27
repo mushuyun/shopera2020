@@ -34,9 +34,8 @@ function App() {
 
   return (
 <BrowserRouter>
-    <div className="grid-container">
-      
-      <header className="header">
+  <div className="grid-container">
+    <header className="header">
         <div className="brand">
           <button onClick={openMenu}>
             &#9776;
@@ -45,23 +44,10 @@ function App() {
         </div>
         <div className="header-links">
 
-            {/* <Link to="/cart">Cart</Link>
-            <Link to="/signin">Sign In</Link>
-       
-            <div className="dropdown">
-              <a href="#"  >Admin</a>
-              <ul className="dropdown-content">
-                <li>
-                  <Link to="/orders">Orders</Link>
-                  <Link to="/products">Products</Link>
-                </li>
-              </ul>
-            </div>
-        </div> */}
-        <a href="cart.html">Cart</a>
+            <Link to="/cart">Cart</Link>
             {
               userInfo ? <Link to="/profile">{userInfo.name}</Link> :
-                <Link to="/signin">Sign In</Link>
+              <Link to="/signin">Sign In</Link>
             }
             {userInfo && userInfo.isAdmin && (
               <div className="dropdown">
@@ -75,46 +61,45 @@ function App() {
               </div>
             )}
           </div>
-      </header>
+    </header>
+    <aside className="sidebar">
+      <h3>Shopping Categories</h3>
+      <button className="sidebar-close-button" onClick={closeMenu}>x</button>
+      <ul>
+        <li>
+          <Link to="/category/Shoes">Shoes</Link>
+        </li>
+        <li>
+          <Link to="/category/Beauty">Beauty</Link>
+        </li>
+        <li>
+          <Link to="/category/Jewelry">Jewelry</Link>
+        </li>
+      </ul>
+    </aside>
 
-      <aside className="sidebar">
-        <h3>Shopping Categories</h3>
-        <button className="sidebar-close-button" onClick={closeMenu}>x</button>
-        <ul>
-          <li>
-            <Link to="/category/Shoes">Shoes</Link>
-          </li>
-          <li>
-            <Link to="/category/Beauty">Beauty</Link>
-          </li>
-          <li>
-            <Link to="/category/Jewelry">Jewelry</Link>
-          </li>
-        </ul>
-      </aside>
+    <main className="main">
+        <div className="content">
+          <Route path="/product/:id" component={Product} />
+          <Route path="/productcrud" component={ProductCrud} />
+          <Route path="/category/Shoes" component={Shoes} />
+          <Route path="/category/Beauty" component={Beauty} /> 
+          <Route path="/category/Jewelry" component={Jewelry} /> 
+          <Route path="/cart" component={Cart} />
+          {/* <Route path="/cart/:id?" component={Cart} /> */}
+          <Route path="/shipping" component={Shipping} />
+          {/* <Route path="/orders" component={Orders} /> */}
+          <Route path="/order/:id" component={Order} />
+          <Route path="/payment" component={Payment} />
+          <Route path="/placeorder" component={PlaceOrder} />
+          <Route path="/profile" component={Profile} />
+          <Route path="/register" component={Register} />
+          <Route path="/signin" component={SignIn} />
+          <Route path="/category/:id" component={Home} />
+          <Route path="/" exact={true} component={Home} />
 
-      <main className="main">
-          <div className="content">
-            <Route path="/product/:id" component={Product} />
-            <Route path="/productcrud" component={ProductCrud} />
-            <Route path="/category/Shoes" component={Shoes} />
-            <Route path="/category/Beauty" component={Beauty} /> 
-            <Route path="/category/Jewelry" component={Jewelry} /> 
-            <Route path="/cart" component={Cart} />
-            {/* <Route path="/cart/:id?" component={Cart} /> */}
-            <Route path="/shipping" component={Shipping} />
-            {/* <Route path="/orders" component={Orders} /> */}
-            <Route path="/order/:id" component={Order} />
-            <Route path="/payment" component={Payment} />
-            <Route path="/placeorder" component={PlaceOrder} />
-            <Route path="/profile" component={Profile} />
-            <Route path="/register" component={Register} />
-            <Route path="/signin" component={SignIn} />
-            <Route path="/category/:id" component={Home} />
-            <Route path="/" exact={true} component={Home} />
-
-          </div>
-        </main>
+        </div>
+      </main>
         
     <footer className="footer">
       CodingBootCamp UNC Project Team 3 All Rights Reserved!
