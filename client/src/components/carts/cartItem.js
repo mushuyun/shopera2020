@@ -5,14 +5,35 @@ import data from "../../data/data";
 class CartItem extends React.Component {
   constructor(props) {
     super(props);
+    this.id = this.props._id;
     this.image = this.props.image;
     this.desc = this.props.desc;
     this.name = this.props.name;
     this.price = this.props.price;
-
-    this.removeCartItem = this.removeCartItem.bind(this);
   }
-  removeCartItem(itemInCart) {}
+  
+  removeCartItem(itemInCart) {
+      var r = document.getElementById("removeItem");
+
+      let cart = [];
+      if (localStorage.getItem("cart") != null) {
+        cart = JSON.parse(localStorage.getItem
+          ("cart"));
+      }
+      let itemIndex = -1;
+      for (var i = 0; i < cart.length; i++) {
+        if (parseInt(cart[i]["product"]["_id"]) == parseInt(itemInCart)) {
+          itemIndex = i;
+        }
+      }
+
+      if (itemIndex !== -1) {
+        cart.splice(itemIndex, 1);
+      }
+      localStorage.setItem("cart", JSON.stringify(cart));
+
+      window.location.reload();
+  }
 
   render() {
     return (
@@ -36,10 +57,7 @@ class CartItem extends React.Component {
               <div className="col-md-6">
                 <h3 className="cart-item-price">${this.price}.00</h3>
 
-                <button
-            onClick={() => removeCartItem(itemInCart)}
-            className="btn btn-danger btn"
-          >
+                <button onClick={() => this.removeCartItem(this.id)} className="btn btn-danger btn">
             Delete
           </button>
               </div>
