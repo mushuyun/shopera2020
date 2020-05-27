@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Cart from "./Cart";
+import CartCollapse from "./cartCollapse";
 import { Form, Row, Col, FormGroup, Label, 
   Input,
   FormFeedback,
@@ -23,7 +23,7 @@ import { Form, Row, Col, FormGroup, Label,
 const ShippingForm = (props) => {
   return (
     <div className="container">
-      <Cart />
+      <CartCollapse />
     <Form>
       <Row form>
         <Col md={6}>
@@ -142,7 +142,7 @@ const ShippingForm = (props) => {
           </FormGroup>
         </Col>
       </Row>
-      <Button id="atcSubmit">Submit</Button>
+      <Button size="lg" id="atcSubmit">Submit</Button>
     </Form>
     </div>
   );
