@@ -55,8 +55,8 @@ function Signin(props) {
           <p>Do not have a shopera account?</p>
         </li>
         <li>  
-            <Link to="/register" className="button secondary text-center" >
-                <h3>Create your shopera account</h3>
+            <Link to="/register" className="button secondary text center">
+              <h3>Create your shopera account</h3>
             </Link>
         </li>
       </ul>
