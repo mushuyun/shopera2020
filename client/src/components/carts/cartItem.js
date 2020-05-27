@@ -36,12 +36,12 @@ class CartItem extends React.Component {
               <div className="col-md-6">
                 <h3 className="cart-item-price">${this.price}.00</h3>
 
-                {/* <button
+                <button
             onClick={() => removeCartItem(itemInCart)}
             className="btn btn-danger btn"
           >
             Delete
-          </button> */}
+          </button>
               </div>
             </div>
           </div>

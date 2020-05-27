@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import './styles/home.css';
 import "./styles/shipping.css";
 import "./styles/cart.css";
@@ -23,13 +24,15 @@ import PaypalConnection from './components/checkouts/PaypalConnect';
 
 function App() {
 
-  const openMenu = () =>{
-    document.querySelector(".sidebar").classList.add("open");
-  };
+  const userSignin = useSelector(state => state.userSignin);
+  const { userInfo } = userSignin;
 
-  const closeMenu = () =>{
+  const openMenu = () => {
+    document.querySelector(".sidebar").classList.add("open");
+  }
+  const closeMenu = () => {
     document.querySelector(".sidebar").classList.remove("open")
-  };
+  }
 
   return (
 <BrowserRouter>
