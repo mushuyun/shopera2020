@@ -11,3 +11,20 @@
   -webkit-transform: scale(1.5); /* Safari 3-8 */
   transform: scale(1.5); 
 }
+
+h2 {
+  padding-left: 15px;
+}
+
+#cartTtlBtn {
+  margin-top: 5px;
+  margin-right: 15px;
+  float: right;
+  background-color: #f0c040;
+  color: black;
+
+}
+
+#cartCntr {
+  margin-top: 10px;
+}

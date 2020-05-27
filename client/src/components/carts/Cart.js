@@ -1,11 +1,14 @@
 import React from "react";
 import CartItem from "./cartItem";
+import { Button } from "reactstrap";
+import "../../styles/shipping.css";
+import "../../styles/cart.css";
 import data from "../../data/data";
 
 const Cart = ({ }) => {
     const items = data.cart;
     return (
-        <div>
+        <div className="container" id="cartCtnr">
            <h2>Shopping Cart</h2> 
 
            <div className="cart">
@@ -21,7 +24,7 @@ const Cart = ({ }) => {
                         {items.length === 0 && (
                             <div className="alert alert-info">Cart is empty</div>
                         )}
-                        <div className="cart__total">Total: 3000 </div>
+                        <Button size="lg" id="cartTtlBtn" className="cartTotal">Total: $  </Button>
                     </div>
                 </div>
             </div>
