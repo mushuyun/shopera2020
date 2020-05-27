@@ -1,5 +1,7 @@
 import React from 'react';
 import './styles/home.css';
+import "./styles/shipping.css";
+import "./styles/cart.css";
 import data from "./data/data";
 import {BrowserRouter, Route, Link} from "react-router-dom";
 import Home from "./components/Home";
