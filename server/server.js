@@ -28,8 +28,8 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "../client/public")));
 app.use("/api/users", userRoute);
-//app.use("/api/products", productRoute);
-//app.use("/api/orders", orderRoute);
+app.use("/api/products", productRoute);
+app.use("/api/orders", orderRoute);
 
 // If its production environment!
 if (process.env.NODE_ENV === "production") {
