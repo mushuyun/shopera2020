@@ -15,7 +15,6 @@ if (process.env.NODE_ENV !== "production") {
 
 // Connect to the Mongo DB
 const mongoose = require("mongoose");
-//mongoose.connect(config.MONGODB_URI);
 const mongodbUrl = config.MONGODB_URI;
 mongoose.connect(mongodbUrl, {
   useNewUrlParser: true,
@@ -28,7 +27,6 @@ const app = express();
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "../client/public")));
-//app.use(routes);
 app.use("/api/users", userRoute);
 //app.use("/api/products", productRoute);
 //app.use("/api/orders", orderRoute);
