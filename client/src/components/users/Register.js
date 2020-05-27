@@ -67,7 +67,7 @@ function Register(props) {
         </li>
         <li>
           <p>Already have an account?</p> 
-          <Link to="/signin"><h3>Sign-in</h3></Link>
+          <Link to="/signin"><h3>Sign-In</h3></Link>
         </li>
 
       </ul>
