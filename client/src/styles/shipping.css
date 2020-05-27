@@ -1,7 +1,12 @@
 #atcSubmit {
     background-color: #f0c040;
     margin-bottom: 10px;
-    text-align: right;
+    
+}
+
+#collapseBtn {
+    margin-top: 10px;
+    background-color: #f0c040;
     
 }
     
