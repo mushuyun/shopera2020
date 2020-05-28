@@ -29,7 +29,11 @@ const ShippingForm = (props) => {
         <Col md={6}>
           <FormGroup>
             <Label for="First Name"></Label>
+<<<<<<< HEAD
             <Input invalid placeholder="First Name"/>
+=======
+            <Input placeholder="First Name" required/>
+>>>>>>> 81906e0156edbcced3524120486101f849d47417
             <FormFeedback invalid >Please Enter First Name</FormFeedback>
             <FormText></FormText>
           </FormGroup>
@@ -37,7 +41,11 @@ const ShippingForm = (props) => {
         <Col md={6}>
           <FormGroup>
             <Label for="Last Name"></Label>
+<<<<<<< HEAD
             <Input invalid placeholder="Last Name"/>
+=======
+            <Input placeholder="Last Name" required/>
+>>>>>>> 81906e0156edbcced3524120486101f849d47417
             <FormFeedback invalid>Please Enter Last Name</FormFeedback>
             <FormText></FormText>
           </FormGroup>
@@ -47,7 +55,11 @@ const ShippingForm = (props) => {
         <Col md={8}>
           <FormGroup>
             <Label for="Street Address"></Label>
+<<<<<<< HEAD
             <Input invalid placeholder="Street Address"/>
+=======
+            <Input placeholder="Street Address" required/>
+>>>>>>> 81906e0156edbcced3524120486101f849d47417
             <FormFeedback invalid>
               Please Enter Street Address with Apt # if applicable
             </FormFeedback>
@@ -66,7 +78,11 @@ const ShippingForm = (props) => {
         <Col md={6}>
           <FormGroup>
             <Label for="City"></Label>
+<<<<<<< HEAD
             <Input valid placeholder="City" />
+=======
+            <Input placeholder="City" required/>
+>>>>>>> 81906e0156edbcced3524120486101f849d47417
             <FormFeedback invalid>Please Enter City of Delivery</FormFeedback>
             <FormText></FormText>
           </FormGroup>
@@ -74,7 +90,11 @@ const ShippingForm = (props) => {
         <Col md={3}>
           <FormGroup>
             <Label for="State"></Label>
+<<<<<<< HEAD
             <Input type="select" name="select" id="stateAbbrev" placeholder="Select State">
+=======
+            <Input type="select" name="select" id="stateAbbrev" placeholder="Select State" required>
+>>>>>>> 81906e0156edbcced3524120486101f849d47417
               <option value="AL">Alabama</option>
               <option value="AK">Alaska</option>
               <option value="AZ">Arizona</option>
@@ -134,7 +154,11 @@ const ShippingForm = (props) => {
         <Col md={3}>
           <FormGroup>
             <Label for="ZipCode"></Label>
+<<<<<<< HEAD
             <Input valid placeholder="Zip Code"/>
+=======
+            <Input placeholder="Zip Code"required/>
+>>>>>>> 81906e0156edbcced3524120486101f849d47417
             <FormFeedback invalid tooltip>
               Please Enter a Valid Zip Code for Delivery
             </FormFeedback>
@@ -148,4 +172,10 @@ const ShippingForm = (props) => {
   );
 };
 
+<<<<<<< HEAD
 export default ShippingForm;
+=======
+export default ShippingForm;
+
+
+>>>>>>> 81906e0156edbcced3524120486101f849d47417

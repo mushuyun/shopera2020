@@ -1,6 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import './styles/home.css';
+import "./styles/shipping.css";
+import "./styles/cart.css";
 import data from "./data/data";
 import {BrowserRouter, Route, Link} from "react-router-dom";
 import Home from "./components/Home";
@@ -19,6 +21,7 @@ import Profile from './components/users/Profile';
 import Shipping from "./components/carts/Shipping";
 import Checkout from './components/checkouts/Checkout';
 import PaypalConnection from './components/checkouts/PaypalConnect';
+import { Badge } from "reactstrap";
 
 function App() {
 
@@ -30,6 +33,11 @@ function App() {
   }
   const closeMenu = () => {
     document.querySelector(".sidebar").classList.remove("open")
+  }
+
+  let cartCount = 0;
+  if (localStorage.getItem("cart") !== null) {
+    cartCount = JSON.parse(localStorage.getItem("cart")).length;
   }
 
   return (
@@ -44,6 +52,7 @@ function App() {
         </div>
         <div className="header-links">
 
+<<<<<<< HEAD
             <Link to="/cart">Cart</Link>
             {
               userInfo ? <Link to="/profile">{userInfo.name}</Link> :
@@ -77,6 +86,38 @@ function App() {
         </li>
       </ul>
     </aside>
+=======
+        <Link to="/cart">Cart<Badge color="danger">{cartCount}</Badge></Link>
+            <Link to="/signin">Sign In</Link>
+       
+            <div className="dropdown">
+              <a href="#"  >Admin</a>
+              <ul className="dropdown-content">
+                <li>
+                  <Link to="/orders">Orders</Link>
+                  <Link to="/products">Products</Link>
+                </li>
+              </ul>
+            </div>
+        </div>
+      </header>
+
+      <aside className="sidebar">
+        <h3>Shopping Categories</h3>
+        <button className="sidebar-close-button" onClick={closeMenu}>x</button>
+        <ul>
+          <li>
+            <Link to="/category/Shoes">Shoes</Link>
+          </li>
+          <li>
+            <Link to="/category/Beauty">Beauty</Link>
+          </li>
+          <li>
+            <Link to="/category/Jewelry">Jewelry</Link>
+          </li>
+        </ul>
+      </aside>
+>>>>>>> 81906e0156edbcced3524120486101f849d47417
 
     <main className="main">
         <div className="content">
