@@ -8,11 +8,6 @@
       "type": "image/x-icon"
     },
     {
-      "src": "./images/beauty1.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
       "src": "./images/shoe1.png",
       "type": "image/png",
       "sizes": "512x512"
