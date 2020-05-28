@@ -21,6 +21,7 @@ import Profile from './components/users/Profile';
 import Shipping from "./components/carts/Shipping";
 import Checkout from './components/checkouts/Checkout';
 import PaypalConnection from './components/checkouts/PaypalConnect';
+import { Badge } from "reactstrap";
 
 function App() {
 
@@ -32,6 +33,11 @@ function App() {
   }
   const closeMenu = () => {
     document.querySelector(".sidebar").classList.remove("open")
+  }
+
+  let cartCount = 0;
+  if (localStorage.getItem("cart") !== null) {
+    cartCount = JSON.parse(localStorage.getItem("cart")).length;
   }
 
   return (
@@ -47,7 +53,7 @@ function App() {
         </div>
         <div className="header-links">
 
-            <Link to="/cart">Cart</Link>
+        <Link to="/cart">Cart<Badge color="danger">{cartCount}</Badge></Link>
             <Link to="/signin">Sign In</Link>
        
             <div className="dropdown">
