@@ -85,44 +85,66 @@ body{
   align-items: center;
 }
 
-/* Home Screen */
+/* Home*/
 .products {
+  /* display: table-column; */
+  vertical-align: middle;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
+
 .products li {
-  list-style-type: none;
-  padding: 0;
-  flex: 0 1 34rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 1rem;
+  flex: 0 20 40rem;
   margin: 1rem;
   height: 50rem;
   border-bottom: .1rem #c0c0c0 solid;
 }
 .product{
-  display: flex;
+  display: table-column;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
 }
 .product-name{
+  margin-left: 80px;
+  display: flex;
+  flex: 1 1 30rem;
   font-size: 2rem;
   font-weight: bold;
 }
 .product-brand{
+  margin-left: 80px;
+  display: flex;
+  flex: 1 1 30rem;
+  display:table-column;
   font-size: 1.2rem;
   color:#808080;
 }
 .product-price{
+  margin-left: 80px;
+  display: flex;
+  flex: 1 1 30rem;
+  
   font-size: 2rem;
   font-weight: bold;
 }
 .product-image{
+  display: flex;
   max-width: 30rem;
+  margin-right: 60px;
   max-height: 30rem;
 }
 .product-rating{
+  display: flex;
+  margin-left: 80px;
+  flex: 1 1 30rem;
   margin-bottom: 1rem;
 }
 /* Sidebar */
@@ -229,4 +251,24 @@ a:hover{
 }
 .button.primary{
   background-color: #f0c040;
+}
+
+/* admin */
+.dropdown{
+  display: inline-block;
+  position: relative;
+}
+.dropdown-content{
+  position: absolute;
+  display: none;
+  right:0;
+  padding: 1rem;
+  list-style-type: none;
+  z-index: 1;
+  background-color: #203040;
+  margin:0;
+  margin-top:0.4rem;
+}
+.dropdown:hover .dropdown-content{
+  display: block;
 }

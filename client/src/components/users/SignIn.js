@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { signin } from './userActions';
-import "./user.css";
+import "../../styles/user.css";
 
 function Signin(props) {
 
@@ -11,10 +11,10 @@ function Signin(props) {
   const userSignin = useSelector(state => state.userSignin);
   const { loading, userInfo, error } = userSignin;
   const dispatch = useDispatch();
-
+  const redirect = props.location.search ? props.location.search.split("=")[1] : '/';
   useEffect(() => {
     if (userInfo) {
-      props.history.push("/");
+      props.history.push(redirect);
     }
     return () => {
       //
@@ -26,6 +26,7 @@ function Signin(props) {
     dispatch(signin(email, password));
 
   }
+
   return <div className="form">
     <form onSubmit={submitHandler} >
       <ul className="form-container">

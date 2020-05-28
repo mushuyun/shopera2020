@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { register } from './userActions';
-import "./user.css";
+import "../../styles/user.css";
 
 function Register(props) {
 
@@ -14,9 +14,10 @@ function Register(props) {
   const { loading, userInfo, error } = userRegister;
   const dispatch = useDispatch();
 
+  const redirect = props.location.search ? props.location.search.split("=")[1] : '/';
   useEffect(() => {
     if (userInfo) {
-      props.history.push("/");
+      props.history.push(redirect);
     }
     return () => {
       //
@@ -26,8 +27,8 @@ function Register(props) {
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(register(name, email, password));
-
   }
+  
   return <div className="form">
     <form onSubmit={submitHandler} >
       <ul className="form-container">

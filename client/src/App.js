@@ -42,9 +42,8 @@ function App() {
 
   return (
 <BrowserRouter>
-    <div className="grid-container">
-      
-      <header className="header">
+  <div className="grid-container">
+    <header className="header">
         <div className="brand">
           <button onClick={openMenu}>
             &#9776;
@@ -84,28 +83,28 @@ function App() {
         </ul>
       </aside>
 
-      <main className="main">
-          <div className="content">
-            <Route path="/product/:id" component={Product} />
-            <Route path="/productcrud" component={ProductCrud} />
-            <Route path="/category/Shoes" component={Shoes} />
-            <Route path="/category/Beauty" component={Beauty} /> 
-            <Route path="/category/Jewelry" component={Jewelry} /> 
-            <Route path="/cart" component={Cart} />
-            {/* <Route path="/cart/:id?" component={Cart} /> */}
-            <Route path="/shipping" component={Shipping} />
-            {/* <Route path="/orders" component={Orders} /> */}
-            <Route path="/order/:id" component={Order} />
-            <Route path="/payment" component={Payment} />
-            <Route path="/placeorder" component={PlaceOrder} />
-            <Route path="/profile" component={Profile} />
-            <Route path="/register" component={Register} />
-            <Route path="/signin" component={SignIn} />
-            <Route path="/category/:id" component={Home} />
-            <Route path="/" exact={true} component={Home} />
+    <main className="main">
+        <div className="content">
+          <Route path="/product/:id" component={Product} />
+          <Route path="/productcrud" component={ProductCrud} />
+          <Route path="/category/Shoes" component={Shoes} />
+          <Route path="/category/Beauty" component={Beauty} /> 
+          <Route path="/category/Jewelry" component={Jewelry} /> 
+          <Route path="/cart" component={Cart} />
+          {/* <Route path="/cart/:id?" component={Cart} /> */}
+          <Route path="/shipping" component={Shipping} />
+          {/* <Route path="/orders" component={Orders} /> */}
+          <Route path="/order" component={Order} />
+          <Route path="/payment" component={Payment} />
+          <Route path="/placeorder" component={PlaceOrder} />
+          <Route path="/profile" component={Profile} />
+          <Route path="/register" component={Register} />
+          <Route path="/signin" component={SignIn} />
+          <Route path="/category/:id" component={Home} />
+          <Route path="/" exact={true} component={Home} />
 
-          </div>
-        </main>
+        </div>
+      </main>
         
     <footer className="footer">
       CodingBootCamp UNC Project Team 3 All Rights Reserved!

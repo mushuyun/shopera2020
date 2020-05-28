@@ -28,8 +28,8 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "../client/public")));
 app.use("/api/users", userRoute);
-//app.use("/api/products", productRoute);
-//app.use("/api/orders", orderRoute);
+app.use("/api/products", productRoute);
+app.use("/api/orders", orderRoute);
 
 // If its production environment!
 if (process.env.NODE_ENV === "production") {
@@ -56,5 +56,5 @@ app.use(function(err, req, res, next) {
 // Starting Server
 const PORT = config.PORT;
 app.listen(PORT, () => {
-  console.log(`🌎 ==> Server now listening on PORT ${PORT}!`);
+  console.log(`🌎 ==> Server listening on PORT ${PORT}!`);
 });
