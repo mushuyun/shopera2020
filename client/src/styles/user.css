@@ -52,3 +52,16 @@ input{
   border: .1rem #c0c0c0 solid;
   border-radius: .5rem;
 }
+
+.profile{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.profile-info{
+  flex: 1 1 30rem;
+}
+.profile-orders{
+  flex: 3 1 60rem;
+}
+

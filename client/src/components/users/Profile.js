@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { logout, update } from './userActions';
 import { useDispatch, useSelector } from 'react-redux';
+import "../../styles/user.css";
 
 function Profile(props) {
   const [name, setName] = useState('');
