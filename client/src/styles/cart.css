@@ -46,4 +46,19 @@ h2 {
 
 #shippingForm {
   margin-top: 50px;
+  padding-top: 25px; 
+}
+
+input.form-control {
+  font-size: 1.5rem;
+  border-color: #f0c040;
+}
+
+select#stateAbbrev.form-control {
+  font-size: 1.5rem;
+  border-color: #f0c040; 
+}
+
+.badge {
+  margin-left: 3px;
 }
