@@ -57,5 +57,5 @@ console.log(config.PORT);
 
 // Starting Server
 app.listen(config.PORT, () => {
-  console.log(`🌎 ==> Server listening on PORT ${config.PORT}!`);
+  console.log(`Server listening on PORT ${config.PORT}!`);
 });
