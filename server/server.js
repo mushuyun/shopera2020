@@ -54,7 +54,7 @@ app.use(function(err, req, res, next) {
 });
 
 // Starting Server
-const PORT = config.PORT;
-app.listen(PORT, () => {
-  console.log(`🌎 ==> Server now listening on PORT ${PORT}!`);
+// const PORT = config.PORT;
+app.listen(config.PORT, () => {
+  console.log(`🌎 ==> Server now listening on PORT ${config.PORT}!`);
 });
