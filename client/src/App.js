@@ -95,7 +95,7 @@ function App() {
             {/* <Route path="/cart/:id?" component={Cart} /> */}
             <Route path="/shipping" component={Shipping} />
             {/* <Route path="/orders" component={Orders} /> */}
-            <Route path="/order/:id" component={Order} />
+            <Route path="/order/:id" component={Order} /> */}
             <Route path="/payment" component={Payment} />
             <Route path="/placeorder" component={PlaceOrder} />
             <Route path="/profile" component={Profile} />

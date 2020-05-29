@@ -6,7 +6,7 @@ function Home(props) {
   return <ul className="products">
     {
       data.products.map(product =>
-        <li>
+        <li key={product._id}>
           <div className="products">
             <Link to={'/product/' + product._id}>
               <img className="product-image" src={product.image} alt="product" />
