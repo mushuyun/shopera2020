@@ -4,7 +4,8 @@ const { getToken, isAuth } = require("../auth.js");
 
 const router = express.Router();
 
-router.put("/:id", isAuth, async (req, res) => {
+
+router.put('/:id', isAuth, async (req, res) => {
   const userId = req.params.id;
   const user = await User.findById(userId);
   if (user) {
@@ -20,12 +21,12 @@ router.put("/:id", isAuth, async (req, res) => {
       token: getToken(updatedUser)
     });
   } else {
-    res.status(404).send({ msg: "User Not Found" });
+    res.status(404).send({ msg: 'User Not Found' });
   }
 
 });
 
-router.post("/signin", async (req, res) => {
+router.post('/signin', async (req, res) => {
 
   const signinUser = await User.findOne({
     email: req.body.email,
@@ -41,12 +42,12 @@ router.post("/signin", async (req, res) => {
     });
 
   } else {
-    res.status(401).send({ msg: "Invalid Email or Password." });
+    res.status(401).send({ msg: 'Invalid Email or Password.' });
   }
 
 });
 
-router.post("/register", async (req, res) => {
+router.post('/register', async (req, res) => {
   const user = new User({
     name: req.body.name,
     email: req.body.email,
@@ -62,7 +63,7 @@ router.post("/register", async (req, res) => {
       token: getToken(newUser)
     })
   } else {
-    res.status(401).send({ msg: "Invalid User Data." });
+    res.status(401).send({ msg: 'Invalid User Data.' });
   }
 
 })
@@ -70,9 +71,9 @@ router.post("/register", async (req, res) => {
 router.get("/createadmin", async (req, res) => {
   try {
     const user = new User({
-      name: "Sue",
-      email: "rtpice@gamil.com",
-      password: "pwsd",
+      name: 'Sue',
+      email: 'rtpice.mu@gmail.com',
+      password: 'pwsd1234',
       isAdmin: true
     });
     const newUser = await user.save();
@@ -81,5 +82,6 @@ router.get("/createadmin", async (req, res) => {
     res.send({ msg: error.message });
   }
 });
+
 
 module.exports = router;
