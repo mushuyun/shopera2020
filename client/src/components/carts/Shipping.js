@@ -5,13 +5,14 @@ import { Form, Row, Col, FormGroup, Label,
   FormFeedback,
   FormText,
   Button,
+  Container
 } from "reactstrap";
 
 
 
 const ShippingForm = (props) => {
   return (
-    <div className="container">
+    <Container>
       <CartCollapse />
     <Form id="shippingForm">
       <Row form>
@@ -133,7 +134,7 @@ const ShippingForm = (props) => {
       </Row>
       <Button size="lg" id="atcSubmit">Submit</Button>
     </Form>
-    </div>
+    </Container>
   );
 };
 

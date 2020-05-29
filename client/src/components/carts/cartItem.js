@@ -15,6 +15,7 @@ class CartItem extends React.Component {
     this.qty = this.props.qty;
   }
   
+  
 
   removeCartItem(itemInCart) {
 
@@ -42,7 +43,7 @@ class CartItem extends React.Component {
     return (
       <Container>
         <div className="cart-item">
-          <Card>
+          <Card body outline color="warning">
             <Row>
               <Col md="2">
                 <div className="cart-item-image" id="cartImg">
