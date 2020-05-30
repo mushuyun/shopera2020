@@ -26,12 +26,12 @@ function Product(props) {
       });
     } else {
       let cart = [];
-      if (localStorage.getItem("cart") != null) {
+      if (localStorage.getItem("cart") !== null) {
         cart = JSON.parse(localStorage.getItem("cart"));
       } 
       let alreadyExists = false;
       for (var i = 0; i < cart.length; i++) {
-        if (cart[i]["product"]["_id"] == productId) {
+        if (cart[i]["product"]["_id"] === productId) {
           alreadyExists = true;
           cart[i]["qty"] += 1;
           break;

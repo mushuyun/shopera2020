@@ -1,16 +1,16 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import './styles/home.css';
-import "./styles/shipping.css";
-import "./styles/cart.css";
+// import "./styles/shipping.css";
+// import "./styles/cart.css";
 import data from "./data/data";
 import {BrowserRouter, Route, Link} from "react-router-dom";
 import Home from "./components/Home";
 import Product from "./components/products/Product";
 import ProductCrud from "./components/products/ProductCrud";
-import Order from "./components/carts/Order";
+// import Order from "./components/carts/Order";
 import Cart from "./components/carts/Cart";
-import Payment from "./components/carts/Payment";
+// import Payment from "./components/carts/Payment";
 import PlaceOrder from "./components/carts/PlaceOrder";
 import Beauty from "./components/products/Beauty";
 import Jewelry from "./components/products/Jewelry";
@@ -94,9 +94,9 @@ function App() {
           {/* <Route path="/cart/:id?" component={Cart} /> */}
           <Route path="/shipping" component={Shipping} />
           {/* <Route path="/orders" component={Orders} /> */}
-          <Route path="/order" component={Order} />
-          <Route path="/payment" component={Payment} />
-          <Route path="/placeorder" component={PlaceOrder} />
+          {/* <Route path="/order" component={Order} /> */}
+          {/* <Route path="/payment" component={Payment} /> */}
+          {/* <Route path="/placeorder" component={PlaceOrder} /> */}
           <Route path="/profile" component={Profile} />
           <Route path="/register" component={Register} />
           <Route path="/signin" component={SignIn} />

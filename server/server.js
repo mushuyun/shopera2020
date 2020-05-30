@@ -53,7 +53,9 @@ app.use(function(err, req, res, next) {
 	res.status(500);
 });
 
+console.log(config.PORT);
+
 // Starting Server
-app.listen(PORT, () => {
-  console.log(`🌎 ==> Server listening on PORT ${config.PORT}!`);
+app.listen(config.PORT, () => {
+  console.log(`Server listening on PORT ${config.PORT}!`);
 });

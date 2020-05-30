@@ -4,6 +4,7 @@ const { getToken, isAuth } = require("../auth.js");
 
 const router = express.Router();
 
+
 router.put('/:id', isAuth, async (req, res) => {
   const userId = req.params.id;
   const user = await User.findById(userId);
@@ -70,9 +71,9 @@ router.post('/register', async (req, res) => {
 router.get("/createadmin", async (req, res) => {
   try {
     const user = new User({
-      name: 'Basir',
-      email: 'basir.jafarzadeh@gmail.com',
-      password: '1234',
+      name: 'Sue',
+      email: 'rtpice.mu@gmail.com',
+      password: 'pwsd1234',
       isAdmin: true
     });
     const newUser = await user.save();

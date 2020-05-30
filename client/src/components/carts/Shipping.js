@@ -1,30 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import CartCollapse from "./cartCollapse";
 import { Form, Row, Col, FormGroup, Label, 
   Input,
   FormFeedback,
   FormText,
   Button,
+  Container
 } from "reactstrap";
 
-// export default function ShippingForm() {
-//   const [validated, setValidated] = useState(false);
 
-//   const handleSubmit = (event) => {
-//     const form = event.currentTarget;
-//     if (form.checkValidity() === false) {
-//       event.preventDefault();
-//       event.stopPropagation();
-//     }
-
-//     setValidated(true);
-//   };
 
 const ShippingForm = (props) => {
   return (
-    <div className="container">
+    <Container>
       <CartCollapse />
-    <Form>
+    <Form id="shippingForm">
       <Row form>
         <Col md={6}>
           <FormGroup>
@@ -56,7 +46,7 @@ const ShippingForm = (props) => {
         <Col md={4}>
           <FormGroup>
             <Label for="Apt Number"></Label>
-            <Input type="number" name="apt#" placeholder="Apt Number"/>
+            <Input placeholder="Apt Number"/>
             <FormFeedback></FormFeedback>
             <FormText>If no apt, leave blank.</FormText>
           </FormGroup>
@@ -144,7 +134,7 @@ const ShippingForm = (props) => {
       </Row>
       <Button size="lg" id="atcSubmit">Submit</Button>
     </Form>
-    </div>
+    </Container>
   );
 };
 

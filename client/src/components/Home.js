@@ -5,17 +5,17 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 
 function Home(props) {
-  return <ul className="products">
-    {
+  return <ul className="products"> {
       data.products.map(product =>
-        <li>
+        <li key={product._id}>
           <div className="products">
             <Link to={'/product/' + product._id}>
-              <img className="product-image" src={product.image} alt="product" />
+              <img className="product-image" src={product.image} alt="product"/>
 
             </Link>
             <div className="product-name">
               <Link to={'/product/' + product._id}>{product.name}</Link>
+              <div className="product-desc">{product.desc}</div>
             </div>
             <div className="product-brand" >{product.brand}</div>  
             <div className="product-price">${product.price}</div>
