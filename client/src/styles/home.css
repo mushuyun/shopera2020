@@ -119,19 +119,26 @@ body{
   font-size: 2rem;
   font-weight: bold;
 }
+.product-desc{
+  margin-left: 80px;
+  display: flex;
+  flex: 1 1 30rem;
+  font-size: 1.5rem;
+  color: #ff8800;
+  font-weight: bold;
+}
 .product-brand{
   margin-left: 80px;
   display: flex;
   flex: 1 1 30rem;
   display:table-column;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color:#808080;
 }
 .product-price{
   margin-left: 80px;
   display: flex;
-  flex: 1 1 30rem;
-  
+  flex: 1 1 30rem; 
   font-size: 2rem;
   font-weight: bold;
 }
@@ -145,7 +152,7 @@ body{
   display: flex;
   margin-left: 80px;
   flex: 1 1 30rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 /* Sidebar */
 
@@ -203,10 +210,11 @@ a:hover{
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
+  font-size: 1.6rem;
   padding: 1rem;
 }
 .details-image {
-  flex: 2 1 60rem;
+  flex: 2 1 50rem;
 }
 .details-image img{
   max-width: 40rem;
@@ -216,7 +224,7 @@ a:hover{
   flex: 1 1 30rem;
 }
 .details-action {
-  flex: 1 1 30rem;
+  flex: 1 1 26rem;
 }
 
 .details-info ul, .details-action ul{
@@ -227,6 +235,7 @@ a:hover{
   margin-bottom: 1rem;
 }
 .back-to-result {
+  color: #ff8000;
   padding: 1rem;
 }
 .details-action{
