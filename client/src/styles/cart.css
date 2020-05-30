@@ -19,12 +19,46 @@ h2 {
 #cartTtlBtn {
   margin-top: 5px;
   margin-right: 15px;
+  margin-bottom: 20px;
   float: right;
   background-color: #f0c040;
   color: black;
+}
 
+#checkOutBtn {
+  margin-top: 5px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+  margin-left: 15px;
+  float: left;
+  background-color: #f0c040;
+  color: black;
 }
 
 #cartCntr {
   margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+#deleteBtn {
+  float: right;
+}
+
+#shippingForm {
+  margin-top: 50px;
+  padding-top: 25px; 
+}
+
+input.form-control {
+  font-size: 1.5rem;
+  border-color: #f0c040;
+}
+
+select#stateAbbrev.form-control {
+  font-size: 1.5rem;
+  border-color: #f0c040; 
+}
+
+.badge {
+  margin-left: 3px;
 }

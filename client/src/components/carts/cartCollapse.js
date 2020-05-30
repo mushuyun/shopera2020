@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Cart from "./Cart";
-import { Collapse, Button, CardBody, Card 
-  } from "reactstrap";
+import { Collapse, Button } from "reactstrap";
 
   const CartCollapse = (props) => {
     const [isOpen, setIsOpen] = useState(false);
