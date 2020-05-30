@@ -54,7 +54,7 @@ function App() {
 
         <Link to="/cart">Cart<Badge color="danger">{cartCount}</Badge></Link>
             <Link to="/signin">Sign In</Link>
-       
+            <Link to="/profile">Profile/Logout</Link>
             <div className="dropdown">
               <a href="#"  >Admin</a>
               <ul className="dropdown-content">
