@@ -53,7 +53,7 @@ function App() {
         <div className="header-links">
 
         <Link to="/cart">Cart<Badge color="danger">{cartCount}</Badge></Link>
-            <Link to="/signin">Sign In</Link>
+            <Link to="/signin">Sign In/Register</Link>
             <Link to="/profile">Profile/Logout</Link>
             <div className="dropdown">
               <a href="#"  >Admin</a>

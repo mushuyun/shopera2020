@@ -9,12 +9,14 @@ import { USER_SIGNIN_REQUEST, USER_SIGNIN_SUCCESS,
     dispatch({ type: USER_UPDATE_REQUEST, payload: { userId, name, email, password } });
     try {
       const { data } = await Axios.put("/api/users/" + userId,
-        { name, email, password }, {
-        headers: {
-          // Authorization: "Sue " + userInfo.token
-          Authorization: "userInfo.name " + userInfo.token
-        }
-      });
+        { name, email, password }
+        //  {
+        // headers: {
+        //   // Authorization: "Sue " + userInfo.token
+        //   Authorization: "userInfo.name " + userInfo.token
+        // }
+      // }
+      );
       dispatch({ type: USER_UPDATE_SUCCESS, payload: data });
       Cookie.set('userInfo', JSON.stringify(data));
     } catch (error) {

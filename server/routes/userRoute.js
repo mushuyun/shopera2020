@@ -8,11 +8,13 @@ const router = express.Router();
 router.put('/:id', isAuth, async (req, res) => {
   const userId = req.params.id;
   const user = await User.findById(userId);
+  console.log("user", User);
   if (user) {
     user.name = req.body.name || user.name;
     user.email = req.body.email || user.email;
     user.password = req.body.password || user.password;
     const updatedUser = await user.save();
+    console.log(updatedUser);
     res.send({
       _id: updatedUser.id,
       name: updatedUser.name,
