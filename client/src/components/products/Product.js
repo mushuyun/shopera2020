@@ -56,6 +56,7 @@ function Product(props) {
       <div className="details-image">
         <img src={product.image} alt="product" ></img>
       </div>
+      
       <div className="details-info">
         <ul>
           <li>
