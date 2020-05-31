@@ -18,27 +18,38 @@ function Profile(props) {
   }
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(update({ userId: userInfo._id, email, name, password }))
+     dispatch(update({ userId: userInfo._id, email, name, password }))
   }
   const userUpdate = useSelector(state => state.userUpdate);
   const { loading, success, error } = userUpdate;
 
-  const myOrderList = useSelector(state => state.myOrderList);
+  //const myOrderList = useSelector(state => state.myOrderList);
   //const { loading: loadingOrders, orders, error: errorOrders } = myOrderList;
+  // const redirect = props.location.search ? props.location.search.split("=")[1] : '/';
+  // useEffect(() => {
+  //   if (userInfo) {
+  //     console.log(userInfo.name)
+  //     setEmail(userInfo.email);
+  //     setName(userInfo.name);
+  //     setPassword(userInfo.password);
+  //   }
+    
+  //   //dispatch(listMyOrders());
+
+  //   return () => {
+
+  //   };
+  // }, [userInfo])
+
   useEffect(() => {
     if (userInfo) {
-      console.log(userInfo.name)
-      setEmail(userInfo.email);
-      setName(userInfo.name);
-      setPassword(userInfo.password);
+      //props.history.push(redirect);
     }
-    
-    //dispatch(listMyOrders());
-
     return () => {
-
+      //
     };
-  }, [userInfo])
+  }, [userInfo]);
+
 
   return <div className="profile">
     <div className="profile-info">

@@ -1,8 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import './styles/home.css';
-// import "./styles/shipping.css";
-// import "./styles/cart.css";
 import data from "./data/data";
 import {BrowserRouter, Route, Link} from "react-router-dom";
 import Home from "./components/Home";
@@ -53,8 +51,8 @@ function App() {
         <div className="header-links">
 
         <Link to="/cart">Cart<Badge color="danger">{cartCount}</Badge></Link>
-            <Link to="/signin">Sign In</Link>
-       
+            <Link to="/signin">Sign In/Register</Link>
+            <Link to="/profile">Profile/Logout</Link>
             <div className="dropdown">
               <a href="#"  >Admin</a>
               <ul className="dropdown-content">
