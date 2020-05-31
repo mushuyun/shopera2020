@@ -1,7 +1,7 @@
 import React from "react";
-import {Redirect} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import CartItem from "./cartItem";
-import { Button } from "reactstrap";
+import { Button, Container } from "reactstrap";
 import "../../styles/shipping.css";
 import "../../styles/cart.css";
 
@@ -12,12 +12,9 @@ class Cart extends React.Component {
             items : JSON.parse(localStorage.getItem("cart")),
             total : 0
         }
-        this.onCheckout = this.onCheckout.bind(this)
     };
     
-    onCheckout() {
-            return  <Redirect  to="./SignIn" />
-     }
+    
     componentDidMount() {
         let total = 0;
         for (var i = 0; i < this.state.items.length; i++) {
@@ -29,7 +26,7 @@ class Cart extends React.Component {
 
     render () {
         return (
-            <div className="container" id="cartCtnr">
+            <Container id="cartCtnr">
             <h2>Shopping Cart</h2> 
 
             <div className="cart">
@@ -42,7 +39,7 @@ class Cart extends React.Component {
                                     ))}
                                 </div>
                             )}
-                            <Button onClick={ this.onCheckout } size="lg" id="checkOutBtn" className="cartCO" >CheckOut</Button>
+                            <Link to="/SignIn" size="lg" id="placeOrderBtn" className="button text-center" >Place Order</Link>
 
                             {this.state.items.length === 0 && (
                                 <div className="alert alert-info">Cart is empty</div>
@@ -51,7 +48,7 @@ class Cart extends React.Component {
                         </div>
                     </div>
                 </div>
-            </div>
+            </Container>
         );
     }
 }
