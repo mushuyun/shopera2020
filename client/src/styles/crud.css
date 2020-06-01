@@ -20,20 +20,27 @@
 
 h2{
     font-family: fantasy;
-    color: darkorange;
+    color: rgb(55, 0, 255);
 }
 
-  .content-margined{
-    margin: 1rem;
-  }
-  
-  .table{
-    width: 100%;
-  }
-  th{
-    text-align: left;
-  }
-  tbody>tr:nth-child(odd){
-    background-color: #f0f0f0;
-  }
-  
+h2:hover{
+    color: rgb(204, 81, 50);
+}
+
+h2{ 
+    cursor: pointer;
+}
+
+.content-margined{
+margin: 1rem;
+}
+
+.table{
+width: 100%;
+}
+th{
+text-align: left;
+}
+tbody>tr:nth-child(odd){
+background-color: #f0f0f0;
+}
