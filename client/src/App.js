@@ -18,7 +18,8 @@ import Checkout from './components/checkouts/Checkout';
 import PaypalConnection from './components/checkouts/PaypalConnect';
 import { Badge } from "reactstrap";
 import ProductsScreen from './components/products/productsScreen';
-import Product from "./components/products/Product";
+import HomeScreen from './components/products/homeScreen';
+import ProductScreen from './components/products/productScreen';
 
 function App() {
 
@@ -82,7 +83,7 @@ function App() {
 
     <main className="main">
         <div className="content">
-          <Route path="/product/:id" component={Product} />
+          <Route path="/product/:id" component={ProductScreen} />
           <Route path="/products" component={ProductsScreen} />
           <Route path="/cart" component={Cart} />
           {/* <Route path="/cart/:id?" component={Cart} /> */}
@@ -94,7 +95,7 @@ function App() {
           <Route path="/profile" component={Profile} />
           <Route path="/register" component={Register} />
           <Route path="/signin" component={SignIn} />
-          <Route path="/category/:id" component={Home} />
+          <Route path="/category/:id" component={HomeScreen} />
           <Route path="/" exact={true} component={Home} />
 
         </div>
