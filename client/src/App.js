@@ -6,15 +6,10 @@ import './styles/home.css';
 import data from "./data/data";
 import {BrowserRouter, Route, Link} from "react-router-dom";
 import Home from "./components/Home";
-import Product from "./components/products/Product";
-import ProductCrud from "./components/products/ProductCrud";
 // import Order from "./components/carts/Order";
 import Cart from "./components/carts/Cart";
 // import Payment from "./components/carts/Payment";
 import PlaceOrder from "./components/carts/PlaceOrder";
-import Beauty from "./components/products/Beauty";
-import Jewelry from "./components/products/Jewelry";
-import Shoes from "./components/products/Shoes";
 import SignIn from './components/users/SignIn';
 import Register from './components/users/Register';
 import Profile from './components/users/Profile';
@@ -22,6 +17,8 @@ import Shipping from "./components/carts/Shipping";
 import Checkout from './components/checkouts/Checkout';
 import PaypalConnection from './components/checkouts/PaypalConnect';
 import { Badge } from "reactstrap";
+import ProductsScreen from './components/products/productsScreen';
+import Product from "./components/products/Product";
 
 function App() {
 
@@ -70,7 +67,7 @@ function App() {
       <aside className="sidebar">
         <h3>Shopping Categories</h3>
         <button className="sidebar-close-button" onClick={closeMenu}>x</button>
-        <ul>
+        <ul className = "categories">
           <li>
             <Link to="/category/Shoes">Shoes</Link>
           </li>
@@ -86,10 +83,7 @@ function App() {
     <main className="main">
         <div className="content">
           <Route path="/product/:id" component={Product} />
-          <Route path="/productcrud" component={ProductCrud} />
-          <Route path="/category/Shoes" component={Shoes} />
-          <Route path="/category/Beauty" component={Beauty} /> 
-          <Route path="/category/Jewelry" component={Jewelry} /> 
+          <Route path="/products" component={ProductsScreen} />
           <Route path="/cart" component={Cart} />
           {/* <Route path="/cart/:id?" component={Cart} /> */}
           <Route path="/shipping" component={Shipping} />
