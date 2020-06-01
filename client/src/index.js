@@ -5,8 +5,6 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import store from "./components/store"
-// import store from './components/users/store';
-// import crudStore from "./components/productManage/crudStore";
 import 'bootstrap/dist/css/bootstrap.css';
 
 ReactDOM.render(

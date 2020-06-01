@@ -99,13 +99,6 @@ function ProductCrud(props) {
               <input type="text" name="brand" value={brand} id="brand" onChange={(e) => setBrand(e.target.value)}>
               </input>
             </li>
-            {/* <li>
-              <label htmlFor="countInStock">
-                CountInStock
-          </label>
-              <input type="text" name="countInStock" value={countInStock} id="countInStock" onChange={(e) => setCountInStock(e.target.value)}>
-              </input>
-            </li> */}
             <li>
               <label htmlFor="name">
                 Category
@@ -131,7 +124,7 @@ function ProductCrud(props) {
     }
 
 
-    {/* <div className="product-list">
+    <div className="product-list">
 
       <table className="table">
         <thead>
@@ -160,7 +153,7 @@ function ProductCrud(props) {
         </tbody>
       </table>
 
-    </div> */}
+    </div>
   </div>
 }
 export default ProductCrud;
