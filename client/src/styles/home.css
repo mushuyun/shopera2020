@@ -22,6 +22,7 @@ body{
   height: 100%;
 }
 .header{
+  height:60px;
   grid-area: header;
   background-color: #082aee;
   color: #ffffff;
@@ -30,13 +31,12 @@ body{
   align-items: center;
   padding: 0.5rem;
 }
-.brand a{
+/* .brand a{
   color: #ffffff;
-  font-size: 3rem;
   font-weight: bold;
   text-decoration: none;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+} */
 .header-links a{
   color:#ecb911;
   text-decoration: none;
@@ -67,10 +67,11 @@ body{
 }
 
 .brand a{
-  color: #ffffff;
-  font-size: 3rem;
+  color: #f8eeee;
+  font-size: 3.2rem;
   font-weight: bold;
   text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .main{
@@ -80,6 +81,7 @@ body{
   grid-area: footer;
   background-color: #203040;
   color: #ffffff;
+  font-size: 1.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
