@@ -57,8 +57,8 @@ function ProductCrud(props) {
   return <div className="content content-margined">
 
     <div className="product-header">
-      <h3>Products</h3>
-      <button className="button primary" onClick={() => openModal({})}>Create Product</button>
+      <h2>Products</h2>
+      <button className="button-primary" onClick={() => openModal({})}>Create Product</button>
     </div>
     {modalVisible &&
       <div className="form">

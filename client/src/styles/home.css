@@ -22,7 +22,7 @@ body{
   height: 100%;
 }
 .header{
-  height:60px;
+  height:55px;
   grid-area: header;
   background-color: #082aee;
   color: #ffffff;
@@ -31,14 +31,8 @@ body{
   align-items: center;
   padding: 0.5rem;
 }
-/* .brand a{
-  color: #ffffff;
-  font-weight: bold;
-  text-decoration: none;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-} */
 .header-links a{
-  color:#ecb911;
+  color:#eca911;
   text-decoration: none;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 1rem;

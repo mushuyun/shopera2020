@@ -2,9 +2,27 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-  
+    font-family: fantasy;
+    padding:15px;
   }
   
+.button-primary{
+    font-size: 18px;
+    font-family: fantasy;
+    color: tomato;
+    padding-left:10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    border-radius: 5px;
+    border-color: rgb(79, 139, 0);
+}
+
+h2{
+    font-family: fantasy;
+    color: darkorange;
+}
+
   .content-margined{
     margin: 1rem;
   }
