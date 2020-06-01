@@ -2,9 +2,25 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import data from '../../data/data';
 
+import { useSelector, useDispatch } from 'react-redux';
+import { detailsProduct } from '../productManage/crudActions';
+
+// function Product(props) {
+//   const [qty, setQty] = useState(1);
+//   const productDetails = useSelector(state => state.productDetails);
+//   const { product, loading, error } = productDetails;
+//   const dispatch = useDispatch();
+
+//   useEffect(() => {
+//     dispatch(detailsProduct(props.match.params.id));
+//     return () => {
+//       //
+//     };
+//   }, []);
 
 
 function Product(props) {
+  
 
   async function addToCart(productId) {
     

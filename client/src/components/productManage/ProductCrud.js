@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import Home from "../Home.js"
 import { saveProduct, listProducts, deleteProdcut } from "./crudActions";
 
 function ProductCrud(props) {
@@ -10,7 +11,7 @@ function ProductCrud(props) {
   const [image, setImage] = useState('');
   const [brand, setBrand] = useState('');
   const [category, setCategory] = useState('');
-  const [countInStock, setCountInStock] = useState('');
+ 
   const [description, setDescription] = useState('');
   const productList = useSelector(state => state.productList);
   const { loading, products, error } = productList;
@@ -98,13 +99,13 @@ function ProductCrud(props) {
               <input type="text" name="brand" value={brand} id="brand" onChange={(e) => setBrand(e.target.value)}>
               </input>
             </li>
-            <li>
+            {/* <li>
               <label htmlFor="countInStock">
                 CountInStock
           </label>
               <input type="text" name="countInStock" value={countInStock} id="countInStock" onChange={(e) => setCountInStock(e.target.value)}>
               </input>
-            </li>
+            </li> */}
             <li>
               <label htmlFor="name">
                 Category
@@ -130,7 +131,7 @@ function ProductCrud(props) {
     }
 
 
-    <div className="product-list">
+    {/* <div className="product-list">
 
       <table className="table">
         <thead>
@@ -159,7 +160,7 @@ function ProductCrud(props) {
         </tbody>
       </table>
 
-    </div>
+    </div> */}
   </div>
 }
 export default ProductCrud;
