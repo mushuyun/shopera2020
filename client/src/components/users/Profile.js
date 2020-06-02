@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { logout, update } from './userActions';
 import { useDispatch, useSelector } from 'react-redux';
+import deToken from "./deToken";
 import "../../styles/user.css";
 
 function Profile(props) {
@@ -43,14 +44,21 @@ function Profile(props) {
 
   useEffect(() => {
     if (userInfo) {
-      //props.history.push(redirect);
+      if (userInfo) {
+            console.log(userInfo.name)
+            setEmail(userInfo.email);
+            setName(userInfo.name);
+            setPassword(userInfo.password);
+          }
     }
     return () => {
-      //
+      
+       //
+  
     };
   }, [userInfo]);
 
-
+  
   return <div className="profile">
     <div className="profile-info">
       <div className="form">

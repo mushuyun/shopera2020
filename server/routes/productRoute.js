@@ -68,7 +68,6 @@ router.get("/", async (req, res) => {
       image: req.body.image,
       brand: req.body.brand,
       category: req.body.category,
-      countInStock: req.body.countInStock,
       description: req.body.description,
       rating: req.body.rating,
       numReviews: req.body.numReviews,
