@@ -126,7 +126,6 @@ function ProductCrud(props) {
       </div>
     }
 
-
     <div className="product-list">
 
       <table className="table">

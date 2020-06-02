@@ -1,9 +1,8 @@
 import {
     PRODUCT_LIST_REQUEST, PRODUCT_LIST_SUCCESS, PRODUCT_LIST_FAIL,
     PRODUCT_DETAILS_REQUEST, PRODUCT_DETAILS_SUCCESS, PRODUCT_DETAILS_FAIL, PRODUCT_SAVE_REQUEST, PRODUCT_SAVE_SUCCESS, PRODUCT_SAVE_FAIL, PRODUCT_DELETE_SUCCESS, PRODUCT_DELETE_FAIL, PRODUCT_DELETE_REQUEST
-  } from "./crudConstants"
-  import axios from 'axios';
-  import Axios from "axios";
+  } from "./crudConstants";
+import axios from "axios";
   
   const listProducts = (category = '', searchKeyword = '', sortOrder = '') => async (dispatch) => {
     try {
@@ -24,14 +23,14 @@ import {
       dispatch({ type: PRODUCT_SAVE_REQUEST, payload: product });
       const { userSignin: { userInfo } } = getState();
       if (!product._id) {
-        const { data } = await Axios.post('/api/products', product, {
+        const { data } = await axios.post('/api/products', product, {
           headers: {
             'Authorization': "Sue " + userInfo.token
           }
         });
         dispatch({ type: PRODUCT_SAVE_SUCCESS, payload: data });
       } else {
-        const { data } = await Axios.put('/api/products/' + product._id, product, {
+        const { data } = await axios.put('/api/products/' + product._id, product, {
           headers: {
             'Authorization': "Sue " + userInfo.token
           }
