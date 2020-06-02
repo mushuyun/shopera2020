@@ -57,7 +57,7 @@ function ProductCrud(props) {
   return <div className="content content-margined">
 
     <div className="product-header">
-      <h2 onClick={() => setModalVisible(false)} className="button-secondary">Products
+      <h2 onClick={() => setModalVisible(false)} className="button-secondary">Product-List
       </h2>
 
       <button className="button-primary" onClick={() => openModal({})}>Create Product</button>
@@ -67,7 +67,7 @@ function ProductCrud(props) {
         <form onSubmit={submitHandler} >
           <ul className="form-container">
             <li>
-              <h2>Create Product</h2>
+              <p className="newPro">Add New Product</p>
             </li>
             <li>
               {loadingSave && <div>Loading...</div>}

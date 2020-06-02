@@ -9,7 +9,7 @@
 .button-primary{
     font-size: 18px;
     font-family: fantasy;
-    color: tomato;
+    color: rgb(255, 129, 71);
     padding-left:10px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -19,6 +19,7 @@
 }
 
 h2{
+    margin-top: 10px;
     font-family: fantasy;
     color: rgb(55, 0, 255);
 }
@@ -30,6 +31,13 @@ h2:hover{
 h2{ 
     cursor: pointer;
 }
+.newPro{
+    font-size: 20px;
+    font-family: fantasy;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
 
 .content-margined{
 margin: 1rem;
