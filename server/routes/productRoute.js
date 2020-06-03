@@ -1,5 +1,5 @@
 const express = require("express");
-const Product = require("../models/product");
+const Product = require("../models/Product");
 const { getToken, isAuth } = require("../auth.js");
 
 
