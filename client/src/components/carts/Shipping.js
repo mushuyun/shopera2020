@@ -1,5 +1,6 @@
 import React from "react";
 import CartCollapse from "./cartCollapse";
+import { Link } from "react-router-dom";
 import { Form, Row, Col, FormGroup, Label, 
   Input,
   FormFeedback,
@@ -132,7 +133,9 @@ const ShippingForm = (props) => {
           </FormGroup>
         </Col>
       </Row>
-      <Button size="lg" id="atcSubmit">Submit</Button>
+      <Link to="/Payment">
+        <Button size="lg" id="checkOutBtn">CheckOut</Button>
+        </Link>
     </Form>
     </Container>
   );

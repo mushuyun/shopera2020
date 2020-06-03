@@ -1,6 +1,7 @@
 const express = require("express");
-const Product = require("../models/Product");
-const { getToken, isAuth } = require("../auth.js");
+const Product = require("../models/Product.js");
+const { isAuth, isAdmin } = require("../auth.js");
+
 
 
 const router = express.Router();
@@ -30,7 +31,8 @@ router.get("/", async (req, res) => {
     }
   });
   
-  router.put("/:id", isAuth, async (req, res) => {
+
+  router.put("/:id", isAuth, isAdmin, async (req, res) => {
     const productId = req.params.id;
     const product = await Product.findById(productId);
     if (product) {
@@ -39,7 +41,7 @@ router.get("/", async (req, res) => {
       product.image = req.body.image;
       product.brand = req.body.brand;
       product.category = req.body.category;
-    //   product.countInStock = req.body.countInStock;
+      product.countInStock = req.body.countInStock;
       product.description = req.body.description;
       const updatedProduct = await product.save();
       if (updatedProduct) {
@@ -50,7 +52,8 @@ router.get("/", async (req, res) => {
   
   });
   
-  router.delete("/:id", isAuth, async (req, res) => {
+
+  router.delete("/:id", isAuth, isAdmin, async (req, res) => {
     const deletedProduct = await Product.findById(req.params.id);
     if (deletedProduct) {
       await deletedProduct.remove();
@@ -61,14 +64,15 @@ router.get("/", async (req, res) => {
   });
   
   
-  router.post("/", isAuth, async (req, res) => {
+
+  router.post("/", isAuth, isAdmin, async (req, res) => {
     const product = new Product({
       name: req.body.name,
       price: req.body.price,
       image: req.body.image,
       brand: req.body.brand,
       category: req.body.category,
-    //   countInStock: req.body.countInStock,
+      countInStock: req.body.countInStock,
       description: req.body.description,
       rating: req.body.rating,
       numReviews: req.body.numReviews,
