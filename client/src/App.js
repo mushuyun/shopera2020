@@ -1,15 +1,18 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import './styles/home.css';
-// import "./styles/shipping.css";
-// import "./styles/cart.css";
 import data from "./data/data";
 import {BrowserRouter, Route, Link} from "react-router-dom";
 import Home from "./components/Home";
+import Product from "./components/products/Product";
+import ProductCrud from "./components/productManage/ProductCrud";
 // import Order from "./components/carts/Order";
 import Cart from "./components/carts/Cart";
 // import Payment from "./components/carts/Payment";
 import PlaceOrder from "./components/carts/PlaceOrder";
+import Beauty from "./components/products/Beauty";
+import Jewelry from "./components/products/Jewelry";
+import Shoes from "./components/products/Shoes";
 import SignIn from './components/users/SignIn';
 import Register from './components/users/Register';
 import Profile from './components/users/Profile';
@@ -17,9 +20,6 @@ import Shipping from "./components/carts/Shipping";
 import Checkout from './components/checkouts/Checkout';
 import PaypalConnection from './components/checkouts/PaypalConnect';
 import { Badge } from "reactstrap";
-import ProductsScreen from './components/products/productsScreen';
-import HomeScreen from './components/products/homeScreen';
-import ProductScreen from './components/products/productScreen';
 
 function App() {
 
@@ -51,14 +51,14 @@ function App() {
         <div className="header-links">
 
         <Link to="/cart">Cart<Badge color="danger">{cartCount}</Badge></Link>
-            <Link to="/signin">Sign In</Link>
-       
+            <Link to="/signin">Sign In/Register</Link>
+            <Link to="/profile">Profile/Logout</Link>
             <div className="dropdown">
               <a href="#"  >Admin</a>
               <ul className="dropdown-content">
                 <li>
                   <Link to="/orders">Orders</Link>
-                  <Link to="/products">Products</Link>
+                  <Link to="/productcrud">Products</Link>
                 </li>
               </ul>
             </div>
@@ -68,7 +68,7 @@ function App() {
       <aside className="sidebar">
         <h3>Shopping Categories</h3>
         <button className="sidebar-close-button" onClick={closeMenu}>x</button>
-        <ul className = "categories">
+        <ul>
           <li>
             <Link to="/category/Shoes">Shoes</Link>
           </li>
@@ -83,8 +83,11 @@ function App() {
 
     <main className="main">
         <div className="content">
-          <Route path="/product/:id" component={ProductScreen} />
-          <Route path="/products" component={ProductsScreen} />
+          <Route path="/product/:id" component={Product} />
+          <Route path="/productcrud" component={ProductCrud} />
+          <Route path="/category/Shoes" component={Shoes} />
+          <Route path="/category/Beauty" component={Beauty} /> 
+          <Route path="/category/Jewelry" component={Jewelry} /> 
           <Route path="/cart" component={Cart} />
           {/* <Route path="/cart/:id?" component={Cart} /> */}
           <Route path="/shipping" component={Shipping} />
@@ -95,7 +98,7 @@ function App() {
           <Route path="/profile" component={Profile} />
           <Route path="/register" component={Register} />
           <Route path="/signin" component={SignIn} />
-          <Route path="/category/:id" component={HomeScreen} />
+          <Route path="/category/:id" component={Home} />
           <Route path="/" exact={true} component={Home} />
 
         </div>
