@@ -49,6 +49,7 @@ function infoToProcess() {
     .catch((errResp) => {
       console.log(errResp);
     });
+    
 }
 
 const PlaceOrder = (props) => {
