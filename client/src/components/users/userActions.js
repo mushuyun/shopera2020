@@ -1,20 +1,22 @@
 import Axios from "axios";
 import Cookie from "js-cookie";
+import { useSelector } from 'react-redux';
 import { USER_SIGNIN_REQUEST, USER_SIGNIN_SUCCESS,
   USER_SIGNIN_FAIL, USER_REGISTER_REQUEST,
   USER_REGISTER_SUCCESS, USER_REGISTER_FAIL, USER_LOGOUT, USER_UPDATE_REQUEST, USER_UPDATE_SUCCESS, USER_UPDATE_FAIL } from "./userConstants";
 
   const update = ({ userId, name, email, password }) => async (dispatch, getState) => {
     const { userSignin: { userInfo } } = getState();
-    dispatch({ type: USER_UPDATE_REQUEST, payload: { userId, name, email, password } });
+    dispatch({ type: USER_UPDATE_REQUEST, payload: { userId, name, email, password} });
     try {
-      const { data } = await Axios.put("/api/users/" + userId,
-        { name, email, password }
-        //  {
-        // headers: {
-        //   // Authorization: "Sue " + userInfo.token
-        //   Authorization: "userInfo.name " + userInfo.token
-        // }
+      const { data } = await Axios.put("/api/users/" + userId
+      
+      //   { name, email, password, },
+        
+      //    {
+      //   headers: {
+      //     Authorization: userInfo.name
+      //   },
       // }
       );
       dispatch({ type: USER_UPDATE_SUCCESS, payload: data });

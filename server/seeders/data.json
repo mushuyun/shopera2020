@@ -1,20 +1,18 @@
 [
-  {
-      "_id": "1",    
+  {  
       "name": "Stiletto Sandal",
       "desc": "Ankle Strap, Beading, Blk, 4 inch Heel",
-      "Category": "Shoes",
+      "category": "Shoes",
       "image": "/images/highheel1.png",
       "price": 600,
       "brand": "Shopera",
       "rating": 4.5,
       "numReviews": 15
   },
-  {
-      "_id": "2",
+  {  
       "name": "High Heel Shoe",
       "desc": "Bow-toe, Ylw, 3 inch Heel",
-      "Category": "Shoes",
+      "category": "Shoes",
       "image": "/images/highheel2.png",
       "price": 500,
       "brand": "Shopera",
@@ -22,7 +20,6 @@
       "numReviews": 10
   },
   {
-       "_id": "3",
       "name": "Stiletto Shoe",
       "desc": "Burn-out, Sq Medallion, Red, 4 inch Heel",
       "Category": "Shoes",
@@ -32,11 +29,10 @@
       "rating": 4.0,
       "numReviews": 17
   },
-  {
-      "_id": "4",    
+  {  
       "name": "Dress Boot",
       "desc": "Ankle Strap, Nude, 4 inch Heel",
-      "Category": "Shoes",
+      "category": "Shoes",
       "image": "/images/boot1.png",
       "price": 700,
       "brand": "Shopera",
@@ -44,10 +40,9 @@
       "numReviews": 15
   },
   {
-      "_id": "5",
       "name": "Rain Boot",
       "desc": "Waterproof, Blk, 1 inch Heel",
-      "Category": "Shoes",
+      "category": "Shoes",
       "image": "/images/boot2.png",
       "price": 500,
       "brand": "Shopera",
@@ -55,10 +50,9 @@
       "numReviews": 10
   },
   {
-      "_id": "6",
       "name": "Rain Boot",
       "desc": "Waterproof, Flrl, 1.5 inch Heel",
-      "Category": "Shoes",
+      "category": "Shoes",
       "image": "/images/boot3.png",
       "price": 800,
       "brand": "Shopera",
@@ -66,10 +60,9 @@
       "numReviews": 17
   },
   {
-       "_id": "7",
       "name": "Lustre Lipstick",
       "desc": "Lady Bug, Red, .1 oz",
-      "Category": "Beauty",
+      "category": "Beauty",
       "image": "/images/lip1.png",
       "price": 50,
       "brand": "Shopera",
@@ -77,10 +70,9 @@
       "numReviews": 15
   },
   {
-      "_id": "8",
       "name": "Matte Lip Stick",
       "desc": "Russian Red, .1 oz",
-      "Category": "Beauty",
+      "category": "Beauty",
       "image": "/images/lip2.png",
       "price": 90,
       "brand": "Shopera",
@@ -88,10 +80,9 @@
       "numReviews": 10
   },
   {
-      "_id": "9",
       "name": "Lustre Lip Stick",
       "desc": "Patisserie, Pink, .1 oz",
-      "Category": "Beauty",
+      "category": "Beauty",
       "image": "/images/lip3.png",
       "price": 100,
       "brand": "Shopera",
@@ -99,10 +90,9 @@
       "numReviews": 17
   },
   {
-      "_id": "10",
       "name": "Necklace",
       "desc": "14kt, 3CT. Blue Topaz, 20 inch",
-      "Category": "Jewelry",
+      "category": "Jewelry",
       "image": "/images/jewelry1.png",
       "price": 1050,
       "brand": "Shopera",
@@ -110,21 +100,19 @@
       "numReviews": 15
   },
   {
-      "_id": "11",
       "name": "Earrings",
       "desc": "Abalone, .20CT. diamond, post-friction back",
-      "Category": "Jewelry",
+      "category": "Jewelry",
       "image": "/images/jewelry2.png",
       "price": 680,
       "brand": "Shopera",
       "rating": 4.2,
       "numReviews": 10
   },
-  {
-      "_id": "12",
+  { 
       "name": "Pendant",
       "desc": "Multi-stone Cabochon, Citrine, Chalcedony, Rose Quartz, Ruby, 3in",
-      "Category": "Jewelry",
+      "category": "Jewelry",
       "image": "/images/jewelry3.png",
       "price": 2700,
       "brand": "Shopera",
