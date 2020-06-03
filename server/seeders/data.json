@@ -1,6 +1,5 @@
 [
-  {
-      "_id": "1",    
+  {    
       "name": "Stiletto Sandal",
       "desc": "Ankle Strap, Beading, Blk, 4 inch Heel",
       "Category": "Shoes",
@@ -11,7 +10,6 @@
       "numReviews": 15
   },
   {
-      "_id": "2",
       "name": "High Heel Shoe",
       "desc": "Bow-toe, Ylw, 3 inch Heel",
       "Category": "Shoes",
@@ -22,7 +20,6 @@
       "numReviews": 10
   },
   {
-       "_id": "3",
       "name": "Stiletto Shoe",
       "desc": "Burn-out, Sq Medallion, Red, 4 inch Heel",
       "Category": "Shoes",
@@ -32,8 +29,7 @@
       "rating": 4.0,
       "numReviews": 17
   },
-  {
-      "_id": "4",    
+  {   
       "name": "Dress Boot",
       "desc": "Ankle Strap, Nude, 4 inch Heel",
       "Category": "Shoes",
@@ -44,7 +40,6 @@
       "numReviews": 15
   },
   {
-      "_id": "5",
       "name": "Rain Boot",
       "desc": "Waterproof, Blk, 1 inch Heel",
       "Category": "Shoes",
@@ -55,7 +50,6 @@
       "numReviews": 10
   },
   {
-      "_id": "6",
       "name": "Rain Boot",
       "desc": "Waterproof, Flrl, 1.5 inch Heel",
       "Category": "Shoes",
@@ -66,7 +60,6 @@
       "numReviews": 17
   },
   {
-       "_id": "7",
       "name": "Lustre Lipstick",
       "desc": "Lady Bug, Red, .1 oz",
       "Category": "Beauty",
@@ -77,7 +70,6 @@
       "numReviews": 15
   },
   {
-      "_id": "8",
       "name": "Matte Lip Stick",
       "desc": "Russian Red, .1 oz",
       "Category": "Beauty",
@@ -88,7 +80,6 @@
       "numReviews": 10
   },
   {
-      "_id": "9",
       "name": "Lustre Lip Stick",
       "desc": "Patisserie, Pink, .1 oz",
       "Category": "Beauty",
@@ -99,7 +90,6 @@
       "numReviews": 17
   },
   {
-      "_id": "10",
       "name": "Necklace",
       "desc": "14kt, 3CT. Blue Topaz, 20 inch",
       "Category": "Jewelry",
@@ -110,7 +100,6 @@
       "numReviews": 15
   },
   {
-      "_id": "11",
       "name": "Earrings",
       "desc": "Abalone, .20CT. diamond, post-friction back",
       "Category": "Jewelry",
@@ -121,7 +110,6 @@
       "numReviews": 10
   },
   {
-      "_id": "12",
       "name": "Pendant",
       "desc": "Multi-stone Cabochon, Citrine, Chalcedony, Rose Quartz, Ruby, 3in",
       "Category": "Jewelry",
