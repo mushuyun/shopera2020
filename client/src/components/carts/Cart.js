@@ -4,22 +4,34 @@ import CartItem from "./cartItem";
 import { Button, Container } from "reactstrap";
 import "../../styles/shipping.css";
 import "../../styles/cart.css";
+import Cookie from "js-cookie";
 
 class Cart extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             items : JSON.parse(localStorage.getItem("cart")),
-            total : 0
+            total : 0,
+            show: this.props.show === undefined ? true : this.props.show
         }
     };
-    
+
+    userSignedIn() {
+        if (Cookie.getJSON("userInfo") === undefined || Cookie.getJSON("userInfo") === null) {
+            window.location.replace("/SignIn"); 
+        } else {
+            window.location.replace("/PlaceOrder")
+        }
+
+     }
     
     componentDidMount() {
         let total = 0;
         for (var i = 0; i < this.state.items.length; i++) {
             total += parseInt(this.state.items[i]["qty"]) * this.state.items[i]["product"]["price"];
         }
+
+        // alert(this.state.show);
 
         this.setState({"total": total});
     }
@@ -35,14 +47,15 @@ class Cart extends React.Component {
                             {this.state.items.length > 0 && (
                                 <div className="cart__body">
                                     {this.state.items.map(item => (
-                                        <CartItem key={item.product._id} {...item.product} />
+                                        <CartItem key={item.product._id} {...item} />
                                     ))}
                                 </div>
                             )}
-                            <Link to="/SignIn" size="lg" id="placeOrderBtn" className="button text-center" >Place Order</Link>
-
                             {this.state.items.length === 0 && (
-                                <div className="alert alert-info">Cart is empty</div>
+                                <div className="alert alert-warning" style={{ backgroundColor: "primary", fontSize: 16, textAlign: "center"}}>Cart is empty</div>
+                            )}
+                            {this.state.show === true && (
+                                <Button className="button text-center" size="lg" onClick={() => this.userSignedIn()} id="placeOrderBtn">Place Order</Button>                         
                             )}
                             <Button size="lg" id="cartTtlBtn" className="cartTotal" >Total: ${this.state.total} </Button>
                         </div>
