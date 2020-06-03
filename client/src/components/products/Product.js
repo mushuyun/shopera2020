@@ -2,9 +2,21 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import data from '../../data/data';
 
-
+import { useSelector, useDispatch } from 'react-redux';
+import { detailsProduct } from '../productManage/crudActions';
 
 function Product(props) {
+  // const [qty, setQty] = useState(1);
+  // const productDetails = useSelector(state => state.productDetails);
+  // const { product, loading, error } = productDetails;
+  // const dispatch = useDispatch();
+
+  // useEffect(() => {
+  //   dispatch(detailsProduct(props.match.params.id));
+  //   return () => {
+  //     //
+  //   };
+  // }, []);
 
   async function addToCart(productId) {
     
@@ -56,6 +68,7 @@ function Product(props) {
       <div className="details-image">
         <img src={product.image} alt="product" ></img>
       </div>
+      
       <div className="details-info">
         <ul>
           <li>
