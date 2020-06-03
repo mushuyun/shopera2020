@@ -4,7 +4,7 @@ import Cookie from 'js-cookie';
 import { productListReducer, productDetailsReducer, productSaveReducer, productDeleteReducer } from './productManage/crudReducers';
 import { userSigninReducer, userRegisterReducer, userUpdateReducer } from './users/userReducers';
 
-const cartItems = Cookie.getJSON("cartItems") || [];
+// const cartItems = Cookie.getJSON("cartItems") || [];
 const userInfo = Cookie.getJSON("userInfo") || null;
 
 const initialState = { userSignin: { userInfo } };
