@@ -27,43 +27,43 @@ function Product(props) {
   const handleAddToCart = () => {
     props.history.push("/cart/" + props.match.params.id + "?qty=" + qty)
   }
-  // async function addToCart(productId) {
+  async function addToCart(productId) {
     
-  //   var e = document.getElementById("itemQty");
+    var e = document.getElementById("itemQty");
 
-  //   if (false) { // user is signed in
+    if (false) { // user is signed in
 
-  //     const body = {
-  //       productId: productId,
-  //       qty: parseInt(e.options[e.selectedIndex].value)
-  //     }
+      const body = {
+        productId: productId,
+        qty: parseInt(e.options[e.selectedIndex].value)
+      }
 
-  //     const response = await fetch("/cart", {
-  //       method: "POST",
-  //       body: JSON.stringify(body),
-  //       headers: {
-  //         "Content-type": "application/json"
-  //       }
-  //     });
-  //   } else {
-  //     let cart = [];
-  //     if (localStorage.getItem("cart") !== null) {
-  //       cart = JSON.parse(localStorage.getItem("cart"));
-  //     } 
-  //     let alreadyExists = false;
-  //     for (var i = 0; i < cart.length; i++) {
-  //       if (cart[i]["product"]["_id"] === productId) {
-  //         alreadyExists = true;
-  //         cart[i]["qty"] += 1;
-  //         break;
-  //       } 
-  //     }
-  //     if (!alreadyExists) {
-  //       cart.push({"product": product, "qty": parseInt(e.options[e.selectedIndex].value)});
-  //     }
-  //     localStorage.setItem("cart", JSON.stringify(cart));
-  //   }
-  // } 
+      const response = await fetch("/cart", {
+        method: "POST",
+        body: JSON.stringify(body),
+        headers: {
+          "Content-type": "application/json"
+        }
+      });
+    } else {
+      let cart = [];
+      if (localStorage.getItem("cart") !== null) {
+        cart = JSON.parse(localStorage.getItem("cart"));
+      } 
+      let alreadyExists = false;
+      for (var i = 0; i < cart.length; i++) {
+        if (cart[i]["product"]["_id"] === productId) {
+          alreadyExists = true;
+          cart[i]["qty"] += 1;
+          break;
+        } 
+      }
+      if (!alreadyExists) {
+        cart.push({"product": product, "qty": parseInt(e.options[e.selectedIndex].value)});
+      }
+      localStorage.setItem("cart", JSON.stringify(cart));
+    }
+  } 
 
   return <div>
     <div className="back-to-result">
