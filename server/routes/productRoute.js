@@ -1,5 +1,5 @@
 const express = require("express");
-const Product = require("../models/Product.js");
+const Product = require("../models/Product");
 const { isAuth, isAdmin } = require("../auth.js");
 
 
