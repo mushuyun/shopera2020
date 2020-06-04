@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import './styles/home.css';
+import Cookie from "js-cookie";
 import data from "./data/data";
 import {BrowserRouter, Route, Link} from "react-router-dom";
 import Home from "./components/Home";
@@ -34,10 +35,14 @@ function App() {
   }
 
   let cartCount = 0;
+  // if (Cookie.get("userInfo")) {
+  // console.log(Cookie.get("userInfo"))
+  
   if (localStorage.getItem("cart") !== null) {
-    cartCount = JSON.parse(localStorage.getItem("cart")).length;
-  }
-
+      let cart = JSON.parse(localStorage.getItem("cart")).map(cartItem => cartCount += parseInt(cartItem["qty"]));
+    
+    }
+  
   return (
 <BrowserRouter>
   <div className="grid-container">
@@ -97,6 +102,7 @@ function App() {
           {/* <Route path="/placeorder" component={PlaceOrder} /> */}
           <Route path="/profile" component={Profile} />
           <Route path="/register" component={Register} />
+          <Route path="/placeOrder" component={PlaceOrder} />
           <Route path="/signin" component={SignIn} />
           <Route path="/category/:id" component={Home} />
           <Route path="/" exact={true} component={Home} />

@@ -40,6 +40,8 @@ function Product(props) {
       }
       localStorage.setItem("cart", JSON.stringify(cart));
     }
+
+    window.location.replace("/cart");
   } 
 
 
@@ -92,10 +94,8 @@ function Product(props) {
             </select>
           </li>
           <li>
-            <button className="button primary" id="atc" onClick={() => addToCart(product._id)}
-            >Add to Cart</button>
-
-
+              <button className="button primary" id="atc" onClick={() => addToCart(product._id)}
+              >Add to Cart</button>
           </li>
         </ul>
       </div>
