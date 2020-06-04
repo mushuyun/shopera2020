@@ -23,11 +23,11 @@ const orderItemSchema = new mongoose.Schema({
   price: { type: String, required: true },
   product: {type: Number, required: true},
   
-  // product: {
-  //   type: mongoose.Schema.Types.ObjectId,
-  //   ref: 'Product',
-  //   required: true
-  // }
+  product: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Product',
+    required: true
+  }
 });
 
 const orderSchema = new mongoose.Schema({

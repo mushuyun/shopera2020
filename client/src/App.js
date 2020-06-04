@@ -34,14 +34,15 @@ function App() {
   }
 
   let cartCount = 0;
-  // if (Cookie.get("userInfo")) {
-  // console.log(Cookie.get("userInfo"))
   
+  //const userLogout = useSelector(state => state.userLogout);
+  //const { userInfo } = userSignin;
+
+
   if (localStorage.getItem("cart") !== null) {
       let cart = JSON.parse(localStorage.getItem("cart")).map(cartItem => cartCount += parseInt(cartItem["qty"]));
-    
     }
-  
+
   return (
 <BrowserRouter>
   <div className="grid-container">
