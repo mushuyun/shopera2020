@@ -57,10 +57,10 @@ const PlaceOrder = (props) => {
     <Container>
       <Row>
         <Col md={6}>
-          <h2 id="userCO">Hello! {UserInfo.name}</h2>
+          <h2 id="userCO" style={{ marginTop: 15, }}>Hello! {UserInfo.name}</h2>
         </Col>
         <Col md={6}>
-          <h2 id="userCO">{UserInfo.email}</h2>
+          <h2 id="userCO" style={{ marginTop: 15, }}>{UserInfo.email}</h2>
         </Col>
       </Row>
       <CartCollapse />
