@@ -2,8 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import data from '../../data/data';
 
-
-
 function Product(props) {
 
   async function addToCart(productId) {

@@ -6,7 +6,7 @@ import data from "./data/data";
 import {BrowserRouter, Route, Link} from "react-router-dom";
 import Home from "./components/Home";
 import Product from "./components/products/Product";
-import ProductCrud from "./components/products/ProductCrud";
+import ProductCrud from "./components/productManage/ProductCrud";
 // import Order from "./components/carts/Order";
 import Cart from "./components/carts/Cart";
 // import Payment from "./components/carts/Payment";
@@ -63,7 +63,7 @@ function App() {
               <ul className="dropdown-content">
                 <li>
                   <Link to="/orders">Orders</Link>
-                  <Link to="/products">Products</Link>
+                  <Link to="/productcrud">Products</Link>
                 </li>
               </ul>
             </div>

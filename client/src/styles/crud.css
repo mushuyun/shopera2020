@@ -1,0 +1,54 @@
+.product-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-family: fantasy;
+    padding:15px;
+  }
+  
+.button-primary{
+    font-size: 18px;
+    font-family: fantasy;
+    color: rgb(255, 129, 71);
+    padding-left:10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    border-radius: 5px;
+    border-color: rgb(79, 139, 0);
+}
+
+h2{
+    margin-top: 10px;
+    font-family: fantasy;
+    color: rgb(55, 0, 255);
+}
+
+h2:hover{
+    color: rgb(204, 81, 50);
+}
+
+h2{ 
+    cursor: pointer;
+}
+.newPro{
+    font-size: 20px;
+    font-family: fantasy;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+
+.content-margined{
+margin: 1rem;
+}
+
+.table{
+width: 100%;
+}
+th{
+text-align: left;
+}
+tbody>tr:nth-child(odd){
+background-color: #f0f0f0;
+}
