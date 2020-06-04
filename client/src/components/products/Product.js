@@ -7,7 +7,6 @@ import { detailsProduct } from './../productManage/crudActions';
 import Home from "../Home";
 import store from "../store";
 import axios from "axios";
-//import data from '../data/data';
 import 'bootstrap/dist/css/bootstrap.css';
 
 

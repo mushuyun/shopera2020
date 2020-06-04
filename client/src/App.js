@@ -2,7 +2,6 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import './styles/home.css';
 import Cookie from "js-cookie";
-import data from "./data/data";
 import {BrowserRouter, Route, Link} from "react-router-dom";
 import Home from "./components/Home";
 import Product from "./components/products/Product";
