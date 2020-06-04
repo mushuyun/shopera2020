@@ -1,17 +1,18 @@
 import React from "react";
 import { Card, Col, Container, Row } from "reactstrap";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+// import Product from "../products"
 // import data from "../../data/data";
 
 
 class CartItem extends React.Component {
   constructor(props) {
     super(props);
-    this.id = this.props._id;
-    this.image = this.props.image;
-    this.desc = this.props.desc;
-    this.name = this.props.name;
-    this.price = this.props.price;
+    this.id = this.props.product._id;
+    this.image = this.props.product.image;
+    this.desc = this.props.product.desc;
+    this.name = this.props.product.name;
+    this.price = this.props.product.price;
     this.qty = this.props.qty;
   }
   
@@ -46,12 +47,14 @@ class CartItem extends React.Component {
           <Card body outline color="warning">
             <Row>
               <Col md="2">
-                <div className="cart-item-image" id="cartImg">
-                  <img
-                    alt="no pic"
-                    style={{ width: "75px" }}
-                    src={this.image}/>
-                </div>
+                  <div className="cart-item-image" id="cartImg">
+                    {/* <Link to={'/Product/product_id'}>  */}
+                      <img
+                        alt="no pic"
+                        style={{ width: "75px" }}
+                        src={this.image}/>
+                    {/* </Link>  */}
+                  </div>
                 </Col>
               <Col md="4">
                 <h3 className="cart-item-description">{this.desc}</h3>

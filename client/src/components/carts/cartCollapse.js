@@ -11,7 +11,7 @@ import { Collapse, Button } from "reactstrap";
       <div className="container">
         <Button size="lg" id="collapseBtn" onClick={toggle} style={{ marginBottom: '1rem' }}>Cart Items</Button>
         <Collapse isOpen={isOpen}>
-          <Cart />
+          <Cart show={isOpen}/>
             
         </Collapse>
       </div>
