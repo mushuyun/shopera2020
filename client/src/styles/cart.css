@@ -55,6 +55,28 @@ h2 {
   padding-top: 25px; 
 }
 
+#atcSubmit {
+  background-color: #f0c040;
+  margin-bottom: 10px;
+  color: black;
+  
+}
+
+#collapseBtn {
+  margin-top: 10px;
+  background-color: #f0c040;
+  color: black;
+  
+}
+
+h2#userCo {
+  margin-top: 15px;
+}
+
+h2:hover {
+  color: #f0c040
+}
+
 #checkOutBtn {
   margin-top: 5px;
   margin-right: 15px;
