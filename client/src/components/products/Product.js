@@ -24,9 +24,7 @@ function Product(props) {
       //
     };
   }, []);
-  const handleAddToCart = () => {
-    props.history.push("/cart/" + props.match.params.id + "?qty=" + qty)
-  }
+  
   async function addToCart(productId) {
     
     var e = document.getElementById("itemQty");
