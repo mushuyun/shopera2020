@@ -14,6 +14,7 @@ import {
 } from "reactstrap";
 import "../../styles/shipping.css";
 import "../../styles/cart.css";
+import "../../styles/placeOrder.css";
 import CartCollapse from "./cartCollapse";
 import Cart from "./Cart";
 import Cookie from "js-cookie";
@@ -51,7 +52,13 @@ function infoToProcess() {
     });
     
 }
+// function switchPage() {
+//   const redirect = props.location.search ? props.location.search.split("=")[1] : '/payment';
+//     if () {
+//       props.history.push(redirect);
+//     }
 
+// }
 const PlaceOrder = (props) => {
   return (
     <Container>
@@ -191,9 +198,11 @@ const PlaceOrder = (props) => {
             </FormGroup>
           </Col>
         </Row>
+        <Link to="/Payment">
         <Button type="submit" onClick={() => infoToProcess()} size="lg" id="checkOutBtn">
           Pay Now!
         </Button>
+        </Link>
       </Form>
     </Container>
   );
