@@ -19,6 +19,7 @@ function Home(props) {
   }, []);
 
 
+
   return <ul className="products"> {
     products.map(product =>
         <li key={product._id}>

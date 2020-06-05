@@ -41,11 +41,6 @@ if (process.env.NODE_ENV === "production") {
 	});
 }
 
-// Add routes, both API and view
-// app.get("/api/config/paypal", (req, res) => {
-//   res.send(config.PAYPAL_CLIENT_ID);
-// });
-
 // Error handler
 app.use(function(err, req, res, next) {
 	console.log("====== ERROR =======");
