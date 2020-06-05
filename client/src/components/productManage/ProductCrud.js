@@ -67,7 +67,7 @@ function ProductCrud(props) {
         <form onSubmit={submitHandler} >
           <ul className="form-container">
             <li>
-              <p className="newPro">Add New Product</p>
+              <p className="newPro">Add or Edit Product</p>
             </li>
             <li>
               {loadingSave && <div>Loading...</div>}

@@ -32,7 +32,7 @@ body{
   padding: 0.5rem;
 }
 .header-links a{
-  color:#eca911;
+  color:#f0c040;
   text-decoration: none;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 1rem;
@@ -61,11 +61,15 @@ body{
 }
 
 .brand a{
-  color: #f8eeee;
+  color:#fcfaf4;
   font-size: 3.2rem;
   font-weight: bold;
   text-decoration: none;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.brand a:hover{
+  color: #ff8000;
 }
 
 .main{
