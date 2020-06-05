@@ -26,14 +26,15 @@ import axios from "axios";
       if (!product._id) {
         const { data } = await axios.post('/api/products', product, {
           headers: {
-            'Authorization': "Sue " + userInfo.token
+            'Authorization': "Bearer " + userInfo.token
           }
         });
+        
         dispatch({ type: PRODUCT_SAVE_SUCCESS, payload: data });
       } else {
         const { data } = await axios.put('/api/products/' + product._id, product, {
           headers: {
-            'Authorization': "Sue " + userInfo.token
+            'Authorization': "Bearer " + userInfo.token
           }
         });
         dispatch({ type: PRODUCT_SAVE_SUCCESS, payload: data });

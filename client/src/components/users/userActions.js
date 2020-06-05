@@ -9,16 +9,15 @@ import { USER_SIGNIN_REQUEST, USER_SIGNIN_SUCCESS,
     const { userSignin: { userInfo } } = getState();
     dispatch({ type: USER_UPDATE_REQUEST, payload: { userId, name, email, password} });
     try {
-      const { data } = await Axios.put("/api/users/" + userId
+      const { data } = await Axios.put("/api/users/" + userId,
       
-      //   { name, email, password, },
+        { name, email, password },
         
-      //    {
-      //   headers: {
-      //     Authorization: userInfo.name
-      //   },
-      // }
-      );
+         {
+          headers:
+          { Authorization: 'Bearer ' + userInfo.token }
+        });
+    
       dispatch({ type: USER_UPDATE_SUCCESS, payload: data });
       Cookie.set('userInfo', JSON.stringify(data));
     } catch (error) {
@@ -50,6 +49,7 @@ import { USER_SIGNIN_REQUEST, USER_SIGNIN_SUCCESS,
   
   const logout = () => (dispatch) => {
     Cookie.remove("userInfo");
+    localStorage.removeItem('cart');
     dispatch({ type: USER_LOGOUT })
   }
   export { signin, register, logout, update };

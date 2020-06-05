@@ -2,7 +2,6 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import './styles/home.css';
 import Cookie from "js-cookie";
-import data from "./data/data";
 import {BrowserRouter, Route, Link} from "react-router-dom";
 import Home from "./components/Home";
 import Product from "./components/products/Product";
@@ -21,6 +20,7 @@ import Shipping from "./components/carts/Shipping";
 import Checkout from './components/checkouts/Checkout';
 import PaypalConnection from './components/checkouts/PaypalConnect';
 import { Badge } from "reactstrap";
+import packageJson from '../package.json';
 
 function App() {
 
@@ -35,14 +35,15 @@ function App() {
   }
 
   let cartCount = 0;
-  // if (Cookie.get("userInfo")) {
-  // console.log(Cookie.get("userInfo"))
   
+  //const userLogout = useSelector(state => state.userLogout);
+  //const { userInfo } = userSignin;
+
+
   if (localStorage.getItem("cart") !== null) {
       let cart = JSON.parse(localStorage.getItem("cart")).map(cartItem => cartCount += parseInt(cartItem["qty"]));
-    
     }
-  
+
   return (
 <BrowserRouter>
   <div className="grid-container">
@@ -55,7 +56,7 @@ function App() {
         </div>
         <div className="header-links">
 
-        <Link to="/cart">Cart<Badge color="danger">{cartCount}</Badge></Link>
+        <Link to="/cart">Cart<Badge color="danger">{cartCount > 0 ? cartCount : ''}</Badge></Link>
             <Link to="/signin">Sign In/Register</Link>
             <Link to="/profile">Profile/Logout</Link>
             <div className="dropdown">
@@ -111,7 +112,7 @@ function App() {
       </main>
         
     <footer className="footer">
-      CodingBootCamp UNC Project Team 3 All Rights Reserved!
+      CodingBootCamp UNC Project Team 3 All Rights Reserved!&nbsp;v{packageJson.version}
     </footer>
   </div>
 </BrowserRouter>

@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { listProducts } from './productManage/crudActions';
 import axios from "axios";
-//import data from '../data/data';
 import 'bootstrap/dist/css/bootstrap.css';
 
 
@@ -18,6 +17,7 @@ function Home(props) {
       //
     };
   }, []);
+
 
 
   return <ul className="products"> {
