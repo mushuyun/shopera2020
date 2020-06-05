@@ -1,18 +1,32 @@
 const express = require("express");
 const Product = require("../models/Product");
 const { isAuth, isAdmin } = require("../auth.js");
-
+const products = require("../seeders/data.json");
 
 const router = express.Router();
 
+router.get('/seed', (req, res) => {
+  Product
+    .remove({})
+    .then(() => db.Product.collection.insertMany(products))
+    .then(data => {
+      console.log(data.result.n + " products inserted!");
+      res.json({success: true});
+    })
+    .catch(err => {
+      console.error(err);
+      res.json({success: false});
+    });
+});
+
 router.get("/", async (req, res) => {
     const category = req.query.category ? { category: req.query.category } : {};
-    const searchKeyword = req.query.searchKeyword ? {
-      name: {
-        $regex: req.query.searchKeyword,
-        $options: 'i'
-      }
-    } : {};
+    // const searchKeyword = req.query.searchKeyword ? {
+    //   name: {
+    //     $regex: req.query.searchKeyword,
+    //     $options: 'i'
+    //   }
+    // } : {};
     const sortOrder = req.query.sortOrder ?
       (req.query.sortOrder === 'lowest' ? { price: 1 } : { price: -1 })
       :
@@ -31,9 +45,11 @@ router.get("/", async (req, res) => {
   });
   
   router.put("/:id", isAuth, isAdmin, async (req, res) => {
+    const isAdmin = req.user.isAdmin;
     const productId = req.params.id;
+    console.log('req.body:', req.body);
     const product = await Product.findById(productId);
-    if (product) {
+    if (isAdmin && product) {
       product.name = req.body.name;
       product.price = req.body.price;
       product.image = req.body.image;

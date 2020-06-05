@@ -15,7 +15,7 @@ import { USER_SIGNIN_REQUEST, USER_SIGNIN_SUCCESS,
         
          {
           headers:
-          { Authorization: 'Sue ' + userInfo.token }
+          { Authorization: 'Bearer ' + userInfo.token }
         });
     
       dispatch({ type: USER_UPDATE_SUCCESS, payload: data });
@@ -49,6 +49,7 @@ import { USER_SIGNIN_REQUEST, USER_SIGNIN_SUCCESS,
   
   const logout = () => (dispatch) => {
     Cookie.remove("userInfo");
+    localStorage.removeItem('cart');
     dispatch({ type: USER_LOGOUT })
   }
   export { signin, register, logout, update };
