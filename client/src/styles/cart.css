@@ -24,6 +24,7 @@ h2 {
   font-weight: bold;
   float: right;
   background-color: #f0c040;
+  ;
   color: black;
 }
 
@@ -69,7 +70,7 @@ h2 {
   
 }
 
-h2#userCo {
+/* h2#userCo {
   margin-top: 15px;
 }
 
@@ -102,4 +103,4 @@ select#stateAbbrev.form-control {
 
 .badge {
   margin-left: 3px;
-}
+} */
