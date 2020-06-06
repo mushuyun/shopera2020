@@ -9,8 +9,7 @@ import axios from "axios";
     try {
   
       dispatch({ type: PRODUCT_LIST_REQUEST });
-      const { data } = await axios.get("/api/products?category=" + category +
-        "&searchKeyword=" + searchKeyword + "&sortOrder=" + sortOrder);
+      const { data } = await axios.get("/api/products?category=" + category)
       dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data });
     }
     catch (error) {
@@ -63,7 +62,7 @@ import axios from "axios";
       dispatch({ type: PRODUCT_DELETE_REQUEST, payload: productId });
       const { data } = await axios.delete("/api/products/" + productId, {
         headers: {
-          Authorization: "Sue " + userInfo.token
+          Authorization: "Bearer " + userInfo.token
         }
       });
       dispatch({ type: PRODUCT_DELETE_SUCCESS, payload: data, success: true });

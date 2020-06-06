@@ -10,9 +10,9 @@ import ProductCrud from "./components/productManage/ProductCrud";
 import Cart from "./components/carts/Cart";
 import Payment from "./components/carts/Payment";
 import PlaceOrder from "./components/carts/PlaceOrder";
-import Beauty from "./components/products/Beauty";
-import Jewelry from "./components/products/Jewelry";
-import Shoes from "./components/products/Shoes";
+// import Beauty from "./components/products/Beauty";
+// import Jewelry from "./components/products/Jewelry";
+// import Shoes from "./components/products/Shoes";
 import SignIn from './components/users/SignIn';
 import Register from './components/users/Register';
 import Profile from './components/users/Profile';
@@ -91,9 +91,9 @@ function App() {
         <div className="content">
           <Route path="/product/:id" component={Product} />
           <Route path="/productcrud" component={ProductCrud} />
-          <Route path="/category/Shoes" component={Shoes} />
+          {/* <Route path="/category/Shoes" component={Shoes} />
           <Route path="/category/Beauty" component={Beauty} /> 
-          <Route path="/category/Jewelry" component={Jewelry} /> 
+          <Route path="/category/Jewelry" component={Jewelry} />  */}
           <Route path="/cart" component={Cart} />
           {/* <Route path="/cart/:id?" component={Cart} /> */}
           <Route path="/shipping" component={Shipping} />

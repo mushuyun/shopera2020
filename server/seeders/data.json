@@ -90,6 +90,16 @@
       "numReviews": 17
   },
   {
+    "name": "Lustre Lip Stick",
+    "description": "Next generation popular color, Pink, .1 oz",
+    "category": "Beauty",
+    "image": "/images/lip4.png",
+    "price": 100,
+    "brand": "Shopera",
+    "rating": 4.5,
+    "numReviews": 19
+},
+  {
       "name": "Necklace",
       "description": "14kt, 3CT. Blue Topaz, 20 inch",
       "category": "Jewelry",
