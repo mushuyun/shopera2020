@@ -1,9 +1,23 @@
 const express = require("express");
 const Product = require("../models/Product");
 const { isAuth, isAdmin } = require("../auth.js");
-
+const products = require("../seeders/data.json");
 
 const router = express.Router();
+//mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/shopera");
+// router.get('/seed', (req, res) => {
+//   Product
+//     .remove({})
+//     .then(() => db.Product.collection.insertMany(products))
+//     .then(data => {
+//       console.log(data.result.n + " products inserted!");
+//       res.json({success: true});
+//     })
+//     .catch(err => {
+//       console.error(err);
+//       res.json({success: false});
+//     });
+// });
 
 router.get("/", async (req, res) => {
     const category = req.query.category ? { category: req.query.category } : {};
@@ -31,9 +45,11 @@ router.get("/", async (req, res) => {
   });
   
   router.put("/:id", isAuth, isAdmin, async (req, res) => {
+    const isAdmin = req.user.isAdmin;
     const productId = req.params.id;
+    console.log('req.body:', req.body);
     const product = await Product.findById(productId);
-    if (product) {
+    if (isAdmin && product) {
       product.name = req.body.name;
       product.price = req.body.price;
       product.image = req.body.image;

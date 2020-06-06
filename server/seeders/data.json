@@ -1,7 +1,7 @@
 [
   {  
       "name": "Stiletto Sandal",
-      "desc": "Ankle Strap, Beading, Blk, 4 inch Heel",
+      "description": "Ankle Strap, Beading, Blk, 4 inch Heel",
       "category": "Shoes",
       "image": "/images/highheel1.png",
       "price": 600,
@@ -11,7 +11,7 @@
   },
   {  
       "name": "High Heel Shoe",
-      "desc": "Bow-toe, Ylw, 3 inch Heel",
+      "description": "Bow-toe, Ylw, 3 inch Heel",
       "category": "Shoes",
       "image": "/images/highheel2.png",
       "price": 500,
@@ -21,7 +21,7 @@
   },
   {
       "name": "Stiletto Shoe",
-      "desc": "Burn-out, Sq Medallion, Red, 4 inch Heel",
+      "description": "Burn-out, Sq Medallion, Red, 4 inch Heel",
       "Category": "Shoes",
       "image": "/images/highheel3.png",
       "price": 400,
@@ -31,7 +31,7 @@
   },
   {  
       "name": "Dress Boot",
-      "desc": "Ankle Strap, Nude, 4 inch Heel",
+      "description": "Ankle Strap, Nude, 4 inch Heel",
       "category": "Shoes",
       "image": "/images/boot1.png",
       "price": 700,
@@ -41,7 +41,7 @@
   },
   {
       "name": "Rain Boot",
-      "desc": "Waterproof, Blk, 1 inch Heel",
+      "description": "Waterproof, Blk, 1 inch Heel",
       "category": "Shoes",
       "image": "/images/boot2.png",
       "price": 500,
@@ -51,7 +51,7 @@
   },
   {
       "name": "Rain Boot",
-      "desc": "Waterproof, Flrl, 1.5 inch Heel",
+      "description": "Waterproof, Flrl, 1.5 inch Heel",
       "category": "Shoes",
       "image": "/images/boot3.png",
       "price": 800,
@@ -61,7 +61,7 @@
   },
   {
       "name": "Lustre Lipstick",
-      "desc": "Lady Bug, Red, .1 oz",
+      "description": "Lady Bug, Red, .1 oz",
       "category": "Beauty",
       "image": "/images/lip1.png",
       "price": 50,
@@ -71,7 +71,7 @@
   },
   {
       "name": "Matte Lip Stick",
-      "desc": "Russian Red, .1 oz",
+      "description": "Russian Red, .1 oz",
       "category": "Beauty",
       "image": "/images/lip2.png",
       "price": 90,
@@ -81,7 +81,7 @@
   },
   {
       "name": "Lustre Lip Stick",
-      "desc": "Patisserie, Pink, .1 oz",
+      "description": "Patisserie, Pink, .1 oz",
       "category": "Beauty",
       "image": "/images/lip3.png",
       "price": 100,
@@ -91,7 +91,7 @@
   },
   {
       "name": "Necklace",
-      "desc": "14kt, 3CT. Blue Topaz, 20 inch",
+      "description": "14kt, 3CT. Blue Topaz, 20 inch",
       "category": "Jewelry",
       "image": "/images/jewelry1.png",
       "price": 1050,
@@ -101,7 +101,7 @@
   },
   {
       "name": "Earrings",
-      "desc": "Abalone, .20CT. diamond, post-friction back",
+      "description": "Abalone, .20CT. diamond, post-friction back",
       "category": "Jewelry",
       "image": "/images/jewelry2.png",
       "price": 680,
@@ -111,7 +111,7 @@
   },
   { 
       "name": "Pendant",
-      "desc": "Multi-stone Cabochon, Citrine, Chalcedony, Rose Quartz, Ruby, 3in",
+      "description": "Multi-stone Cabochon, Citrine, Chalcedony, Rose Quartz, Ruby, 3in",
       "category": "Jewelry",
       "image": "/images/jewelry3.png",
       "price": 2700,
