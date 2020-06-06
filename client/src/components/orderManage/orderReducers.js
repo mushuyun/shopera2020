@@ -1,69 +1,105 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
-import { listOrders, deleteOrder } from '../actions/orderActions';
-
-function orderCrud(props) {
-  const orderList = useSelector(state => state.orderList);
-  const { loading, orders, error } = orderList;
-
-  const orderDelete = useSelector(state => state.orderDelete);
-  const { loading: loadingDelete, success: successDelete, error: errorDelete } = orderDelete;
-
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(listOrders());
-    return () => {
-      //
-    };
-  }, [successDelete]);
-
-  const deleteHandler = (order) => {
-    dispatch(deleteOrder(order._id));
+import {
+    ORDER_DETAILS_REQUEST, ORDER_DETAILS_SUCCESS, ORDER_DETAILS_FAIL,
+    MY_ORDER_LIST_REQUEST, MY_ORDER_LIST_SUCCESS, MY_ORDER_LIST_FAIL,
+    ORDER_LIST_REQUEST, ORDER_LIST_SUCCESS, ORDER_LIST_FAIL, ORDER_DELETE_REQUEST, ORDER_DELETE_SUCCESS, ORDER_DELETE_FAIL
+  } from "./orderConstants";
+  
+  
+//   function orderCreateReducer(state = {}, action) {
+//     switch (action.type) {
+//       case ORDER_CREATE_REQUEST:
+//         return { loading: true };
+//       case ORDER_CREATE_SUCCESS:
+//         return { loading: false, order: action.payload, success: true };
+//       case ORDER_CREATE_FAIL:
+//         return { loading: false, error: action.payload };
+//       default: return state;
+//     }
+//   }
+  
+  
+  function orderDetailsReducer(state = {
+    order: {
+      orderItems: [],
+      shipping: {},
+      payment: {}
+    }
+  }, action) {
+    switch (action.type) {
+      case ORDER_DETAILS_REQUEST:
+        return { loading: true };
+      case ORDER_DETAILS_SUCCESS:
+        return { loading: false, order: action.payload };
+      case ORDER_DETAILS_FAIL:
+        return { loading: false, error: action.payload };
+      default: return state;
+    }
   }
-  return loading ? <div>Loading...</div> :
-    <div className="content content-margined">
-
-      <div className="order-header">
-        <h3>Orders</h3>
-      </div>
-      <div className="order-list">
-
-        <table className="table">
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>DATE</th>
-              <th>TOTAL</th>
-              <th>USER</th>
-              <th>PAID</th>
-              <th>PAID AT</th>
-              <th>DELIVERED</th>
-              <th>DELIVERED AT</th>
-              <th>ACTIONS</th>
-            </tr>
-          </thead>
-          <tbody>
-            {orders.map(order => (<tr key={order._id}>
-              <td>{order._id}</td>
-              <td>{order.createdAt}</td>
-              <td>{order.totalPrice}</td>
-              <td>{order.user.name}</td>
-              <td>{order.isPaid.toString()}</td>
-              <td>{order.paidAt}</td>
-              <td>{order.isDelivered.toString()}</td>
-              <td>{order.deliveredAt}</td>
-              <td>
-                <Link to={"/order/" + order._id} className="button secondary" >Details</Link>
-                {' '}
-                <button type="button" onClick={() => deleteHandler(order)} className="button secondary">Delete</button>
-              </td>
-            </tr>))}
-          </tbody>
-        </table>
-
-      </div>
-    </div>
-}
-export default orderCrud;
+  
+  
+  function myOrderListReducer(state = {
+    orders: []
+  }, action) {
+    switch (action.type) {
+      case MY_ORDER_LIST_REQUEST:
+        return { loading: true };
+      case MY_ORDER_LIST_SUCCESS:
+        return { loading: false, orders: action.payload };
+      case MY_ORDER_LIST_FAIL:
+        return { loading: false, error: action.payload };
+      default: return state;
+    }
+  }
+  
+  function orderListReducer(state = {
+    orders: []
+  }, action) {
+    switch (action.type) {
+      case ORDER_LIST_REQUEST:
+        return { loading: true };
+      case ORDER_LIST_SUCCESS:
+        return { loading: false, orders: action.payload };
+      case ORDER_LIST_FAIL:
+        return { loading: false, error: action.payload };
+      default: return state;
+    }
+  }
+  
+//   function orderPayReducer(state = {
+//     order: {
+//       orderItems: [],
+//       shipping: {},
+//       payment: {}
+//     }
+//   }, action) {
+//     switch (action.type) {
+//       case ORDER_PAY_REQUEST:
+//         return { loading: true };
+//       case ORDER_PAY_SUCCESS:
+//         return { loading: false, success: true };
+//       case ORDER_PAY_FAIL:
+//         return { loading: false, error: action.payload };
+//       default: return state;
+//     }
+//   }
+  
+  function orderDeleteReducer(state = {
+    order: {
+      orderItems: [],
+      shipping: {},
+      payment: {}
+    }
+  }, action) {
+    switch (action.type) {
+      case ORDER_DELETE_REQUEST:
+        return { loading: true };
+      case ORDER_DELETE_SUCCESS:
+        return { loading: false, success: true };
+      case ORDER_DELETE_FAIL:
+        return { loading: false, error: action.payload };
+      default: return state;
+    }
+  }
+  export {
+    orderDetailsReducer, myOrderListReducer, orderListReducer, orderDeleteReducer
+  }
