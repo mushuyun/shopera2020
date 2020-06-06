@@ -1,0 +1,34 @@
+h2#userCo {
+    margin-top: 15px;
+  }
+  
+  h2:hover {
+    color: #ff8000
+  }
+  
+  #checkOutBtn {
+    margin-top: 5px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    padding: 5px;
+    border-color: black;
+    font-size: 18px;
+    font-weight: 500;
+    float: left;
+    background-color: #ff8000;
+    color: black;
+  }
+  
+  input.form-control {
+    font-size: 1.5rem;
+    border-color: #ff8000;
+  }
+  
+  select#stateAbbrev.form-control {
+    font-size: 1.5rem;
+    border-color: #ff8000; 
+  }
+  
+  .badge {
+    margin-left: 3px;
+  }

@@ -14,6 +14,7 @@ import {
 } from "reactstrap";
 import "../../styles/shipping.css";
 import "../../styles/cart.css";
+import "../../styles/placeOrder.css";
 import CartCollapse from "./cartCollapse";
 import Cart from "./Cart";
 import Cookie from "js-cookie";
@@ -51,16 +52,22 @@ function infoToProcess() {
     });
     
 }
+// function switchPage() {
+//   const redirect = props.location.search ? props.location.search.split("=")[1] : '/payment';
+//     if () {
+//       props.history.push(redirect);
+//     }
 
+// }
 const PlaceOrder = (props) => {
   return (
     <Container>
       <Row>
         <Col md={6}>
-          <h2 id="userCO">Hello! {UserInfo.name}</h2>
+          <h2 id="userCO" style={{ marginTop: 15, }}>Hello! {UserInfo.name}</h2>
         </Col>
         <Col md={6}>
-          <h2 id="userCO">{UserInfo.email}</h2>
+          <h2 id="userCO" style={{ marginTop: 15, }}>{UserInfo.email}</h2>
         </Col>
       </Row>
       <CartCollapse />
@@ -191,9 +198,11 @@ const PlaceOrder = (props) => {
             </FormGroup>
           </Col>
         </Row>
+        <Link to="/Payment">
         <Button type="submit" onClick={() => infoToProcess()} size="lg" id="checkOutBtn">
           Pay Now!
         </Button>
+        </Link>
       </Form>
     </Container>
   );
