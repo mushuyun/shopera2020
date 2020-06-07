@@ -13,14 +13,13 @@ import PlaceOrder from "./components/carts/PlaceOrder";
 import Beauty from "./components/products/Beauty";
 import Jewelry from "./components/products/Jewelry";
 import Shoes from "./components/products/Shoes";
-import SignIn from './components/users/SignIn';
-import Register from './components/users/Register';
-import Profile from './components/users/Profile';
+import SignIn from "./components/users/SignIn";
+import Register from "./components/users/Register";
+import Profile from "./components/users/Profile";
 import Shipping from "./components/carts/Shipping";
-import Checkout from './components/checkouts/Checkout';
-import PaypalConnection from './components/checkouts/PaypalConnect';
+import PaypalConnection from "./components/checkouts/PaypalConnect";
 import { Badge } from "reactstrap";
-import packageJson from '../package.json';
+import packageJson from "../package.json";
 
 function App() {
 
