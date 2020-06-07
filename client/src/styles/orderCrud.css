@@ -1,0 +1,25 @@
+
+h3{
+  color: rgb(6, 6, 44);
+}
+th{
+font-size: 12px;
+}
+td{
+font-size: 12px;
+}
+
+.status{
+font-size: 13px;
+font-weight: bolder;
+}
+
+.action{
+font-size: 10px;
+font-weight: bold;
+}
+
+.button {
+  padding: none;
+  font-size: 13px;
+}

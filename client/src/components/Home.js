@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { listProducts } from './productManage/crudActions';
 import 'bootstrap/dist/css/bootstrap.css';
+
+function Home(props) {
+
+// loading full product list....
 function Home(props) {
 //loading full product list....
   const productList = useSelector(state => state.productList);
@@ -15,6 +19,7 @@ function Home(props) {
       //
     };
   }, []);
+
 //sort product by category.....
   const [searchKeyword, setSearchKeyword] = useState('');
   const category = props.match.params.id ? props.match.params.id : '';
@@ -24,6 +29,7 @@ function Home(props) {
       //
     };
   }, [category]);
+
   return <>
   {category &&
     <h2>{category}</h2>}
@@ -46,5 +52,6 @@ function Home(props) {
           }
         </ul>
     </>
+
 }
 export default Home;

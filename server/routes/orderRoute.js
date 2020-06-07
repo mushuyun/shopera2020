@@ -35,6 +35,36 @@ router.post('/saveOrder', async (req, res) => {
       res.status(401).send({ msg: 'Error on DB Save' });
     }
   
-  })
+  });
 
+  router.get("/", isAuth, async (req, res) => {
+    const orders = await Order.find({}).populate('user');
+    res.send(orders);
+  });
+
+  router.get("/user/", isAuth, async (req, res) => {
+    const orders = await Order.find({ user: req.user._id });
+    res.send(orders);
+  });
+
+  router.get("/:id", isAuth, async (req, res) => {
+    const order = await Order.findOne({ _id: req.params.id });
+    if (order) {
+      res.send(order);
+    } else {
+      res.status(404).send("Order Not Found.")
+    }
+  });
+
+  router.delete("/:id", isAuth, isAdmin, async (req, res) => {
+    const order = await Order.findOne({ _id: req.params.id });
+    if (order) {
+      const deletedOrder = await order.remove();
+      res.send(deletedOrder);
+    } else {
+      res.status(404).send("Order Not Found.")
+    }
+  });
+
+ 
 module.exports = router;
