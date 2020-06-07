@@ -95,7 +95,6 @@ function App() {
           <Route path="/signin" component={SignIn} />
           <Route path="/category/:id" component={Home} />
           <Route path="/" exact={true} component={Home} />
-
         </div>
       </main>
         
