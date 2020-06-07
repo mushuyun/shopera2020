@@ -17,10 +17,19 @@ function Home(props) {
       //
     };
   }, []);
-
-
-
-  return <ul className="products"> {
+//sort product by category.....
+const [searchKeyword, setSearchKeyword] = useState('');
+const category = props.match.params.id ? props.match.params.id : '';
+useEffect(() => {
+  dispatch(listProducts(category));
+  return () => {
+  // 
+  };
+}, [category]);
+return <>
+{category &&
+  <h2>{category}</h2>}
+  <ul className="products"> {
     products.map(product =>
         <li key={product._id}>
           <div className="products">
@@ -30,7 +39,7 @@ function Home(props) {
             <div className="product-name">
               <Link to={'/product/' + product._id}>{product.name}</Link>  
             </div>
-            <div className="product-desc">{product.desc}</div>
+            <div className="product-desc">{product.description}</div>
             <div className="product-brand" >{product.brand}</div>  
             <div className="product-price">${product.price}</div>
             <div className="product-rating">{product.rating} Stars ({product.numReviews} Reviews)</div> 
@@ -38,6 +47,7 @@ function Home(props) {
         </li>)
     }
   </ul>
+  </>
 }
 
 export default Home;
