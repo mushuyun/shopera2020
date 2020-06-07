@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { listOrders, detailsOrder, deleteOrder } from './orderActions';
+import "../../styles/orderCrud.css";
 
 function OrdersScreen(props) {
   const orderList = useSelector(state => state.orderList);
@@ -45,9 +46,9 @@ function OrdersScreen(props) {
               <td>{order._id}</td>
               <td>{order.createdAt}</td>
               <td>{order.user.name}</td>
-              <td>DELIVERED!</td>
+              <td className="status">DELIVERED!</td>
               <td className="action">
-                <Link className="action" to={"/order/" + order._id} className="button secondary" >Details</Link>
+                <Link to={"/order/" + order._id} className="button secondary" >Details</Link>
                 {' '}
                 <button type="button" onClick={() => deleteHandler(order)} className="button secondary">Delete</button>
               </td>
