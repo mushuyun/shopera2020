@@ -43,23 +43,6 @@ function Profile(props) {
     };
   }, [userInfo])
 
-
-  // useEffect(() => {
-  //   if (userInfo) {
-  //     if (userInfo) {
-  //           console.log(userInfo.name)
-  //           setEmail(userInfo.email);
-  //           setName(userInfo.name);
-  //           setPassword(userInfo.password);
-  //         }
-  //   }
-  //   return () => {   
-  //        //
-  //   };
-  // }, [userInfo]);
-
-
-  
   return <div className="profile">
     <div className="profile-info">
       <div className="form">
@@ -114,13 +97,15 @@ function Profile(props) {
                 <tr>
                   <th>ID</th>
                   <th>ORDER DATE</th>
-                  <th>ACTIONS</th>
+                  <th>STATUS</th>
+                  <th className="action">ACTIONS</th>
                 </tr>
               </thead>
               <tbody>
                 {orders.map(order => <tr key={order._id}>
                   <td>{order._id}</td>
                   <td>{order.createdAt}</td>
+                  <td className="deliver">DELIVERED!</td>
                   <td>
                     <Link to={"/order/" + order._id}>DETAILS</Link>
                   </td>
