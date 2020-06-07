@@ -8,6 +8,7 @@ import {
     order: {
       orderItems: [],
       shipping: {},
+      createdAt: ""
     }
   }, action) {
     switch (action.type) {

@@ -72,39 +72,7 @@ function Order(props) {
             </ul>
            </div>
          </div>
-        {/* <div className="placeorder-action">
-          <ul>
-            <li className="placeorder-actions-payment">
-              {loadingPay && <div>Finishing Payment...</div>}
-              {!order.isPaid &&
-                <PaypalButton
-                  amount={order.totalPrice}
-                  onSuccess={handleSuccessPayment} />
-              }
-            </li>
-            <li>
-              <h3>Order Summary</h3>
-            </li>
-            <li>
-              <div>Items</div>
-              <div>${order.itemsPrice}</div>
-            </li>
-            <li>
-              <div>Shipping</div>
-              <div>${order.shippingPrice}</div>
-            </li>
-            <li>
-              <div>Tax</div>
-              <div>${order.taxPrice}</div>
-            </li>
-            <li>
-              <div>Order Total</div>
-              <div>${order.totalPrice}</div>
-            </li>
-          </ul> */}
-
-
-
+        
         </div>
 
       </div> 
