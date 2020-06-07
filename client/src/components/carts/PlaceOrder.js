@@ -52,13 +52,7 @@ function infoToProcess() {
     });
     
 }
-// function switchPage() {
-//   const redirect = props.location.search ? props.location.search.split("=")[1] : '/payment';
-//     if () {
-//       props.history.push(redirect);
-//     }
 
-// }
 const PlaceOrder = (props) => {
   return (
     <Container>

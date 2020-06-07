@@ -22,7 +22,6 @@ import {
     order: {
       orderItems: [],
       shipping: {},
-      payment: {}
     }
   }, action) {
     switch (action.type) {
@@ -87,7 +86,6 @@ import {
     order: {
       orderItems: [],
       shipping: {},
-      payment: {}
     }
   }, action) {
     switch (action.type) {
@@ -100,6 +98,7 @@ import {
       default: return state;
     }
   }
+
   export {
     orderDetailsReducer, myOrderListReducer, orderListReducer, orderDeleteReducer
-  }
+  };

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { listOrders, deleteOrder } from '../actions/orderActions';
+import { listOrders, detailsOrder, deleteOrder } from './orderActions';
+import "../../styles/orderCrud.css";
 
-function orderCrud(props) {
+function OrdersScreen(props) {
   const orderList = useSelector(state => state.orderList);
   const { loading, orders, error } = orderList;
 
@@ -66,4 +67,4 @@ function orderCrud(props) {
       </div>
     </div>
 }
-export default orderCrud;
+export default OrdersScreen;

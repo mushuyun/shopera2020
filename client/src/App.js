@@ -6,19 +6,20 @@ import {BrowserRouter, Route, Link} from "react-router-dom";
 import Home from "./components/Home";
 import Product from "./components/products/Product";
 import ProductCrud from "./components/productManage/ProductCrud";
-// import Order from "./components/carts/Order";
+// import orderCrud from "./components/orderManage/orderCrud";
+import Order from "./components/carts/Order";
 import Cart from "./components/carts/Cart";
 import Payment from "./components/carts/Payment";
 import PlaceOrder from "./components/carts/PlaceOrder";
-// import Beauty from "./components/products/Beauty";
-// import Jewelry from "./components/products/Jewelry";
-// import Shoes from "./components/products/Shoes";
 import SignIn from './components/users/SignIn';
 import Register from './components/users/Register';
 import Profile from './components/users/Profile';
 import Shipping from "./components/carts/Shipping";
-import Checkout from './components/checkouts/Checkout';
-import PaypalConnection from './components/checkouts/PaypalConnect';
+// import Beauty from "./components/products/Beauty";
+// import Jewelry from "./components/products/Jewelry";
+// import Shoes from "./components/products/Shoes";
+// import Checkout from './components/checkouts/Checkout';
+// import PaypalConnection from './components/checkouts/PaypalConnect';
 import { Badge } from "reactstrap";
 import packageJson from '../package.json';
 
@@ -94,17 +95,18 @@ function App() {
           {/* <Route path="/category/Shoes" component={Shoes} />
           <Route path="/category/Beauty" component={Beauty} /> 
           <Route path="/category/Jewelry" component={Jewelry} />  */}
+          {/* <Route path="/ordercrud" component={orderCrud} /> */}
           <Route path="/cart" component={Cart} />
           {/* <Route path="/cart/:id?" component={Cart} /> */}
           <Route path="/shipping" component={Shipping} />
-          {/* <Route path="/orders" component={Orders} /> */}
-          {/* <Route path="/order" component={Order} /> */}
+          {/* <Route path="/orders" component={Orders} />  */}
+          <Route path="/order/:id" component={Order} />
           <Route path="/payment" component={Payment} />
           <Route path="/profile" component={Profile} />
           <Route path="/register" component={Register} />
           <Route path="/placeOrder" component={PlaceOrder} />
           <Route path="/signin" component={SignIn} />
-          <Route path="/category/:id" component={Home} />
+          {/* <Route path="/category/:id" component={Home} /> */}
           <Route path="/" exact={true} component={Home} />
 
         </div>
