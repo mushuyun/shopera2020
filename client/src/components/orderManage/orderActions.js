@@ -3,21 +3,6 @@ import {
   ORDER_DETAILS_REQUEST, ORDER_DETAILS_SUCCESS, ORDER_DETAILS_FAIL, USER_ORDER_LIST_REQUEST, USER_ORDER_LIST_SUCCESS, USER_ORDER_LIST_FAIL, ORDER_DELETE_REQUEST, ORDER_DELETE_SUCCESS, ORDER_DELETE_FAIL, ORDER_LIST_REQUEST, ORDER_LIST_SUCCESS, ORDER_LIST_FAIL
 } from "./orderConstants";
 
-// const createOrder = (order) => async (dispatch, getState) => {
-//   try {
-//     dispatch({ type: ORDER_CREATE_REQUEST, payload: order });
-//     const { userSignin: { userInfo } } = getState();
-//     const { data: { data: newOrder } } = await Axios.post("/api/orders", order, {
-//       headers: {
-//         Authorization: ' Bearer ' + userInfo.token
-//       }
-//     });
-//     dispatch({ type: ORDER_CREATE_SUCCESS, payload: newOrder });
-//   } catch (error) {
-//     dispatch({ type: ORDER_CREATE_FAIL, payload: error.message });
-//   }
-// }
-
 const listUserOrders = () => async (dispatch, getState) => {
   try {
     dispatch({ type: USER_ORDER_LIST_REQUEST });
@@ -60,20 +45,6 @@ const detailsOrder = (orderId) => async (dispatch, getState) => {
     dispatch({ type: ORDER_DETAILS_FAIL, payload: error.message });
   }
 }
-
-// const payOrder = (order, paymentResult) => async (dispatch, getState) => {
-//   try {
-//     dispatch({ type: ORDER_PAY_REQUEST, payload: paymentResult });
-//     const { userSignin: { userInfo } } = getState();
-//     const { data } = await Axios.put("/api/orders/" + order._id + "/pay", paymentResult, {
-//       headers:
-//         { Authorization: 'Bearer ' + userInfo.token }
-//     });
-//     dispatch({ type: ORDER_PAY_SUCCESS, payload: data })
-//   } catch (error) {
-//     dispatch({ type: ORDER_PAY_FAIL, payload: error.message });
-//   }
-// }
 
 const deleteOrder = (orderId) => async (dispatch, getState) => {
   try {
