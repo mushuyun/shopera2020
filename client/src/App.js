@@ -53,13 +53,24 @@ function App() {
             <Link to="/signin">Sign In/Register</Link>
             <Link to="/profile">Profile/Logout</Link>
             <div className="dropdown">
-              <a href="#"  >Admin</a>
+              {/* <a href="#"  >Admin</a>
               <ul className="dropdown-content">
                 <li>
                   <Link to="/ordercrud">Orders</Link>
                   <Link to="/productcrud">Products</Link>
                 </li>
-              </ul>
+              </ul> */}
+              {userInfo && userInfo.isAdmin && (
+              <div className="dropdown">
+                <a href="#"  >Admin</a>
+                <ul className="dropdown-content">
+                  <li>
+                    <Link to="/ordercrud">Orders</Link>
+                    <Link to="/productcrud">Products</Link>
+                  </li>
+                </ul>
+              </div>
+            )}
             </div>
         </div>
       </header>

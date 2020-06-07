@@ -9,10 +9,6 @@ function Order(props) {
   const orderDetails = useSelector(state => state.orderDetails);
   const { loading, order, error } = orderDetails;
 
-  return loading ? <div>Loading ...</div> : error ? <div>{error}
-
-   
-
 }
 
 
