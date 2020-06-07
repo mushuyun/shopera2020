@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 function Home(props) {
 
-//loading full product list....
+// loading full product list....
   const productList = useSelector(state => state.productList);
   const { products, loading, error } = productList;
   const dispatch = useDispatch();
@@ -27,6 +27,7 @@ function Home(props) {
       //
     };
   }, [category]);
+
 
   return <>
   {category &&
