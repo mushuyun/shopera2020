@@ -18,8 +18,6 @@ import Shipping from "./components/carts/Shipping";
 // import Beauty from "./components/products/Beauty";
 // import Jewelry from "./components/products/Jewelry";
 // import Shoes from "./components/products/Shoes";
-// import Checkout from './components/checkouts/Checkout';
-// import PaypalConnection from './components/checkouts/PaypalConnect';
 import { Badge } from "reactstrap";
 import packageJson from '../package.json';
 
@@ -36,9 +34,6 @@ function App() {
   }
 
   let cartCount = 0;
-  
-  //const userLogout = useSelector(state => state.userLogout);
-  //const { userInfo } = userSignin;
 
 
   if (localStorage.getItem("cart") !== null) {
