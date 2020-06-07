@@ -8,6 +8,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 function Home(props) {
 
 // loading full product list....
+function Home(props) {
+//loading full product list....
   const productList = useSelector(state => state.productList);
   const { products, loading, error } = productList;
   const dispatch = useDispatch();
@@ -19,7 +21,7 @@ function Home(props) {
   }, []);
 
 //sort product by category.....
-  // const [searchKeyword, setSearchKeyword] = useState('');
+  const [searchKeyword, setSearchKeyword] = useState('');
   const category = props.match.params.id ? props.match.params.id : '';
   useEffect(() => {
     dispatch(listProducts(category));
@@ -27,7 +29,6 @@ function Home(props) {
       //
     };
   }, [category]);
-
 
   return <>
   {category &&
@@ -53,5 +54,4 @@ function Home(props) {
     </>
 
 }
-
 export default Home;
