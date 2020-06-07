@@ -6,7 +6,7 @@ import {BrowserRouter, Route, Link} from "react-router-dom";
 import Home from "./components/Home";
 import Product from "./components/products/Product";
 import ProductCrud from "./components/productManage/ProductCrud";
-// import orderCrud from "./components/orderManage/orderCrud";
+import orderCrud from "./components/orderManage/orderCrud";
 import Order from "./components/carts/Order";
 import Cart from "./components/carts/Cart";
 import Payment from "./components/carts/Payment";
@@ -59,7 +59,7 @@ function App() {
               <a href="#"  >Admin</a>
               <ul className="dropdown-content">
                 <li>
-                  <Link to="/orders">Orders</Link>
+                  <Link to="/ordercrud">Orders</Link>
                   <Link to="/productcrud">Products</Link>
                 </li>
               </ul>
@@ -90,7 +90,7 @@ function App() {
           {/* <Route path="/category/Shoes" component={Shoes} />
           <Route path="/category/Beauty" component={Beauty} /> 
           <Route path="/category/Jewelry" component={Jewelry} />  */}
-          {/* <Route path="/ordercrud" component={orderCrud} /> */}
+          <Route path="/ordercrud" component={orderCrud} />
           <Route path="/cart" component={Cart} />
           {/* <Route path="/cart/:id?" component={Cart} /> */}
           <Route path="/shipping" component={Shipping} />

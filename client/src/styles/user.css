@@ -56,27 +56,32 @@ input{
 .profile{
   display: flex;
   flex-wrap: wrap;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .profile-info{
   flex: 1 1 30rem;
 }
+  
 .profile-orders{
   flex: 3 1 60rem;
+  margin-top: 40px;
 }
+
 th{
-  font-size: 14px;
+  font-size: 12px;
 }
 td{
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .deliver{
-  font-size: 14px;
+  font-size: 13px;
   font-weight: bold;
 }
 
 .action{
-  font-size: 14px;
+  font-size: 13px;
   font-weight: bold;
 }
