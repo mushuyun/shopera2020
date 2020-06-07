@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { logout, update } from './userActions';
-import { listMyOrders } from '../orderManage/orderActions';
+import { listUserOrders, detailsOrder } from '../orderManage/orderActions';
 import { useDispatch, useSelector } from 'react-redux';
 import Cookie from "js-cookie";
 import axios from "axios";
@@ -25,8 +25,8 @@ function Profile(props) {
   }
   const userUpdate = useSelector(state => state.userUpdate);
   const { loading, success, error } = userUpdate;
-  const myOrderList = useSelector(state => state.myOrderList);
-  const { loading: loadingOrders, orders, error: errorOrders } = myOrderList;
+  const USEROrderList = useSelector(state => state.USEROrderList);
+  const { loading: loadingOrders, orders, error: errorOrders } = USEROrderList;
   const redirect = props.location.search ? props.location.search.split("=")[1] : '/';
   useEffect(() => {
     if (userInfo) {
@@ -36,7 +36,7 @@ function Profile(props) {
       setPassword(userInfo.password);
     }
     
-    dispatch(listMyOrders());
+    dispatch(listUserOrders());
 
     return () => {
 

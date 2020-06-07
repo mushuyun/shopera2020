@@ -1,26 +1,10 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { createOrder, detailsOrder } from '../orderManage/orderActions';
+import { detailsOrder } from '../orderManage/orderActions';
+import "../../styles/user.css";
 
 function Order(props) {
-
-//   const orderPay = useSelector(state => state.orderPay);
-//   const { loading: loadingPay, success: successPay, error: errorPay } = orderPay;
-//   const dispatch = useDispatch();
-//   useEffect(() => {
-//     if (successPay) {
-//       props.history.push("/profile");
-//     } else {
-//       dispatch(detailsOrder(props.match.params.id));
-//     }
-//     return () => {
-//     };
-//   }, [successPay]);
-
-//   const handleSuccessPayment = (paymentResult) => {
-//     dispatch(payOrder(order, paymentResult));
-//   }
 
   const orderDetails = useSelector(state => state.orderDetails);
   const { loading, order, error } = orderDetails;
@@ -44,8 +28,10 @@ function Order(props) {
                 {order.createdAt}, {order.updatedAt}
               </div>
         </div>
+    <div>
+      
           
-          <div>
+           <div>
             <ul className="cart-list-container">
               <li>
                 <h3>
@@ -53,14 +39,14 @@ function Order(props) {
                 </h3>
                 <div>
                   Price
-          </div>
+                </div>
               </li>
               {
-                order.orderItems.length === 0 ?
-                  <div>
-                    Cart is empty
-                  </div>
-                  :
+                // order.orderItems.length === 0 ?
+                //   <div>
+                //     Cart is empty
+                //   </div>
+                //   :
                   order.orderItems.map(item =>
                     <li key={item._id}>
                       <div className="cart-image">
@@ -84,8 +70,8 @@ function Order(props) {
                   )
               }
             </ul>
-          </div>
-        </div>
+           </div>
+         </div>
         {/* <div className="placeorder-action">
           <ul>
             <li className="placeorder-actions-payment">
@@ -119,9 +105,9 @@ function Order(props) {
 
 
 
-        {/* </div> */}
+        </div>
 
-      </div>
+      </div> 
     </div>
 
 }
