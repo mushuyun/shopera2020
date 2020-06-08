@@ -1,46 +1,79 @@
-Shopera is a complete e-commerce site bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Shopera
 
-## Available Scripts
 
-In the project directory, you can run:
+Shopera is a complete e-commerce site bootstrapped with the [Create React App](https://github.com/facebook/create-react-app). It is a versatile app that can be utilized by any client with an inventory to host.
 
-### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+ ## Table of Contents: 
+  * Installation 
+  * Usage 
+  * License 
+  * Contributing 
+  * Questions 
+  * Images 
+   
+   #### Installation: 
 
-### `npm test`
+   npm install
+   
+   ### Technology: 
+   * [React documentation](https://reactjs.org/).
+   * [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started)
+   * [ReactDom](https://reactjs.org/docs/react-dom.html)
+   * [React-router-dom](https://www.npmjs.com/package/react-router-dom)
+   * [React-Redux](https://react-redux.js.org/)
+   * [React-beautiful-dnd](https://www.npmjs.com/package/react-beautiful-dnd)
+   * [Reactstrap](https://reactstrap.github.io/)
+   * [MongoDB](https://www.mongodb.com/)
+   * [Axios](https://www.npmjs.com/package/axios)
+   * [Express](https://expressjs.com/)
+   * [JS-Cookie](https://www.npmjs.com/package/js-cookie)
+   * [Bootstrap](https://getbootstrap.com/)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ 
+   
+   #### License: 
 
-### `npm run build`
+   ISC: [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
+   
+   ### Contributions: 
+   
+   * [Shuyun Mu](https://github.com/mushuyun)
+   * [Karna Cutolo](https://github.com/Karna1014)
+   * [Jon Handy](https://github.com/jhandy4)
+   
+   
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ### Questions: 
+   
+   #### If you have any questions about this repo, please reach out: 
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+   * **Email: karna.cutolo@gmail.com**
+   * **Email: rtpice.mu@gmail.com**
+   * **Email: jhandy4@gmail.com**
+     
+   #### Images: 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   **Shopera Home Page**
 
-## Learn More
+   ![Home Page](./public/images/Home.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   **Shopera Order Page**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ![Order Page](./public/images/Order.png)
 
-### Making a Progressive Web App
+   **Shopera Payment Page**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+   ![Payment Page](./public/images/Payment.png)
 
-### Deployment
+   **Shopera Admin Page**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+   ![Admin Page](./public/images/Admin.png)
 
-### `npm run build` fails to minify
+   **Shopera ProdUpdate Page**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+   ![ProdUpdate Page](./public/images/ProdUpdate.png)
+
+
+
