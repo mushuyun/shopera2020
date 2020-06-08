@@ -10,7 +10,7 @@ class Cart extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            items : JSON.parse(localStorage.getItem("cart")),
+            items : localStorage.getItem("cart") === null ? [] : JSON.parse(localStorage.getItem("cart")),
             total : 0,
             show: this.props.show === undefined ? true : this.props.show
         }
