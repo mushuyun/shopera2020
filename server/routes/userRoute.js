@@ -74,7 +74,7 @@ router.get("/createadmin", async (req, res) => {
   try {
     const user = new User({
       name: 'Sue',
-      email: 'rtpice.mu@gmail.com',
+      email: 'sue@shopera.com',
       password: 'pwsd1234',
       isAdmin: true
     });

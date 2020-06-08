@@ -1,15 +1,16 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import './styles/home.css';
 import Cookie from "js-cookie";
 import {BrowserRouter, Route, Link} from "react-router-dom";
 import Home from "./components/Home";
 import Product from "./components/products/Product";
 import ProductCrud from "./components/productManage/ProductCrud";
-// import Order from "./components/carts/Order";
+import orderCrud from "./components/orderManage/orderCrud";
+import Order from "./components/carts/Order";
 import Cart from "./components/carts/Cart";
 import Payment from "./components/carts/Payment";
 import PlaceOrder from "./components/carts/PlaceOrder";
+<<<<<<< HEAD
 import Beauty from "./components/products/Beauty";
 import Jewelry from "./components/products/Jewelry";
 import Shoes from "./components/products/Shoes";
@@ -20,6 +21,15 @@ import Shipping from "./components/carts/Shipping";
 import PaypalConnection from "./components/checkouts/PaypalConnect";
 import { Badge } from "reactstrap";
 import packageJson from "../package.json";
+=======
+import SignIn from './components/users/SignIn';
+import Register from './components/users/Register';
+import Profile from './components/users/Profile';
+import Shipping from "./components/carts/Shipping";
+import { Badge } from "reactstrap";
+import packageJson from '../package.json';
+import './styles/home.css';
+>>>>>>> origin
 
 function App() {
 
@@ -34,9 +44,6 @@ function App() {
   }
 
   let cartCount = 0;
-  
-  //const userLogout = useSelector(state => state.userLogout);
-  //const { userInfo } = userSignin;
 
 
   if (localStorage.getItem("cart") !== null) {
@@ -59,13 +66,24 @@ function App() {
             <Link to="/signin">Sign In/Register</Link>
             <Link to="/profile">Profile/Logout</Link>
             <div className="dropdown">
-              <a href="#"  >Admin</a>
+              {/* <a href="#"  >Admin</a>
               <ul className="dropdown-content">
                 <li>
-                  <Link to="/orders">Orders</Link>
+                  <Link to="/ordercrud">Orders</Link>
                   <Link to="/productcrud">Products</Link>
                 </li>
-              </ul>
+              </ul> */}
+              {userInfo && userInfo.isAdmin && (
+              <div className="dropdown">
+                <a href="#"  >Admin</a>
+                <ul className="dropdown-content">
+                  <li>
+                    <Link to="/ordercrud">Orders</Link>
+                    <Link to="/productcrud">Products</Link>
+                  </li>
+                </ul>
+              </div>
+            )}
             </div>
         </div>
       </header>
@@ -90,14 +108,10 @@ function App() {
         <div className="content">
           <Route path="/product/:id" component={Product} />
           <Route path="/productcrud" component={ProductCrud} />
-          <Route path="/category/Shoes" component={Shoes} />
-          <Route path="/category/Beauty" component={Beauty} /> 
-          <Route path="/category/Jewelry" component={Jewelry} /> 
+          <Route path="/ordercrud" component={orderCrud} />
           <Route path="/cart" component={Cart} />
-          {/* <Route path="/cart/:id?" component={Cart} /> */}
           <Route path="/shipping" component={Shipping} />
-          {/* <Route path="/orders" component={Orders} /> */}
-          {/* <Route path="/order" component={Order} /> */}
+          <Route path="/order/:id" component={Order} />
           <Route path="/payment" component={Payment} />
           <Route path="/profile" component={Profile} />
           <Route path="/register" component={Register} />
@@ -105,7 +119,6 @@ function App() {
           <Route path="/signin" component={SignIn} />
           <Route path="/category/:id" component={Home} />
           <Route path="/" exact={true} component={Home} />
-
         </div>
       </main>
         

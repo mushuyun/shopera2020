@@ -87,7 +87,7 @@ body{
 
 /* Home*/
 .products {
-  /* display: table-column; */
+  display: table-column;
   vertical-align: middle;
   display: flex;
   justify-content: center;
@@ -101,7 +101,7 @@ body{
   align-items: flex-start;
   flex-wrap: wrap;
   padding: 1rem;
-  flex: 0 20 40rem;
+  flex: 0 1 38rem;
   margin: 1rem;
   height: 50rem;
   border-bottom: .1rem #c0c0c0 solid;
@@ -109,6 +109,7 @@ body{
 .product{
   display: table-column;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: space-between;
   height: 100%;
 }
@@ -281,3 +282,16 @@ a:hover{
 .dropdown:hover .dropdown-content{
   display: block;
 }
+/* .categories{
+
+  padding: 0;
+  list-style-type: none;
+}
+.categories a{
+  display: flex;
+  padding: 1rem;
+}
+
+.categories a:hover{
+  background-color: #c0c0c0;
+} */

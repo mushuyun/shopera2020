@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { logout, update } from './userActions';
+import { listUserOrders, detailsOrder } from '../orderManage/orderActions';
 import { useDispatch, useSelector } from 'react-redux';
+import Cookie from "js-cookie";
+import axios from "axios";
 import "../../styles/user.css";
 
 function Profile(props) {
@@ -22,42 +25,24 @@ function Profile(props) {
   }
   const userUpdate = useSelector(state => state.userUpdate);
   const { loading, success, error } = userUpdate;
-
-  //const myOrderList = useSelector(state => state.myOrderList);
-  //const { loading: loadingOrders, orders, error: errorOrders } = myOrderList;
-  // const redirect = props.location.search ? props.location.search.split("=")[1] : '/';
-  // useEffect(() => {
-  //   if (userInfo) {
-  //     console.log(userInfo.name)
-  //     setEmail(userInfo.email);
-  //     setName(userInfo.name);
-  //     setPassword(userInfo.password);
-  //   }
-    
-  //   //dispatch(listMyOrders());
-
-  //   return () => {
-
-  //   };
-  // }, [userInfo])
-
+  const USEROrderList = useSelector(state => state.USEROrderList);
+  const { loading: loadingOrders, orders, error: errorOrders } = USEROrderList;
+  const redirect = props.location.search ? props.location.search.split("=")[1] : '/';
   useEffect(() => {
     if (userInfo) {
-      if (userInfo) {
-            console.log(userInfo.name)
-            setEmail(userInfo.email);
-            setName(userInfo.name);
-            setPassword(userInfo.password);
-          }
+      console.log(userInfo.name)
+      setEmail(userInfo.email);
+      setName(userInfo.name);
+      setPassword(userInfo.password);
     }
-    return () => {
-      
-       //
-  
-    };
-  }, [userInfo]);
+    
+    dispatch(listUserOrders());
 
-  
+    return () => {
+
+    };
+  }, [userInfo])
+
   return <div className="profile">
     <div className="profile-info">
       <div className="form">
@@ -102,7 +87,34 @@ function Profile(props) {
         </form>
       </div>
     </div>
+
+    <div className="profile-orders content-margined">
+      {
+        loadingOrders ? <div>Loading...</div> :
+          errorOrders ? <div>{errorOrders} </div> :
+            <table className="table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>ORDER DATE</th>
+                  <th>STATUS</th>
+                  <th className="action">ACTIONS</th>
+                </tr>
+              </thead>
+              <tbody>
+                {orders.map(order => <tr key={order._id}>
+                  <td>{order._id}</td>
+                  <td>{order.createdAt}</td>
+                  <td className="deliver">DELIVERED!</td>
+                  <td>
+                    <Link to={"/order/" + order._id}>DETAILS</Link>
+                  </td>
+                </tr>)}
+              </tbody>
+            </table>
+      }
+      </div>
     </div>
-}
+  }
 
 export default Profile;

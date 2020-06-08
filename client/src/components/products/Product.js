@@ -4,15 +4,12 @@ import { Link, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
 import { listProducts } from './../productManage/crudActions';
 import { detailsProduct } from './../productManage/crudActions';
-import Home from "../Home";
-import store from "../store";
-import axios from "axios";
 import 'bootstrap/dist/css/bootstrap.css';
 
 
 function Product(props) {
     
-  const [qty, setQty] = useState(1);
+  // const [qty, setQty] = useState(1);
   const productDetails = useSelector(state => state.productDetails);
   const { product, loading, error } = productDetails;
   const dispatch = useDispatch();
