@@ -10,18 +10,6 @@ import Order from "./components/carts/Order";
 import Cart from "./components/carts/Cart";
 import Payment from "./components/carts/Payment";
 import PlaceOrder from "./components/carts/PlaceOrder";
-<<<<<<< HEAD
-import Beauty from "./components/products/Beauty";
-import Jewelry from "./components/products/Jewelry";
-import Shoes from "./components/products/Shoes";
-import SignIn from "./components/users/SignIn";
-import Register from "./components/users/Register";
-import Profile from "./components/users/Profile";
-import Shipping from "./components/carts/Shipping";
-import PaypalConnection from "./components/checkouts/PaypalConnect";
-import { Badge } from "reactstrap";
-import packageJson from "../package.json";
-=======
 import SignIn from './components/users/SignIn';
 import Register from './components/users/Register';
 import Profile from './components/users/Profile';
@@ -29,7 +17,6 @@ import Shipping from "./components/carts/Shipping";
 import { Badge } from "reactstrap";
 import packageJson from '../package.json';
 import './styles/home.css';
->>>>>>> origin
 
 function App() {
 
