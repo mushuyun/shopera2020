@@ -51,7 +51,7 @@ class Cart extends React.Component {
                                     ))}
                                 </div>
                             )}
-                            {this.state.items.length === 0 && (
+                            {!this.state.items.length && (
                                 <div className="alert alert-warning" style={{ backgroundColor: "primary", fontSize: 16, textAlign: "center"}}>Cart is empty</div>
                             )}
                             {this.state.show === true && (
