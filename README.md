@@ -57,23 +57,23 @@ Shopera is a complete e-commerce site bootstrapped with the [Create React App](h
 
    **Shopera Home Page**
 
-   ![Home Page](./public/images/Home.png)
+   ![Home Page](./client/public/images/Home.png)
 
    **Shopera Order Page**
 
-   ![Order Page](./public/images/Order.png)
+   ![Order Page](./client/public/images/Order.png)
 
    **Shopera Payment Page**
 
-   ![Payment Page](./public/images/Payment.png)
+   ![Payment Page](./client/public/images/Payment.png)
 
    **Shopera Admin Page**
 
-   ![Admin Page](./public/images/Admin.png)
+   ![Admin Page](./client/public/images/Admin.png)
 
    **Shopera ProdUpdate Page**
 
-   ![ProdUpdate Page](./public/images/ProdUpdate.png)
+   ![ProdUpdate Page](./client/public/images/ProdUpdate.png)
 
 
 
