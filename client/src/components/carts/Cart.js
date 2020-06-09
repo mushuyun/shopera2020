@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from 'react-router-dom';
 import CartItem from "./cartItem";
 import { Button, Container } from "reactstrap";
 import "../../styles/shipping.css";

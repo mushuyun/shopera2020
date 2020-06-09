@@ -1,8 +1,6 @@
 import React from "react";
 import { Card, Col, Container, Row } from "reactstrap";
-import { Link } from "react-router-dom";
-// import Product from "../products"
-// import data from "../../data/data";
+
 
 
 class CartItem extends React.Component {
