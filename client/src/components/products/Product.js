@@ -1,6 +1,6 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
-import { Link, useParams } from "react-router-dom";
+import { useEffect } from 'react';
+import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
 import { listProducts } from './../productManage/crudActions';
 import { detailsProduct } from './../productManage/crudActions';
@@ -25,38 +25,22 @@ function Product(props) {
     
     var e = document.getElementById("itemQty");
 
-    if (false) { // user is signed in
-
-      const body = {
-        productId: productId,
-        qty: parseInt(e.options[e.selectedIndex].value)
-      }
-
-      const response = await fetch("/cart", {
-        method: "POST",
-        body: JSON.stringify(body),
-        headers: {
-          "Content-type": "application/json"
-        }
-      });
-    } else {
-      let cart = [];
-      if (localStorage.getItem("cart") !== null) {
-        cart = JSON.parse(localStorage.getItem("cart"));
+    let cart = [];
+    if (localStorage.getItem("cart") !== null) {
+      cart = JSON.parse(localStorage.getItem("cart"));
+    } 
+    let alreadyExists = false;
+    for (var i = 0; i < cart.length; i++) {
+      if (cart[i]["product"]["_id"] === productId) {
+        alreadyExists = true;
+        cart[i]["qty"] += 1;
+        break;
       } 
-      let alreadyExists = false;
-      for (var i = 0; i < cart.length; i++) {
-        if (cart[i]["product"]["_id"] === productId) {
-          alreadyExists = true;
-          cart[i]["qty"] += 1;
-          break;
-        } 
-      }
-      if (!alreadyExists) {
-        cart.push({"product": product, "qty": parseInt(e.options[e.selectedIndex].value)});
-      }
-      localStorage.setItem("cart", JSON.stringify(cart));
     }
+    if (!alreadyExists) {
+      cart.push({"product": product, "qty": parseInt(e.options[e.selectedIndex].value)});
+    }
+    localStorage.setItem("cart", JSON.stringify(cart));
 
     window.location.replace("/cart");
   } 

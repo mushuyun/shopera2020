@@ -1,93 +1,93 @@
 [
-  {  
-      "name": "Stiletto Sandal",
-      "description": "Ankle Strap, Beading, Blk, 4 inch Heel",
-      "category": "Shoes",
-      "image": "/images/highheel1.png",
-      "price": 600,
-      "brand": "Shopera",
-      "rating": 4.5,
-      "numReviews": 15
-  },
-  {  
-      "name": "High Heel Shoe",
-      "description": "Bow-toe, Ylw, 3 inch Heel",
-      "category": "Shoes",
-      "image": "/images/highheel2.png",
-      "price": 500,
-      "brand": "Shopera",
-      "rating": 4.2,
-      "numReviews": 10
+  {
+    "name": "Stiletto Sandal",
+    "description": "Ankle Strap, Beading, Blk, 4 inch Heel",
+    "category": "Shoes",
+    "image": "/images/highheel1.png",
+    "price": 600,
+    "brand": "Shopera",
+    "rating": 4.5,
+    "numReviews": 15
   },
   {
-      "name": "Stiletto Shoe",
-      "description": "Burn-out, Sq Medallion, Red, 4 inch Heel",
-      "Category": "Shoes",
-      "image": "/images/highheel3.png",
-      "price": 400,
-      "brand": "Shopera",
-      "rating": 4.0,
-      "numReviews": 17
-  },
-  {  
-      "name": "Dress Boot",
-      "description": "Ankle Strap, Nude, 4 inch Heel",
-      "category": "Shoes",
-      "image": "/images/boot1.png",
-      "price": 700,
-      "brand": "Shopera",
-      "rating": 4.5,
-      "numReviews": 15
+    "name": "High Heel Shoe",
+    "description": "Bow-toe, Ylw, 3 inch Heel",
+    "category": "Shoes",
+    "image": "/images/highheel2.png",
+    "price": 500,
+    "brand": "Shopera",
+    "rating": 4.2,
+    "numReviews": 10
   },
   {
-      "name": "Rain Boot",
-      "description": "Waterproof, Blk, 1 inch Heel",
-      "category": "Shoes",
-      "image": "/images/boot2.png",
-      "price": 500,
-      "brand": "Shopera",
-      "rating": 4.2,
-      "numReviews": 10
+    "name": "Stiletto Shoe",
+    "description": "Burn-out, Sq Medallion, Red, 4 inch Heel",
+    "category": "Shoes",
+    "image": "/images/highheel3.png",
+    "price": 400,
+    "brand": "Shopera",
+    "rating": 4.0,
+    "numReviews": 17
   },
   {
-      "name": "Rain Boot",
-      "description": "Waterproof, Flrl, 1.5 inch Heel",
-      "category": "Shoes",
-      "image": "/images/boot3.png",
-      "price": 800,
-      "brand": "Shopera",
-      "rating": 4.0,
-      "numReviews": 17
+    "name": "Dress Boot",
+    "description": "Ankle Strap, Nude, 4 inch Heel",
+    "category": "Shoes",
+    "image": "/images/boot1.png",
+    "price": 700,
+    "brand": "Shopera",
+    "rating": 4.5,
+    "numReviews": 15
   },
   {
-      "name": "Lustre Lipstick",
-      "description": "Lady Bug, Red, .1 oz",
-      "category": "Beauty",
-      "image": "/images/lip1.png",
-      "price": 50,
-      "brand": "Shopera",
-      "rating": 4.5,
-      "numReviews": 15
+    "name": "Rain Boot",
+    "description": "Waterproof, Blk, 1 inch Heel",
+    "category": "Shoes",
+    "image": "/images/boot2.png",
+    "price": 500,
+    "brand": "Shopera",
+    "rating": 4.2,
+    "numReviews": 10
   },
   {
-      "name": "Matte Lip Stick",
-      "description": "Russian Red, .1 oz",
-      "category": "Beauty",
-      "image": "/images/lip2.png",
-      "price": 90,
-      "brand": "Shopera",
-      "rating": 4.2,
-      "numReviews": 10
+    "name": "Rain Boot",
+    "description": "Waterproof, Flrl, 1.5 inch Heel",
+    "category": "Shoes",
+    "image": "/images/boot3.png",
+    "price": 800,
+    "brand": "Shopera",
+    "rating": 4.0,
+    "numReviews": 17
   },
   {
-      "name": "Lustre Lip Stick",
-      "description": "Patisserie, Pink, .1 oz",
-      "category": "Beauty",
-      "image": "/images/lip3.png",
-      "price": 100,
-      "brand": "Shopera",
-      "rating": 4.0,
-      "numReviews": 17
+    "name": "Lustre Lipstick",
+    "description": "Lady Bug, Red, .1 oz",
+    "category": "Beauty",
+    "image": "/images/lip1.png",
+    "price": 50,
+    "brand": "Shopera",
+    "rating": 4.5,
+    "numReviews": 15
+  },
+  {
+    "name": "Matte Lip Stick",
+    "description": "Russian Red, .1 oz",
+    "category": "Beauty",
+    "image": "/images/lip2.png",
+    "price": 90,
+    "brand": "Shopera",
+    "rating": 4.2,
+    "numReviews": 10
+  },
+  {
+    "name": "Lustre Lip Stick",
+    "description": "Patisserie, Pink, .1 oz",
+    "category": "Beauty",
+    "image": "/images/lip3.png",
+    "price": 100,
+    "brand": "Shopera",
+    "rating": 4.0,
+    "numReviews": 17
   },
   {
     "name": "Lustre Lip Stick",
@@ -98,35 +98,35 @@
     "brand": "Shopera",
     "rating": 4.5,
     "numReviews": 19
-},
-  {
-      "name": "Necklace",
-      "description": "14kt, 3CT. Blue Topaz, 20 inch",
-      "category": "Jewelry",
-      "image": "/images/jewelry1.png",
-      "price": 1050,
-      "brand": "Shopera",
-      "rating": 4.5,
-      "numReviews": 15
   },
   {
-      "name": "Earrings",
-      "description": "Abalone, .20CT. diamond, post-friction back",
-      "category": "Jewelry",
-      "image": "/images/jewelry2.png",
-      "price": 680,
-      "brand": "Shopera",
-      "rating": 4.2,
-      "numReviews": 10
+    "name": "Necklace",
+    "description": "14kt, 3CT. Blue Topaz, 20 inch",
+    "category": "Jewelry",
+    "image": "/images/jewelry1.png",
+    "price": 1050,
+    "brand": "Shopera",
+    "rating": 4.5,
+    "numReviews": 15
   },
-  { 
-      "name": "Pendant",
-      "description": "Multi-stone Cabochon, Citrine, Chalcedony, Rose Quartz, Ruby, 3in",
-      "category": "Jewelry",
-      "image": "/images/jewelry3.png",
-      "price": 2700,
-      "brand": "Shopera",
-      "rating": 4.0,
-      "numReviews": 17
+  {
+    "name": "Earrings",
+    "description": "Abalone, .20CT. diamond, post-friction back",
+    "category": "Jewelry",
+    "image": "/images/jewelry2.png",
+    "price": 680,
+    "brand": "Shopera",
+    "rating": 4.2,
+    "numReviews": 10
+  },
+  {
+    "name": "Pendant",
+    "description": "Multi-stone Cabochon, Citrine, Chalcedony, Rose Quartz, Ruby, 3in",
+    "category": "Jewelry",
+    "image": "/images/jewelry3.png",
+    "price": 2700,
+    "brand": "Shopera",
+    "rating": 4.0,
+    "numReviews": 17
   }
 ]

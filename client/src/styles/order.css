@@ -1,0 +1,17 @@
+#orderCtnr {
+    margin-top: 20px;
+}
+
+h1 {
+    color: #082aee
+}
+
+#ordNum {
+    float: right;
+}
+
+li {
+    font-size: 20px;
+    color: #082aee;
+    text-align: center;
+}

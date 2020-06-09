@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from 'react-router-dom';
 import CartItem from "./cartItem";
 import { Button, Container } from "reactstrap";
 import "../../styles/shipping.css";
@@ -10,7 +9,7 @@ class Cart extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            items : JSON.parse(localStorage.getItem("cart")),
+            items : localStorage.getItem("cart") === null ? [] : JSON.parse(localStorage.getItem("cart")),
             total : 0,
             show: this.props.show === undefined ? true : this.props.show
         }
@@ -51,7 +50,7 @@ class Cart extends React.Component {
                                     ))}
                                 </div>
                             )}
-                            {this.state.items.length === 0 && (
+                            {!this.state.items.length && (
                                 <div className="alert alert-warning" style={{ backgroundColor: "primary", fontSize: 16, textAlign: "center"}}>Cart is empty</div>
                             )}
                             {this.state.show === true && (

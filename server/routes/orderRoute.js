@@ -22,7 +22,6 @@ router.post('/saveOrder', async (req, res) => {
       user: req.body.userInfo,
       orderItems: buyerCart,
       shipping: req.body.shippingInfo,
-      // totalPrice: 100
       totalPrice: req.body.total
     });
 
