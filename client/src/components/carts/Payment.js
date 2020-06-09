@@ -15,7 +15,7 @@ const UserInfo = Cookie.getJSON("userInfo");
 const Payment = (props) => {
         return <Container>
             <Col md={12}>
-            <h2 id="userCO" style={{ marginTop: 15, }}>Thank you for Shopping! {UserInfo.name}</h2>
+            <h2 id="userCO" style={{ marginTop: 15 }}>Thank you for Shopping! {UserInfo.name}</h2>
             </Col> 
             <Container style={{ textAlign: "center" }}>
             <Row>
