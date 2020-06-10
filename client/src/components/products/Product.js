@@ -56,7 +56,7 @@ function Product(props) {
             </div>
             <div className="details-info">
               <ul>
-                <li>
+                <li className="details-name">
                   <h4>{product.name}</h4>
                 </li>
                 <li>
@@ -67,7 +67,7 @@ function Product(props) {
                 </li>
                 <li>
                   Description:
-                  <div>
+                  <div className="desc">
                     {product.description}
                   </div>
                 </li>
@@ -91,7 +91,7 @@ function Product(props) {
             </select>
           </li>
           <li>
-              <button className="button primary" id="atc" onClick={() => addToCart(product._id)}
+              <button className="button primary" id="add" onClick={() => addToCart(product._id)}
               >Add to Cart</button>
           </li>
         </ul>

@@ -116,10 +116,10 @@ body{
 }
 .product-name{
   display: flex-start;
-  /* display: flex-end; */
   flex: 1 1 40rem;
-  font-size: 2rem;
+  font-size: 2.3rem;
   font-weight: bold;
+  color:darkblue;
 }
 .product-desc{
   display: flex-start;
@@ -266,8 +266,19 @@ a:hover{
   background-color: #f0c040;
 }
 
-#atc{
+#add{
   font-size: 16px;
+  font-weight: bold;
+}
+
+.details-name{
+  font-size: 22px;
+  font-weight: bold;
+  color: blue;
+}
+
+.desc{
+  color: #ff8800;
 }
 
 /* admin */
