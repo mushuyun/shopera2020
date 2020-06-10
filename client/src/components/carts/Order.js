@@ -14,7 +14,6 @@ class Order extends React.Component {
  
   componentWillMount() {
     const UserInfo = Cookie.getJSON("userInfo");
-    // const orderId = order._id
     const orderId = this.props.match.params.id;
     console.log(orderId);
     fetch("/api/orders/" + orderId, {
@@ -66,7 +65,7 @@ class Order extends React.Component {
               <div className="Purchases">
                 <li>Item: { order.name }</li>
                 <li>Qty Purchased: { order.qty }</li>
-                <li><img className="product-image" src={ order.image } alt="product"/></li> 
+                <li><img className="order-image" src={ order.image } alt="product"/></li> 
               </div>
               </li>)
                }
