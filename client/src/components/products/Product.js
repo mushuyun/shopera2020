@@ -57,7 +57,7 @@ function Product(props) {
             <div className="details-info">
               <ul>
                 <li className="details-name">
-                  <h4>{product.name}</h4>
+                  <h3>{product.name}</h3>
                 </li>
                 <li>
                   {product.rating} Stars ({product.numReviews} Reviews)
