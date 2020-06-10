@@ -146,7 +146,7 @@ body{
 }
 .product-image{
   display: flex;
-  max-width: 30rem;
+  max-width: 40rem;
   max-height: 30rem;
 }
 .product-rating{
@@ -215,10 +215,10 @@ a:hover{
   font-family: 'Times New Roman', Times, serif;
 }
 .details-image {
-  flex: 2 1 40rem;
+  flex: 2 1 35rem;
 }
 .details-image img{
-  max-width: 40rem;
+  max-width: 35rem;
   widows: 100%;
 }
 .details-info {
