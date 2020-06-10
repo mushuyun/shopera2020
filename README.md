@@ -30,8 +30,8 @@ Shopera is a complete e-commerce site bootstrapped with the [Create React App](h
    * [Express](https://expressjs.com/)
    * [JS-Cookie](https://www.npmjs.com/package/js-cookie)
    * [Bootstrap](https://getbootstrap.com/)
+   * [JWT Authentication](https://www.jsonwebtoken.io/)
 
- 
    
    #### License: 
 
