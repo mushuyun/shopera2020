@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { logout, update } from './userActions';
-import { listUserOrders } from '../orderManage/orderActions';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { logout, update } from "./userActions";
+import { listUserOrders } from "../orderManage/orderActions";
+import { useDispatch, useSelector } from "react-redux";
 import "../../styles/user.css";
 
 function Profile(props) {
-  const [name, setName] = useState('');
-  const [password, setPassword] = useState('');
-  const [email, setEmail] = useState('');
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
   const dispatch = useDispatch();
 
   const userSignin = useSelector(state => state.userSignin);
@@ -25,7 +25,7 @@ function Profile(props) {
   const { loading, success, error } = userUpdate;
   const USEROrderList = useSelector(state => state.USEROrderList);
   const { loading: loadingOrders, orders, error: errorOrders } = USEROrderList;
-  const redirect = props.location.search ? props.location.search.split("=")[1] : '/';
+  const redirect = props.location.search ? props.location.search.split("=")[1] : "/";
   useEffect(() => {
     if (userInfo) {
       console.log(userInfo.name)
