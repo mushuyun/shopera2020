@@ -246,7 +246,7 @@ a:hover{
   border-radius: 0.5rem;
   background-color: #f8f8f8;
   padding: 1rem;
-  font-size: 0.7rem;
+  font-size: 0.5rem;
 }
 .details-action ul li:last-child{
   display: flex;
