@@ -17,7 +17,7 @@ function Home(props) {
     };
   }, []);
 //sort product by category.....
-  const category = props.match.params.id ? props.match.params.id : '';
+  const category = props.match.params.id ? props.match.params.id : "";
   useEffect(() => {
     dispatch(listProducts(category));
     return () => {

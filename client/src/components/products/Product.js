@@ -1,10 +1,10 @@
-import React from 'react';
-import { useEffect } from 'react';
+import React from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useSelector, useDispatch } from 'react-redux';
-import { listProducts } from './../productManage/crudActions';
-import { detailsProduct } from './../productManage/crudActions';
-import 'bootstrap/dist/css/bootstrap.css';
+import { useSelector, useDispatch } from "react-redux";
+import { listProducts } from "./../productManage/crudActions";
+import { detailsProduct } from "./../productManage/crudActions";
+import "bootstrap/dist/css/bootstrap.css";
 
 
 function Product(props) {

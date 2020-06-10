@@ -1,20 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
-import { register } from './userActions';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { register } from "./userActions";
 import "../../styles/user.css";
 
 function Register(props) {
 
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [rePassword, setRePassword] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [rePassword, setRePassword] = useState("");
   const userRegister = useSelector(state => state.userRegister);
   const { loading, userInfo, error } = userRegister;
   const dispatch = useDispatch();
 
-  const redirect = props.location.search ? props.location.search.split("=")[1] : '/';
+  const redirect = props.location.search ? props.location.search.split("=")[1] : "/";
   useEffect(() => {
     if (userInfo) {
       props.history.push(redirect);
