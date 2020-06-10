@@ -46,12 +46,10 @@ class CartItem extends React.Component {
             <Row>
               <Col md="2">
                   <div className="cart-item-image" id="cartImg">
-                    {/* <Link to={'/Product/product_id'}>  */}
                       <img
                         alt="no pic"
                         style={{ width: "75px" }}
                         src={this.image}/>
-                    {/* </Link>  */}
                   </div>
                 </Col>
               <Col md="4">

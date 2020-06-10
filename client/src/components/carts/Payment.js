@@ -20,31 +20,31 @@ const Payment = (props) => {
             <Container style={{ textAlign: "center" }}>
             <Row>
             <Col md={12} id="ccLink">
-                <Link to="./" id="payMC"><img src="https://img.icons8.com/officel/48/000000/mastercard.png"/>
+                <Link to="./" id="payMC"><img src="https://img.icons8.com/officel/48/000000/mastercard.png"alt="MC"/>
                 </Link>
             </Col>
             </Row>
             <Row>
             <Col md={12} id="ccLink">
-                <Link to="./" id="payVisa"><img src="https://img.icons8.com/color/48/000000/visa.png"/>
+                <Link to="./" id="payVisa"><img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa"/>
                 </Link>
             </Col>
             </Row>
             <Row>
             <Col md={12} id="ccLink">   
-                <Link to="./" id="payDisc"><img src="https://img.icons8.com/color/48/000000/discover.png"/>
+                <Link to="./" id="payDisc"><img src="https://img.icons8.com/color/48/000000/discover.png" alt="Disc"/>
                 </Link>
             </Col>
             </Row>
             <Row>
             <Col md={12} id="ccLink">
-                <Link to="./" id="payAmex"><img src="https://img.icons8.com/officel/40/000000/amex.png"/>
+                <Link to="./" id="payAmex"><img src="https://img.icons8.com/officel/40/000000/amex.png"alt="Amex"/>
                 </Link>
             </Col>
             </Row>
             <Row>
             <Col md={12} id="ccLink">
-                <Link to="./" id="payPP"><img src="https://img.icons8.com/officel/40/000000/paypal.png"/>
+                <Link to="./" id="payPP"><img src="https://img.icons8.com/officel/40/000000/paypal.png" alt="PayPal"alt/>
                 </Link>
             </Col>
             </Row>

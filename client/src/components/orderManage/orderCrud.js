@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { listOrders, detailsOrder, deleteOrder } from './orderActions';
+import { listOrders, deleteOrder } from './orderActions';
 import "../../styles/orderCrud.css";
 
 function OrdersScreen(props) {

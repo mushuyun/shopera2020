@@ -2,7 +2,7 @@
     margin-top: 20px;
 }
 
-h1 {
+h2 {
     color: #082aee
 }
 
@@ -14,4 +14,11 @@ li {
     font-size: 20px;
     color: #082aee;
     text-align: center;
+}
+
+.order-image {
+    width: 100px;
+}
+h3{
+    font-family: sans-serif;
 }
