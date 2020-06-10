@@ -16,7 +16,6 @@ import "../../styles/shipping.css";
 import "../../styles/cart.css";
 import "../../styles/placeOrder.css";
 import CartCollapse from "./cartCollapse";
-import Cart from "./Cart";
 import Cookie from "js-cookie";
 
 const UserInfo = Cookie.getJSON("userInfo");
