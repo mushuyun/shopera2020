@@ -17,7 +17,6 @@ function Home(props) {
     };
   }, []);
 //sort product by category.....
-  const [searchKeyword, setSearchKeyword] = useState('');
   const category = props.match.params.id ? props.match.params.id : '';
   useEffect(() => {
     dispatch(listProducts(category));
