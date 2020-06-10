@@ -4,20 +4,20 @@ const { isAuth, isAdmin } = require("../auth.js");
 const products = require("../seeders/data.json");
 
 const router = express.Router();
-//mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/shopera");
-// router.get('/seed', (req, res) => {
-//   Product
-//     .remove({})
-//     .then(() => db.Product.collection.insertMany(products))
-//     .then(data => {
-//       console.log(data.result.n + " products inserted!");
-//       res.json({success: true});
-//     })
-//     .catch(err => {
-//       console.error(err);
-//       res.json({success: false});
-//     });
-// });
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/shopera");
+router.get('/seed', (req, res) => {
+  Product
+    .remove({})
+    .then(() => Product.collection.insertMany(products))
+    .then(data => {
+      console.log(data.result.n + " products inserted!");
+      res.json({success: true});
+    })
+    .catch(err => {
+      console.error(err);
+      res.json({success: false});
+    });
+});
 
 router.get("/", async (req, res) => {
     const category = req.query.category ? { category: req.query.category } : {};
