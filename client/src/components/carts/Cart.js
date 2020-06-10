@@ -30,7 +30,7 @@ class Cart extends React.Component {
             total += parseInt(this.state.items[i]["qty"]) * this.state.items[i]["product"]["price"];
         }
 
-        // alert(this.state.show);
+        
 
         this.setState({"total": total});
     }

@@ -15,6 +15,10 @@ li {
     color: #082aee;
     text-align: center;
 }
+
+.order-image {
+    width: 100px;
+}
 h3{
     font-family: sans-serif;
 }
