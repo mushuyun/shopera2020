@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
 import { listProducts } from './../productManage/crudActions';
 import { detailsProduct } from './../productManage/crudActions';
-import 'bootstrap/dist/css/bootstrap.css';
+// import 'bootstrap/dist/css/bootstrap.css';
 
 
 function Product(props) {
@@ -70,7 +70,7 @@ function Product(props) {
                 <li>
                   Description:
                   <div>
-                    {product.desc}
+                    {product.description}
                   </div>
                 </li>
               </ul>

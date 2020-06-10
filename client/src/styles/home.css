@@ -91,8 +91,9 @@ body{
   vertical-align: middle;
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;  
   flex-wrap: wrap;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .products li {
@@ -101,7 +102,7 @@ body{
   align-items: flex-start;
   flex-wrap: wrap;
   padding: 1rem;
-  flex: 0 1 38rem;
+  flex: 0 1 40rem;
   margin: 1rem;
   height: 50rem;
   border-bottom: .1rem #c0c0c0 solid;
@@ -114,46 +115,45 @@ body{
   height: 100%;
 }
 .product-name{
-  margin-left: 80px;
-  display: flex;
-  flex: 1 1 30rem;
+  display: flex-start;
+  /* display: flex-end; */
+  flex: 1 1 40rem;
   font-size: 2rem;
   font-weight: bold;
 }
 .product-desc{
-  margin-left: 80px;
-  display: flex;
-  flex: 1 1 30rem;
+  display: flex-start;
+  /* display: flex-end; */
+  flex: 1 1 40rem;
   font-size: 1.5rem;
   color: #ff8800;
   font-weight: bold;
 }
 .product-brand{
-  margin-left: 80px;
-  display: flex;
-  flex: 1 1 30rem;
+  display: flex-start;
+  /* display: flex-end; */
+  flex: 1 1 40rem;
   display:table-column;
   font-size: 1.5rem;
   color:#808080;
 }
 .product-price{
-  margin-left: 80px;
-  display: flex;
-  flex: 1 1 30rem; 
+  display: flex-start;
+  /* display: flex-end; */
+  flex: 1 1 40rem; 
   font-size: 2rem;
   font-weight: bold;
 }
 .product-image{
   display: flex;
   max-width: 30rem;
-  margin-right: 60px;
   max-height: 30rem;
 }
 .product-rating{
-  display: flex;
-  margin-left: 80px;
-  flex: 1 1 30rem;
+  display: flex-end;
+  flex: 1 1 40rem;
   margin-bottom: 1.5rem;
+  font-size: 1.2rem;
 }
 /* Sidebar */
 
@@ -211,18 +211,20 @@ a:hover{
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  font-size: 1.6rem;
   padding: 1rem;
+  font-family: 'Times New Roman', Times, serif;
 }
 .details-image {
-  flex: 2 1 50rem;
+  flex: 2 1 40rem;
 }
 .details-image img{
   max-width: 40rem;
   widows: 100%;
 }
 .details-info {
-  flex: 1 1 30rem;
+  flex: 1 1 22rem;
+  font-size: 1.1rem;
+  margin-right: 30px;
 }
 .details-action {
   flex: 1 1 26rem;
@@ -244,6 +246,7 @@ a:hover{
   border-radius: 0.5rem;
   background-color: #f8f8f8;
   padding: 1rem;
+  font-size: 0.7rem;
 }
 .details-action ul li:last-child{
   display: flex;
@@ -261,6 +264,10 @@ a:hover{
 }
 .button.primary{
   background-color: #f0c040;
+}
+
+#atc{
+  font-size: 16px;
 }
 
 /* admin */
@@ -282,16 +289,3 @@ a:hover{
 .dropdown:hover .dropdown-content{
   display: block;
 }
-/* .categories{
-
-  padding: 0;
-  list-style-type: none;
-}
-.categories a{
-  display: flex;
-  padding: 1rem;
-}
-
-.categories a:hover{
-  background-color: #c0c0c0;
-} */
