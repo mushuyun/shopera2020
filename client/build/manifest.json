@@ -1,0 +1,70 @@
+{
+  "short_name": "Shopera",
+  "name": "Shopera E Commerce",
+  "icons": [
+    {
+      "src": "./images/boot1.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "./images/boot2.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "./images/boot3.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "./images/highheel1.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "./images/highheel2.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "./images/highheel3.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "./images/lip1.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "./images/lip2.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "./images/lip3.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "./images/jewelry1.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "./images/jewelry2.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "./images/jewelry3.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
