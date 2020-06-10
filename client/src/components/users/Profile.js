@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { logout, update } from './userActions';
-import { listUserOrders, detailsOrder } from '../orderManage/orderActions';
+import { listUserOrders } from '../orderManage/orderActions';
 import { useDispatch, useSelector } from 'react-redux';
-import Cookie from "js-cookie";
-import axios from "axios";
 import "../../styles/user.css";
 
 function Profile(props) {

@@ -50,11 +50,11 @@ class Order extends React.Component {
           </Card>
           <Card body outline color="warning">
             <h1>Shipping Address</h1>
-              <h2>{ this.state.data.shipping?.streetAddress }</h2>
-              <h2>{ this.state.data.shipping?.aptNumber }</h2>
-              <h2>{ this.state.data.shipping?.cityName }</h2>
-              <h2>{ this.state.data.shipping?.state }</h2>
-              <h2>{ this.state.data.shipping?.zipCode }</h2>
+              <h3>{ this.state.data.shipping?.streetAddress }</h3>
+              <h3>{ this.state.data.shipping?.aptNumber }</h3>
+              <h3>{ this.state.data.shipping?.cityName }</h3>
+              <h3>{ this.state.data.shipping?.state }</h3>
+              <h3>{ this.state.data.shipping?.zipCode }</h3>
           </Card>
           <Card body outline color="warning">
           
