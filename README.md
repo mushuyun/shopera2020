@@ -1,9 +1,7 @@
 # Shopera
 
+Shopera is a __MERN FULL STACK__ application using __JWT Authentication__ to add an extra layer of security for users. It is a complete e-commerce site bootstrapped with the [Create React App](https://github.com/facebook/create-react-app) and the flexibility to be utilized by any client with an inventory to host.
 
-Shopera is a complete e-commerce site bootstrapped with the [Create React App](https://github.com/facebook/create-react-app). It is a versatile app that can be utilized by any client with an inventory to host.
-
-Shopera is a __MERN FULL STACK__ application using __JWT Authentication__ to add an extra layer of security for users. 
 
  ## Table of Contents: 
   * Installation 
