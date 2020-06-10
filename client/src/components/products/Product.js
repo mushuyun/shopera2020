@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
 import { listProducts } from './../productManage/crudActions';
 import { detailsProduct } from './../productManage/crudActions';
-import 'bootstrap/dist/css/bootstrap.css';
-
 
 function Product(props) {
     
@@ -58,8 +56,8 @@ function Product(props) {
             </div>
             <div className="details-info">
               <ul>
-                <li>
-                  <h4>{product.name}</h4>
+                <li className="details-name">
+                  <h3>{product.name}</h3>
                 </li>
                 <li>
                   {product.rating} Stars ({product.numReviews} Reviews)
@@ -69,8 +67,8 @@ function Product(props) {
                 </li>
                 <li>
                   Description:
-                  <div>
-                    {product.desc}
+                  <div className="desc">
+                    {product.description}
                   </div>
                 </li>
               </ul>
@@ -93,7 +91,7 @@ function Product(props) {
             </select>
           </li>
           <li>
-              <button className="button primary" id="atc" onClick={() => addToCart(product._id)}
+              <button className="button primary" id="add" onClick={() => addToCart(product._id)}
               >Add to Cart</button>
           </li>
         </ul>
