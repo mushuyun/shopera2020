@@ -12,7 +12,7 @@ class Order extends React.Component {
     }
   }
  
-  componentWillMount() {
+  componentDidMount() {
     const UserInfo = Cookie.getJSON("userInfo");
     const orderId = this.props.match.params.id;
     console.log(orderId);
