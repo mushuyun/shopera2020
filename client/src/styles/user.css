@@ -18,7 +18,7 @@
   background-color: #F8F9F9;
 }
 .form-container li{
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color:darkslateblue;
   display: flex;
   flex-direction: column;

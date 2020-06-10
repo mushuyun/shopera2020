@@ -2,8 +2,12 @@
     margin-top: 20px;
 }
 
+h1 {
+    color:  #082aee;
+}
+
 h2 {
-    color: #082aee
+    color:  #082aee;
 }
 
 #ordNum {
@@ -14,7 +18,17 @@ li {
     font-size: 20px;
     color: #082aee;
     text-align: center;
+    font-weight: 500;
 }
-h3{
-    font-family: sans-serif;
+
+.order-image {
+    width: 100px;
+}
+
+#ordAdd {
+    font-size: 20px;
+    color: #082aee;
+    text-align: center;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

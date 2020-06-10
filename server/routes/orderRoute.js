@@ -5,7 +5,7 @@ const { isAuth, isAdmin } = require("../auth.js");
 
 const router = express.Router();
 
-router.post('/saveOrder', async (req, res) => {
+router.post("/saveOrder", async (req, res) => {
     let cart = req.body.cartInfo;
     let buyerCart = cart.map(item => {
         let container = {};
@@ -31,13 +31,13 @@ router.post('/saveOrder', async (req, res) => {
         _id: newOrder.id,  
       })
     } else {
-      res.status(401).send({ msg: 'Error on DB Save' });
+      res.status(401).send({ msg: "Error on DB Save" });
     }
   
   });
 
   router.get("/", isAuth, async (req, res) => {
-    const orders = await Order.find({}).populate('user');
+    const orders = await Order.find({}).populate("user");
     res.send(orders);
   });
 
