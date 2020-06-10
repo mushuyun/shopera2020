@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { listOrders, deleteOrder } from './orderActions';
 import "../../styles/orderCrud.css";
 
-function OrdersScreen(props) {
+function OrderCrud(props) {
   const orderList = useSelector(state => state.orderList);
   const { loading, orders, error } = orderList;
 
@@ -59,4 +59,4 @@ function OrdersScreen(props) {
       </div>
     </div>
 }
-export default OrdersScreen;
+export default OrderCrud;
