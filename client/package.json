@@ -1,5 +1,5 @@
 {
-  "name": "shop",
+  "name": "shopera",
   "version": "0.1.1",
   "private": true,
   "proxy": "http://localhost:4000",
@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
     "bootstrap": "^4.5.0",
+    "http-proxy-middleware": "^1.0.4",
     "js-cookie": "^2.2.1",
     "react": "^16.13.1",
     "react-beautiful-dnd": "^13.0.0",
