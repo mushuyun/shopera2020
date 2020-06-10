@@ -5,7 +5,9 @@ const products = require("../seeders/data.json");
 
 const router = express.Router();
 // mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/shopera");
+
 router.get("/seed", (req, res) => {
+
   Product
     .remove({})
     .then(() => Product.collection.insertMany(products))
