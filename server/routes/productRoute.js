@@ -4,31 +4,33 @@ const { isAuth, isAdmin } = require("../auth.js");
 const products = require("../seeders/data.json");
 
 const router = express.Router();
-//mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/shopera");
-// router.get('/seed', (req, res) => {
-//   Product
-//     .remove({})
-//     .then(() => db.Product.collection.insertMany(products))
-//     .then(data => {
-//       console.log(data.result.n + " products inserted!");
-//       res.json({success: true});
-//     })
-//     .catch(err => {
-//       console.error(err);
-//       res.json({success: false});
-//     });
-// });
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/shopera");
+
+router.get("/seed", (req, res) => {
+
+  Product
+    .remove({})
+    .then(() => Product.collection.insertMany(products))
+    .then(data => {
+      console.log(data.result.n + " products inserted!");
+      res.json({success: true});
+    })
+    .catch(err => {
+      console.error(err);
+      res.json({success: false});
+    });
+});
 
 router.get("/", async (req, res) => {
     const category = req.query.category ? { category: req.query.category } : {};
     const searchKeyword = req.query.searchKeyword ? {
       name: {
         $regex: req.query.searchKeyword,
-        $options: 'i'
+        $options: "i"
       }
     } : {};
     const sortOrder = req.query.sortOrder ?
-      (req.query.sortOrder === 'lowest' ? { price: 1 } : { price: -1 })
+      (req.query.sortOrder === "lowest"? { price: 1 } : { price: -1 })
       :
       { _id: -1 };
     const products = await Product.find({ ...category, ...searchKeyword }).sort(sortOrder);
@@ -47,7 +49,7 @@ router.get("/", async (req, res) => {
   router.put("/:id", isAuth, isAdmin, async (req, res) => {
     const isAdmin = req.user.isAdmin;
     const productId = req.params.id;
-    console.log('req.body:', req.body);
+    console.log("req.body:", req.body);
     const product = await Product.findById(productId);
     if (isAdmin && product) {
       product.name = req.body.name;
@@ -59,10 +61,10 @@ router.get("/", async (req, res) => {
       product.description = req.body.description;
       const updatedProduct = await product.save();
       if (updatedProduct) {
-        return res.status(200).send({ message: 'Product Updated', data: updatedProduct });
+        return res.status(200).send({ message: "Product Updated", data: updatedProduct });
       }
     }
-    return res.status(500).send({ message: ' Error in Updating Product.' });
+    return res.status(500).send({ message: " Error in Updating Product." });
   
   });
   
@@ -90,9 +92,9 @@ router.get("/", async (req, res) => {
     });
     const newProduct = await product.save();
     if (newProduct) {
-      return res.status(201).send({ message: 'New Product Created', data: newProduct });
+      return res.status(201).send({ message: "New Product Created", data: newProduct });
     }
-    return res.status(500).send({ message: ' Error in Creating Product.' });
+    return res.status(500).send({ message: " Error in Creating Product." });
   })
   
 

@@ -1,19 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-// import Home from "../Home.js"
+import React, { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import "../../styles/crud.css"
 import { saveProduct, listProducts, deleteProdcut } from "./crudActions";
 
 function ProductCrud(props) {
   const [modalVisible, setModalVisible] = useState(false);
-  const [id, setId] = useState('');
-  const [name, setName] = useState('');
-  const [price, setPrice] = useState('');
-  const [image, setImage] = useState('');
-  const [brand, setBrand] = useState('');
-  const [category, setCategory] = useState('');
+  const [id, setId] = useState("");
+  const [name, setName] = useState("");
+  const [price, setPrice] = useState("");
+  const [image, setImage] = useState("");
+  const [brand, setBrand] = useState("");
+  const [category, setCategory] = useState("");
  
-  const [description, setDescription] = useState('');
+  const [description, setDescription] = useState("");
   const productList = useSelector(state => state.productList);
   const { loading, products, error } = productList;
 
@@ -148,7 +147,7 @@ function ProductCrud(props) {
             <td>{product.brand}</td>
             <td>
               <button className="button" onClick={() => openModal(product)} >Edit</button>
-              {' '}
+              {" "}
               <button className="button" onClick={() => deleteHandler(product)} >Delete</button>
             </td>
           </tr>))}

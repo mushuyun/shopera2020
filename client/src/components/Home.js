@@ -1,9 +1,11 @@
-import React from 'react';
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
-import { listProducts } from './productManage/crudActions';
-import 'bootstrap/dist/css/bootstrap.css';
+
+import React from "react";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { listProducts } from "./productManage/crudActions";
+import "bootstrap/dist/css/bootstrap.css";
+
 
 function Home(props) {
 //loading full product list....
@@ -17,7 +19,7 @@ function Home(props) {
     };
   }, []);
 //sort product by category.....
-  const category = props.match.params.id ? props.match.params.id : '';
+  const category = props.match.params.id ? props.match.params.id : "";
   useEffect(() => {
     dispatch(listProducts(category));
     return () => {
@@ -31,11 +33,11 @@ function Home(props) {
           products.map(product =>
               <li key={product._id}>
                 <div className="products">
-                  <Link to={'/product/' + product._id}>
+                  <Link to={"/product/" + product._id}>
                     <img className="product-image" src={product.image} alt="product"/>
                   </Link>
                   <div className="product-name">
-                    <Link to={'/product/' + product._id}>{product.name}</Link>  
+                    <Link to={"/product/" + product._id}>{product.name}</Link>  
                   </div>
                   <div className="product-desc">{product.description}</div>
                   <div className="product-brand" >{product.brand}</div>  

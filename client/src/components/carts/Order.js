@@ -12,7 +12,7 @@ class Order extends React.Component {
     }
   }
  
-  componentWillMount() {
+  componentDidMount() {
     const UserInfo = Cookie.getJSON("userInfo");
     const orderId = this.props.match.params.id;
     console.log(orderId);
@@ -50,11 +50,11 @@ class Order extends React.Component {
           </Card>
           <Card body outline color="warning">
             <h1>Shipping Address</h1>
-              <h3>{ this.state.data.shipping?.streetAddress }</h3>
-              <h3>{ this.state.data.shipping?.aptNumber }</h3>
-              <h3>{ this.state.data.shipping?.cityName }</h3>
-              <h3>{ this.state.data.shipping?.state }</h3>
-              <h3>{ this.state.data.shipping?.zipCode }</h3>
+              <h3 id="ordAdd">{ this.state.data.shipping?.streetAddress }</h3>
+              <h3 id="ordAdd">{ this.state.data.shipping?.aptNumber }</h3>
+              <h3 id="ordAdd">{ this.state.data.shipping?.cityName }</h3>
+              <h3 id="ordAdd">{ this.state.data.shipping?.state }</h3>
+              <h3 id="ordAdd">{ this.state.data.shipping?.zipCode }</h3>
           </Card>
           <Card body outline color="warning">
           
@@ -62,11 +62,9 @@ class Order extends React.Component {
             <ul className = "oItems" style={{ listStyle: "none" }}> {
               this.state.data.orderItems?.map(order =>
               <li key={order._id}>
-              <div className="Purchases">
                 <li>Item: { order.name }</li>
                 <li>Qty Purchased: { order.qty }</li>
                 <li><img className="order-image" src={ order.image } alt="product"/></li> 
-              </div>
               </li>)
                }
              </ul>

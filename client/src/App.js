@@ -1,5 +1,5 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React from "react";
+import { useSelector } from "react-redux";
 // import Cookie from "js-cookie";
 import {BrowserRouter, Route, Link} from "react-router-dom";
 import Home from "./components/Home";
@@ -10,13 +10,13 @@ import Order from "./components/carts/Order";
 import Cart from "./components/carts/Cart";
 import Payment from "./components/carts/Payment";
 import PlaceOrder from "./components/carts/PlaceOrder";
-import SignIn from './components/users/SignIn';
-import Register from './components/users/Register';
-import Profile from './components/users/Profile';
+import SignIn from "./components/users/SignIn";
+import Register from "./components/users/Register";
+import Profile from "./components/users/Profile";
 import Shipping from "./components/carts/Shipping";
 import { Badge } from "reactstrap";
-import packageJson from '../package.json';
-import './styles/home.css';
+import packageJson from "../package.json";
+import "./styles/home.css";
 
 function App() {
 
