@@ -4,8 +4,11 @@ import { Button, Container } from "reactstrap";
 import "../../styles/shipping.css";
 import "../../styles/cart.css";
 import Cookie from "js-cookie";
+import {useHistory} from "react-router-dom";
 
+let history = useHistory();
 class Cart extends React.Component {
+    
     constructor(props) {
         super(props);
         this.state = {
@@ -17,10 +20,12 @@ class Cart extends React.Component {
 
     userSignedIn() {
         if (Cookie.getJSON("userInfo") === undefined || Cookie.getJSON("userInfo") === null) {
-            window.location.replace("/signIn"); 
+            // window.location.replace("/signIn"); 
+            history.push("/signin");
         } else {
-            window.location.replace("/placeorder")
-        }
+            // window.location.replace("/placeorder")
+            history.push("/placeorder");
+        }     
 
      }
     
