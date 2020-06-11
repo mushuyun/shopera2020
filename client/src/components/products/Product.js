@@ -7,9 +7,9 @@ import { listProducts } from "./../productManage/crudActions";
 import { detailsProduct } from "./../productManage/crudActions";
 
 
-let history = useHistory();
+
 function Product(props) {
-    
+  let history = useHistory();
   // const [qty, setQty] = useState(1);
   const productDetails = useSelector(state => state.productDetails);
   const { product, loading, error } = productDetails;
