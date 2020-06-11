@@ -17,9 +17,9 @@ class Cart extends React.Component {
 
     userSignedIn() {
         if (Cookie.getJSON("userInfo") === undefined || Cookie.getJSON("userInfo") === null) {
-            window.location.replace("/SignIn"); 
+            window.location.replace("/signIn"); 
         } else {
-            window.location.replace("/PlaceOrder")
+            window.location.replace("/placeorder")
         }
 
      }
