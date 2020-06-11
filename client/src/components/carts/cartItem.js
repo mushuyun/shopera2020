@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Col, Container, Row } from "reactstrap";
-
+import history from "../../history";
 
 
 class CartItem extends React.Component {
@@ -35,7 +35,7 @@ class CartItem extends React.Component {
       }
       localStorage.setItem("cart", JSON.stringify(cart));
 
-      window.location.reload();
+      history.push("/cart");
   }
 
   render() {
