@@ -7,7 +7,6 @@ import { listProducts } from "./../productManage/crudActions";
 import { detailsProduct } from "./../productManage/crudActions";
 
 
-
 function Product(props) {
   let history = useHistory();
   // const [qty, setQty] = useState(1);
@@ -44,7 +43,8 @@ function Product(props) {
     localStorage.setItem("cart", JSON.stringify(cart));
 
   
-    history.push("/cart");
+    // history.push("/cart");
+    history.go("/cart");
   } 
 
   return <div>
