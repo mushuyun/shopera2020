@@ -4,9 +4,9 @@ import { Button, Container } from "reactstrap";
 import "../../styles/shipping.css";
 import "../../styles/cart.css";
 import Cookie from "js-cookie";
-import {useHistory} from "react-router-dom";
+import history from "../../history";
 
-let history = useHistory();
+// let history = useHistory();
 class Cart extends React.Component {
     
     constructor(props) {
