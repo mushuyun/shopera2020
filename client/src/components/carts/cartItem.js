@@ -35,7 +35,7 @@ class CartItem extends React.Component {
       }
       localStorage.setItem("cart", JSON.stringify(cart));
 
-      history.push("/cart");
+      history.go("/cart");
   }
 
   render() {
