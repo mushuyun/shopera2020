@@ -43,8 +43,8 @@ function Product(props) {
     localStorage.setItem("cart", JSON.stringify(cart));
 
   
-    // history.push("/cart");
-    history.go("/cart");
+    history.push("/cart");
+    history.go();
   } 
 
   return <div>
