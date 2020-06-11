@@ -37,6 +37,9 @@ function App() {
 
   if (localStorage.getItem("cart") !== null) {
       let cart = JSON.parse(localStorage.getItem("cart")).map(cartItem => cartCount += parseInt(cartItem["qty"]));
+      // console.log(cartCount);
+      history.push("/cart");
+      
     }
 
   return (
@@ -52,6 +55,7 @@ function App() {
         <div className="header-links">
 
         <Link to="/cart">Cart<Badge color="danger">{cartCount > 0 ? cartCount : ''}</Badge></Link>
+            {/* {console.log(cartCount)} */}
             <Link to="/signin">Sign In/Register</Link>
             <Link to="/profile">Profile/Logout</Link>
             <div className="dropdown">
