@@ -2,7 +2,8 @@ import React from "react";
 import { useSelector } from "react-redux";
 import history from './history'
 // import Cookie from "js-cookie";
-import {HashRouter as BrowserRouter, Route, Link} from "react-router-dom";
+import { Router } from "react-router-dom";
+import { Route, Link} from "react-router-dom";
 import Home from "./components/Home";
 import Product from "./components/products/Product";
 import ProductCrud from "./components/productManage/ProductCrud";
@@ -39,7 +40,7 @@ function App() {
     }
 
   return (
-<BrowserRouter history={history}>
+<Router history={history}>
   <div className="grid-container">
     <header className="header">
         <div className="brand">
@@ -114,7 +115,7 @@ function App() {
       CodingBootCamp UNC Project Team 3 All Rights Reserved!&nbsp;v{packageJson.version}
     </footer>
   </div>
-</BrowserRouter>
+</Router>
   );
 }
 
