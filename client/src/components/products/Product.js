@@ -43,7 +43,7 @@ function Product(props) {
     }
     localStorage.setItem("cart", JSON.stringify(cart));
 
-    // window.location.replace("/cart");
+  
     history.push("/cart");
   } 
 
