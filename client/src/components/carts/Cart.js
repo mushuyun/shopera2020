@@ -1,4 +1,5 @@
 import React from "react";
+import { Router } from "react-router-dom";
 import CartItem from "./cartItem";
 import { Button, Container } from "reactstrap";
 import "../../styles/shipping.css";
@@ -6,9 +7,9 @@ import "../../styles/cart.css";
 import Cookie from "js-cookie";
 import history from "../../history";
 
-// let history = useHistory();
+
 class Cart extends React.Component {
-    
+
     constructor(props) {
         super(props);
         this.state = {
@@ -66,7 +67,7 @@ class Cart extends React.Component {
             </Container>
         );
     }
-}
+}                                                                                                                                                                                                                                                                                                                                                                                                                           
 
 
 export default Cart;
