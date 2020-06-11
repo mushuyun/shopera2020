@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 // import Cookie from "js-cookie";
-import {BrowserRouter, Route, Link} from "react-router-dom";
+import {HashRouter as BrowserRouter, Route, Link} from "react-router-dom";
 import Home from "./components/Home";
 import Product from "./components/products/Product";
 import ProductCrud from "./components/productManage/ProductCrud";
@@ -102,7 +102,7 @@ function App() {
           <Route path="/payment" component={Payment} />
           <Route path="/profile" component={Profile} />
           <Route path="/register" component={Register} />
-          <Route path="/placeOrder" component={PlaceOrder} />
+          <Route path="/placeorder" component={PlaceOrder} />
           <Route path="/signin" component={SignIn} />
           <Route path="/category/:id" component={Home} />
           <Route path="/" exact={true} component={Home} />

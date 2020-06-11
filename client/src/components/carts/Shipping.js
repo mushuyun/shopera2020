@@ -133,7 +133,7 @@ const ShippingForm = (props) => {
           </FormGroup>
         </Col>
       </Row>
-      <Link to="/PlaceOrder">
+      <Link to="/placeorder">
         <Button size="lg" id="checkOutBtn">CheckOut</Button>
         </Link>
     </Form>
