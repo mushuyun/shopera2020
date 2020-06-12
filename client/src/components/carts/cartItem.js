@@ -1,7 +1,6 @@
 import React from "react";
 import { Card, Col, Container, Row } from "reactstrap";
-
-
+import history from "../../history";
 
 class CartItem extends React.Component {
   constructor(props) {
@@ -14,14 +13,11 @@ class CartItem extends React.Component {
     this.qty = this.props.qty;
   }
   
-  
-
   removeCartItem(itemInCart) {
 
       let cart = [];
       if (localStorage.getItem("cart") !== null) {
-        cart = JSON.parse(localStorage.getItem
-          ("cart"));
+        cart = JSON.parse(localStorage.getItem("cart"));
       }
       let itemIndex = -1;
       for (var i = 0; i < cart.length; i++) {
@@ -35,7 +31,8 @@ class CartItem extends React.Component {
       }
       localStorage.setItem("cart", JSON.stringify(cart));
 
-      window.location.reload();
+      history.push("/cart");
+      history.go("0");
   }
 
   render() {

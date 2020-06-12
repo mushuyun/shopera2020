@@ -1,11 +1,15 @@
 import React from "react";
+import { Router } from "react-router-dom";
 import CartItem from "./cartItem";
 import { Button, Container } from "reactstrap";
 import "../../styles/shipping.css";
 import "../../styles/cart.css";
 import Cookie from "js-cookie";
+import history from "../../history";
+
 
 class Cart extends React.Component {
+
     constructor(props) {
         super(props);
         this.state = {
@@ -17,10 +21,12 @@ class Cart extends React.Component {
 
     userSignedIn() {
         if (Cookie.getJSON("userInfo") === undefined || Cookie.getJSON("userInfo") === null) {
-            window.location.replace("/SignIn"); 
+            console.log(this.props);
+            history.push("/signin");
         } else {
-            window.location.replace("/PlaceOrder")
-        }
+            console.log(this.props);
+            history.push("/placeorder");
+        }     
 
      }
     
@@ -63,7 +69,7 @@ class Cart extends React.Component {
             </Container>
         );
     }
-}
+}                                                                                                                                                                                                                                                                                                                                                                                                                           
 
 
 export default Cart;

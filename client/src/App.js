@@ -1,7 +1,9 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import history from './history'
 // import Cookie from "js-cookie";
-import {BrowserRouter, Route, Link} from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+import { Route, Link} from "react-router-dom";
 import Home from "./components/Home";
 import Product from "./components/products/Product";
 import ProductCrud from "./components/productManage/ProductCrud";
@@ -35,10 +37,13 @@ function App() {
 
   if (localStorage.getItem("cart") !== null) {
       let cart = JSON.parse(localStorage.getItem("cart")).map(cartItem => cartCount += parseInt(cartItem["qty"]));
+      // console.log(cartCount);
+      history.push("/cart");
+      
     }
 
   return (
-<BrowserRouter>
+<BrowserRouter history={history}>
   <div className="grid-container">
     <header className="header">
         <div className="brand">
@@ -50,6 +55,7 @@ function App() {
         <div className="header-links">
 
         <Link to="/cart">Cart<Badge color="danger">{cartCount > 0 ? cartCount : ''}</Badge></Link>
+            {/* {console.log(cartCount)} */}
             <Link to="/signin">Sign In/Register</Link>
             <Link to="/profile">Profile/Logout</Link>
             <div className="dropdown">
@@ -93,19 +99,19 @@ function App() {
 
     <main className="main">
         <div className="content">
-          <Route path="/product/:id" component={Product} />
-          <Route path="/productcrud" component={ProductCrud} />
-          <Route path="/ordercrud" component={orderCrud} />
-          <Route path="/cart" component={Cart} />
-          <Route path="/shipping" component={Shipping} />
-          <Route path="/order/:id" component={Order} />
-          <Route path="/payment" component={Payment} />
-          <Route path="/profile" component={Profile} />
-          <Route path="/register" component={Register} />
-          <Route path="/placeOrder" component={PlaceOrder} />
-          <Route path="/signin" component={SignIn} />
-          <Route path="/category/:id" component={Home} />
-          <Route path="/" exact={true} component={Home} />
+          <Route exact={true} path="/product/:id" component={Product} />
+          <Route exact={true} path="/productcrud" component={ProductCrud} />
+          <Route exact={true} path="/ordercrud" component={orderCrud} />
+          <Route exact={true} path="/cart" component={Cart} />
+          <Route exact={true} path="/shipping" component={Shipping} />
+          <Route exact={true} path="/order/:id" component={Order} />
+          <Route exact={true} path="/payment" component={Payment} />
+          <Route exact={true} path="/profile" component={Profile} />
+          <Route exact={true} path="/register" component={Register} />
+          <Route exact={true} path="/placeorder" component={PlaceOrder} />
+          <Route exact={true} path="/signin" component={SignIn} />
+          <Route exact={true} path="/category/:id" component={Home} />
+          <Route exact={true} path="/" component={Home} />
         </div>
       </main>
         
