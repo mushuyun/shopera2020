@@ -23,10 +23,10 @@ class Cart extends React.Component {
     userSignedIn() {
         if (Cookie.getJSON("userInfo") === undefined || Cookie.getJSON("userInfo") === null) {
             console.log(this.props);
-            history.push("/signin");
+            this.props.history.push("/signin");
         } else {
             console.log(this.props);
-            history.push("/placeorder");
+            this.props.history.push("/placeorder");
         }     
 
      }
@@ -35,9 +35,7 @@ class Cart extends React.Component {
         let total = 0;
         for (var i = 0; i < this.state.items.length; i++) {
             total += parseInt(this.state.items[i]["qty"]) * this.state.items[i]["product"]["price"];
-        }
-
-        
+        }   
 
         this.setState({"total": total});
     }
