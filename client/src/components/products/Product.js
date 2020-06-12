@@ -44,6 +44,7 @@ function Product(props) {
 
   
     history.push("/cart");
+    history.go();
   } 
 
   return <div>
