@@ -102,8 +102,8 @@ function App() {
           <Route exact={true} path="/product/:id" component={Product} />
           <Route exact={true} path="/productcrud" component={ProductCrud} />
           <Route exact={true} path="/ordercrud" component={orderCrud} />
-          <Route path="/cart" component={Cart} />
-          <Route exact path="/shipping" component={Shipping} />
+          <Route exact={true} path="/cart" component={Cart} />
+          <Route exact={true} path="/shipping" component={Shipping} />
           <Route exact={true} path="/order/:id" component={Order} />
           <Route exact={true} path="/payment" component={Payment} />
           <Route exact={true} path="/profile" component={Profile} />
