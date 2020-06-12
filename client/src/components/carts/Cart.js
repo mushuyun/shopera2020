@@ -1,5 +1,6 @@
 import React from "react";
-import { Router } from "react-router-dom";
+// import { Router } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import CartItem from "./cartItem";
 import { Button, Container } from "reactstrap";
 import "../../styles/shipping.css";
