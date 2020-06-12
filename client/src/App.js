@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import history from './history'
 // import Cookie from "js-cookie";
-import { Router } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import { Route, Link} from "react-router-dom";
 import Home from "./components/Home";
 import Product from "./components/products/Product";
@@ -43,7 +43,7 @@ function App() {
     }
 
   return (
-<Router history={history}>
+<BrowserRouter history={history}>
   <div className="grid-container">
     <header className="header">
         <div className="brand">
@@ -99,19 +99,19 @@ function App() {
 
     <main className="main">
         <div className="content">
-          <Route path="/product/:id" component={Product} />
-          <Route path="/productcrud" component={ProductCrud} />
-          <Route path="/ordercrud" component={orderCrud} />
-          <Route path="/cart" component={Cart} />
-          <Route path="/shipping" component={Shipping} />
-          <Route path="/order/:id" component={Order} />
-          <Route path="/payment" component={Payment} />
-          <Route path="/profile" component={Profile} />
-          <Route path="/register" component={Register} />
-          <Route path="/placeorder" component={PlaceOrder} />
-          <Route path="/signin" component={SignIn} />
-          <Route path="/category/:id" component={Home} />
-          <Route path="/" exact={true} component={Home} />
+          <Route exact={true} path="/product/:id" component={Product} />
+          <Route exact={true} path="/productcrud" component={ProductCrud} />
+          <Route exact={true} path="/ordercrud" component={orderCrud} />
+          <Route exact={true} path="/cart" component={Cart} />
+          <Route exact={true} path="/shipping" component={Shipping} />
+          <Route exact={true} path="/order/:id" component={Order} />
+          <Route exact={true} path="/payment" component={Payment} />
+          <Route exact={true} path="/profile" component={Profile} />
+          <Route exact={true} path="/register" component={Register} />
+          <Route exact={true} path="/placeorder" component={PlaceOrder} />
+          <Route exact={true} path="/signin" component={SignIn} />
+          <Route exact={true} path="/category/:id" component={Home} />
+          <Route exact={true} path="/" component={Home} />
         </div>
       </main>
         
@@ -119,7 +119,7 @@ function App() {
       CodingBootCamp UNC Project Team 3 All Rights Reserved!&nbsp;v{packageJson.version}
     </footer>
   </div>
-</Router>
+</BrowserRouter>
   );
 }
 
