@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import "../../styles/crud.css"
-import { saveProduct, listProducts, deleteProdcut } from "./crudActions";
+import { saveProduct, listProducts, deleteProduct } from "./crudActions";
 
 function ProductCrud(props) {
   const [modalVisible, setModalVisible] = useState(false);
@@ -51,7 +51,7 @@ function ProductCrud(props) {
     }));
   }
   const deleteHandler = (product) => {
-    dispatch(deleteProdcut(product._id));
+    dispatch(deleteProduct(product._id));
   }
   return <div className="content content-margined">
 
