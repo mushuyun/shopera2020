@@ -9,7 +9,6 @@ import { detailsProduct } from "./../productManage/crudActions";
 
 function Product(props) {
   let history = useHistory();
-  // const [qty, setQty] = useState(1);
   const productDetails = useSelector(state => state.productDetails);
   const { product, loading, error } = productDetails;
   const dispatch = useDispatch();
