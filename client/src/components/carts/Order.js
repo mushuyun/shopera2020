@@ -72,11 +72,7 @@ class Order extends React.Component {
         </Container>
       </>
     );
-};
+  };
 }
-
-  
-
-
 
 export default Order;
